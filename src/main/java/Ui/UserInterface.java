@@ -47,6 +47,7 @@ public class UserInterface {
         }
     }
 
+
     public void exitProgram()  {
         try {
             System.out.print("Exiting Program");
@@ -59,7 +60,7 @@ public class UserInterface {
             System.exit(1);
 
         } catch (InterruptedException e) {
-            System.out.println("Systemet kan ikke afslutte");
+            System.out.println("System can not exit");
         }
 
 
