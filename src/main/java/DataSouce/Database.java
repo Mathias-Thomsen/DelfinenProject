@@ -17,7 +17,15 @@ public class Database {
 
     }
 
-    public ArrayList<ClubMember> getClubmembers() {
+    public boolean deleteMember(ClubMember clubMember){
+        boolean result = clubMembers.remove(clubMember);
+
+        change = true;
+
+        return result;
+    }
+
+    public ArrayList<ClubMember> getClubMembers() {
         return clubMembers;
     }
 
