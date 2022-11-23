@@ -54,14 +54,13 @@ public class UserInterface {
 
     public void clubManagerMenu() {
         int menuChoise = 0;
-        while (menuChoise != 9) {
             System.out.println("""
                     -------------------------
                     Club manager menu:
                     -------------------------
                     1. Create new member
                     2. delete current member
-                    3. edit member info
+                    3. edit member information
                     9. go back to sign in
                     """);
 
@@ -77,12 +76,11 @@ public class UserInterface {
 
             } while (!userChoiceFalse);
 
-
-        }
         switch (menuChoise) {
             case 1 -> createMember();
             case 2 -> deleteMember();
-            //case 3 ->
+            case 3 -> editMember();
+            case 4 -> showMenmbers();
             case 9 -> menu();
             default -> System.out.println("Invalid Input\n");
         }
