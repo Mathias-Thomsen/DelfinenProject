@@ -4,14 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="642c5adc-9b4c-4118-b77d-b0582f721d79" name="Changes" comment="First commit">
+    <list default="true" id="642c5adc-9b4c-4118-b77d-b0582f721d79" name="Changes" comment="added constructer and with setter and getter in Clubmember class 2.0">
+      <change afterPath="$PROJECT_DIR$/data/clubmembersData.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClubMember/ClubMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClubMember/ClubMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataSouce/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataSouce/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataSouce/Filehandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataSouce/Filehandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ui/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,6 +52,15 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Initiate Program" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="DelfinenProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -51,7 +73,7 @@
       <workItem from="1668772793260" duration="15000" />
       <workItem from="1668787460416" duration="1387000" />
       <workItem from="1668804412421" duration="1106000" />
-      <workItem from="1669110780074" duration="1202000" />
+      <workItem from="1669110780074" duration="14874000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1668771434329</created>
@@ -74,7 +96,35 @@
       <option name="project" value="LOCAL" />
       <updated>1668771833924</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="First commit Added UI menu with role selection">
+      <created>1669112055297</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669112055297</updated>
+    </task>
+    <task id="LOCAL-00005" summary="secound commit with added clubMember class">
+      <created>1669129706620</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669129706620</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added constructer and with setter and getter in Clubmember class">
+      <created>1669146851373</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669146851373</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added constructer and with setter and getter in Clubmember class 2.0">
+      <created>1669147410451</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669147410451</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,7 +141,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/MarcusFNBranch" />
+                        <option value="origin/main" />
                       </list>
                     </value>
                   </entry>
@@ -105,6 +155,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="First commit Added UI menu with role selection" />
+    <MESSAGE value="secound commit with added clubMember class" />
+    <MESSAGE value="added constructer and with setter and getter in Clubmember class" />
+    <MESSAGE value="added constructer and with setter and getter in Clubmember class 2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="added constructer and with setter and getter in Clubmember class 2.0" />
   </component>
 </project>
