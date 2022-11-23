@@ -1,15 +1,18 @@
 package Ui;
 
+import ClubMember.ClubMember;
 import Controller.Controller;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class UserInterface {
     Scanner scanner = new Scanner(System.in);
     boolean userChoiceFalse = false;
+    private String nameInput;
     Controller controller = new Controller();
 
     public void menu() {
@@ -42,7 +45,6 @@ public class UserInterface {
         }
 
     }
-
     public void InitiateProgram(int menuChoice) {
         switch (menuChoice) {
             case 1 -> createMember();
@@ -52,14 +54,13 @@ public class UserInterface {
             default -> System.out.println("Invalid Input\n");
         }
     }
-
     public void createMember() {
         System.out.println("--------------------------------------------------------");
         System.out.println("Input new member name: ");
-        String nameinput = scanner.nextLine();
-        while (nameinput.isEmpty() || nameinput.equals(" ")) {
+        nameInput = scanner.nextLine();
+        while (nameInput.isEmpty() || nameInput.equals(" ")) {
             System.out.print("Invalid input try again:");
-            nameinput = scanner.nextLine();
+            nameInput = scanner.nextLine();
         }
         System.out.println("--------------------------------------------------------");
         System.out.print("Input new member age: ");
@@ -111,12 +112,36 @@ public class UserInterface {
             swim = scanner.nextLine();
         }
 
-        controller.createClubMember(nameinput, ageInput, activityStatus, membership, swim, 0);
+        controller.createClubMember(nameInput, ageInput, activityStatus, membership, swim, 0);
 
         controller.saveData();
     }
+    public void deleteMember(){
+        System.out.println("--------------------------------------------------------");
+        System.out.println("Input the name of a member you want to delete: ");
+        String userDeleteMember = scanner.nextLine().trim().toLowerCase();
+        ArrayList<ClubMember> searchDeleteMember = new ArrayList<>();
 
-        public void exitProgram() {
+        int index = 1;
+
+        for (ClubMember deleteMember : controller.getClubMembers()){
+            nameInput = deleteMember.getName().toLowerCase();
+            if (nameInput.contains(userDeleteMember.toLowerCase())){
+                searchDeleteMember.add(deleteMember);
+                System.out.println(index++ + ": " + deleteMember.getName());
+            }
+        }
+        System.out.println("Select the number of the member you want to delete: ");
+        String userDeleteNumberString = scanner.nextLine();
+        int userDeleteNumberInt = Integer.parseInt(userDeleteNumberString);
+
+        ClubMember deleteMember = searchDeleteMember.get(userDeleteNumberInt - 1);
+        controller.deleteMember(deleteMember);
+        System.out.println("You have now deleted: " + deleteMember.getName() + " from you membership");
+
+        controller.saveData();
+    }
+    public void exitProgram() {
             try {
                 System.out.print("Exiting Program");
                 TimeUnit.SECONDS.sleep(1);
