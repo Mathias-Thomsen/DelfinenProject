@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="642c5adc-9b4c-4118-b77d-b0582f721d79" name="Changes" comment="added constructer and with setter and getter in Clubmember class 2.0">
-      <change afterPath="$PROJECT_DIR$/data/clubmembersData.csv" afterDir="false" />
+    <list default="true" id="642c5adc-9b4c-4118-b77d-b0582f721d79" name="Changes" comment="Added showMembersMethod and editMembersMethod">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClubMember/ClubMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClubMember/ClubMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/clubmembersData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/clubmembersData.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataSouce/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataSouce/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DataSouce/Filehandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataSouce/Filehandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ui/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +24,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="updateFeature" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -124,7 +127,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669147410451</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added showMembersMethod and editMembersMethod">
+      <created>1669203312611</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669203312611</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added showMembersMethod and editMembersMethod">
+      <created>1669203379777</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669203379777</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,15 +153,9 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="FILTERS">
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
                 <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/main" />
-                      </list>
-                    </value>
-                  </entry>
+                  <entry key="Show.Git.Branches" value="true" />
                 </map>
               </option>
             </State>
@@ -159,6 +170,7 @@
     <MESSAGE value="secound commit with added clubMember class" />
     <MESSAGE value="added constructer and with setter and getter in Clubmember class" />
     <MESSAGE value="added constructer and with setter and getter in Clubmember class 2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="added constructer and with setter and getter in Clubmember class 2.0" />
+    <MESSAGE value="Added showMembersMethod and editMembersMethod" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added showMembersMethod and editMembersMethod" />
   </component>
 </project>

@@ -11,7 +11,7 @@ public class Controller {
     Database database = new Database();
     Filehandler filehandler = new Filehandler();
     public void createClubMember(String name, int age, boolean activityStatus, String membershipType, String swimType, int membershipNumber){
-    database.createClubMember(name, age, activityStatus, membershipType, swimType, membershipNumber);
+        database.createClubMember(name, age, activityStatus, membershipType, swimType, membershipNumber);
     }
 
     public ArrayList<ClubMember> getClubMembers(){
@@ -36,5 +36,9 @@ public class Controller {
         } catch (FileNotFoundException e) {
             System.out.println("fail");
         }
+    }
+
+    public ArrayList<ClubMember> getMembers() {
+        return database.getClubMembers();
     }
 }
