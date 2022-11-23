@@ -9,8 +9,8 @@ public class Database {
     public ArrayList<ClubMember> clubMembers = new ArrayList<>();
 
 
-    public void createClubMember(String name, int age, boolean activityStatus, String membershipType, String swimType, int membershipNumber) {
-        ClubMember clubMember = new ClubMember(name, age, activityStatus, membershipType, swimType, membershipNumber);
+    public void createClubMember(String membershipNumber, String name, int age, String activityStatus, String membershipType, String swimType) {
+        ClubMember clubMember = new ClubMember(membershipNumber,name, age, activityStatus, membershipType, swimType);
         clubMembers.add(clubMember);
 
         change = true; // To the save method, so we only save to the txt file if a change has been made.
@@ -33,4 +33,6 @@ public class Database {
         clubMembers.clear();
 
     }
+
+
 }

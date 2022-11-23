@@ -10,8 +10,9 @@ import java.util.ArrayList;
 public class Controller {
     Database database = new Database();
     Filehandler filehandler = new Filehandler();
-    public void createClubMember(String name, int age, boolean activityStatus, String membershipType, String swimType, int membershipNumber){
-        database.createClubMember(name, age, activityStatus, membershipType, swimType, membershipNumber);
+    ClubMember clubMember = new ClubMember();
+    public void createClubMember(String membershipNumber, String name, int age, String activityStatus, String membershipType, String swimType){
+        database.createClubMember(membershipNumber, name, age, activityStatus, membershipType, swimType);
     }
 
     public ArrayList<ClubMember> getClubMembers(){
@@ -41,4 +42,14 @@ public class Controller {
     public ArrayList<ClubMember> getMembers() {
         return database.getClubMembers();
     }
+
+    public int getSizeOfDatabase() {
+
+        int sizeOfDatabase = database.getClubMembers().size();
+
+        return sizeOfDatabase + 1;
+
+    }
+
 }
+
