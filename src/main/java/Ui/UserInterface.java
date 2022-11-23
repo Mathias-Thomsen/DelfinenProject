@@ -59,12 +59,13 @@ public class UserInterface {
                     Club manager menu:
                     -------------------------
                     1. Create new member
-                    2. delete current member
+                    2. Show list of members
                     3. edit member information
+                    4. Delete current member
                     9. go back to sign in
                     """);
 
-            do {
+            do{
                 String valg = scanner.nextLine().trim();
                 try {
                     menuChoise = Integer.parseInt(valg);
@@ -78,9 +79,9 @@ public class UserInterface {
 
         switch (menuChoise) {
             case 1 -> createMember();
-            case 2 -> deleteMember();
+            case 2 -> showMenmbers();
             case 3 -> editMember();
-            case 4 -> showMenmbers();
+            case 4 -> deleteMember();
             case 9 -> menu();
             default -> System.out.println("Invalid Input\n");
         }
