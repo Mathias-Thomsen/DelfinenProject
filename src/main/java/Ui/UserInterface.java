@@ -88,13 +88,17 @@ public class UserInterface {
     }
 
     public void createMember() {
+
+        //Name
         System.out.println("--------------------------------------------------------");
         System.out.println("Input new member name: ");
-        String nameinput = scanner.nextLine();
-        while (nameinput.isEmpty() || nameinput.equals(" ")) {
+        String nameInput = scanner.nextLine();
+        while (nameInput.isEmpty() || nameInput.equals(" ")) {
             System.out.print("Invalid input try again:");
-            nameinput = scanner.nextLine();
+            nameInput = scanner.nextLine();
         }
+
+        //Age
         System.out.println("--------------------------------------------------------");
         System.out.print("Input new member age: ");
 
@@ -107,34 +111,33 @@ public class UserInterface {
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input try again:");
             }
-        }
-        while (!userChoiceFalse);
+        } while (!userChoiceFalse);
 
-        boolean activityStatus = false;
-        String activity;
-        do {
-            System.out.println("--------------------------------------------------------");
-            System.out.print("Input new member activity status (passive/active): ");
 
-            activity = scanner.nextLine().trim().toLowerCase();
-            if (activity.equals("active") || activity.equals("a")) {
-                activityStatus = true;
-            } else if (activity.equals("passive") || activity.equals("p")) {
-                activityStatus = false;
-            } else {
-                System.out.println("Invalid input");
-                System.out.println("please enter active or passive: ");
-            }
-        } while (activity.isEmpty());
-
+        //Activity status
         System.out.println("--------------------------------------------------------");
-        System.out.print("Input new member activity status (junior/senior): ");
-        String membership = scanner.nextLine().trim().toLowerCase();
-
-        while (membership.isEmpty() || membership.equals(" ")) {
+        System.out.println("Input new member activity status (active/passive): ");
+        String activity = scanner.nextLine();
+        while (activity.isEmpty() || activity.equals(" ")) {
             System.out.print("Invalid input try again:");
-            membership = scanner.nextLine();
+            activity = scanner.nextLine();
         }
+
+
+        //Junior or senior
+        System.out.println("--------------------------------------------------------");
+        String juniorOrSenior = "";
+
+        if (ageInput < 18) {
+            juniorOrSenior = "junior";
+        } else {
+            juniorOrSenior = "senior";
+        }
+        System.out.println("The age of the member is " + ageInput + " so the person's membership is a " + juniorOrSenior + " membership");
+
+
+
+        //Exerciser/competition
 
         System.out.println("--------------------------------------------------------");
         System.out.print("Input new member activity status (Exerciser/competition): ");
@@ -145,9 +148,12 @@ public class UserInterface {
             swim = scanner.nextLine();
         }
 
-        controller.createClubMember(nameInput, ageInput, activityStatus, membership, swim, 0);
 
-        controller.saveData();
+
+        //Create member
+        controller.createClubMember(nameInput, ageInput, activity, juniorOrSenior, swim, 0);
+
+        controller.saveData(); //save to the file every time we make a new member.
     }
 
     public void showMenmbers() {

@@ -10,7 +10,8 @@ import java.util.ArrayList;
 public class Controller {
     Database database = new Database();
     Filehandler filehandler = new Filehandler();
-    public void createClubMember(String name, int age, boolean activityStatus, String membershipType, String swimType, int membershipNumber){
+    ClubMember clubMember = new ClubMember();
+    public void createClubMember(String name, int age, String activityStatus, String membershipType, String swimType, int membershipNumber){
         database.createClubMember(name, age, activityStatus, membershipType, swimType, membershipNumber);
     }
 
@@ -41,4 +42,15 @@ public class Controller {
     public ArrayList<ClubMember> getMembers() {
         return database.getClubMembers();
     }
+
+    public int getNumber() {
+        try {
+            return filehandler.numberOfMembers();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
 }
+

@@ -3,7 +3,7 @@ package ClubMember;
 public class ClubMember {
     private String name;
     private int age;
-    private boolean activityStatus;
+    private String activityStatus;
     private String membershipType;
     private String swimType;
     private int membershipNumber;
@@ -11,7 +11,7 @@ public class ClubMember {
     public ClubMember(){
 
     }
-    public ClubMember(String name, int age, boolean activityStatus, String membershipType, String swimType, int membershipNumber) {
+    public ClubMember(String name, int age, String activityStatus, String membershipType, String swimType, int membershipNumber) {
         this.name = name;
         this.age = age;
         this.activityStatus = activityStatus;
@@ -36,12 +36,12 @@ public class ClubMember {
         this.age = Integer.parseInt(age);
     }
 
-    public boolean isActivityStatus() {
+    public String isActivityStatus() {
         return activityStatus;
     }
 
     public void setActivityStatus(String activityStatus) {
-        this.activityStatus = Boolean.parseBoolean(activityStatus);
+        this.activityStatus = activityStatus;
     }
 
     public String getMembershipType() {
@@ -67,6 +67,7 @@ public class ClubMember {
     public void setMembershipNumber(String membershipNumber) {
         this.membershipNumber = Integer.parseInt(membershipNumber);
     }
+
 
     @Override
     public String toString() {

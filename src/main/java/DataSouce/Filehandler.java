@@ -59,4 +59,21 @@ public class Filehandler {
         }
     }
 
+    public int numberOfMembers() throws FileNotFoundException {
+
+        Scanner reader = new Scanner(new File("data/clubmembersData.csv"));
+        int memberShipNumber = 0;
+
+        while (reader.hasNextLine()) {
+            memberShipNumber++;
+        }
+        return memberShipNumber;
+
+
+
+
+
+
+    }
+
 }

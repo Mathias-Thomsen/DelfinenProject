@@ -9,7 +9,7 @@ public class Database {
     public ArrayList<ClubMember> clubMembers = new ArrayList<>();
 
 
-    public void createClubMember(String name, int age, boolean activityStatus, String membershipType, String swimType, int membershipNumber) {
+    public void createClubMember(String name, int age, String activityStatus, String membershipType, String swimType, int membershipNumber) {
         ClubMember clubMember = new ClubMember(name, age, activityStatus, membershipType, swimType, membershipNumber);
         clubMembers.add(clubMember);
 
