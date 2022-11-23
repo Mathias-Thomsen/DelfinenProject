@@ -45,78 +45,104 @@ public class UserInterface {
 
     public void InitiateProgram(int menuChoice) {
         switch (menuChoice) {
-            case 1 -> createMember();
-            //case 2 ->
-            //case 3 ->
-            case 4 -> exitProgram();
+            case 1 -> clubManagerMenu();
+            //case 2 -> coachMenu();
+            //case 3 -> cashierMenu();
+            //case 4 -> exitProgram();
             default -> System.out.println("Invalid Input\n");
         }
     }
+    public void clubManagerMenu() {
+        int menuChoise = 0;
+        while (menuChoise != 9) {
+            System.out.println("""
+                    -------------------------
+                    Club manager menu:
+                    -------------------------
+                    1. Create
+                    2. Coach
+                    3. Cashier
+                    4. Exit program
+                    """);
 
-    public void createMember() {
-        System.out.println("--------------------------------------------------------");
-        System.out.println("Input new member name: ");
-        String nameinput = scanner.nextLine();
-        while (nameinput.isEmpty() || nameinput.equals(" ")) {
-            System.out.print("Invalid input try again:");
-            nameinput = scanner.nextLine();
+            do {
+                String valg = scanner.nextLine().trim();
+                try {
+                    menuChoise = Integer.parseInt(valg);
+                    userChoiceFalse = true;
+                } catch (NumberFormatException e) {
+                    System.out.print("There has been a error enter a valid number: ");
+                    scanner.nextLine();
+                }
+
+            } while (!userChoiceFalse);
         }
-        System.out.println("--------------------------------------------------------");
-        System.out.print("Input new member age: ");
-
-        int ageInput = 0;
-        do {
-            try {
-                String ageInputString = scanner.nextLine();
-                ageInput = Integer.parseInt(ageInputString);
-                userChoiceFalse = true;
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid input try again:");
-            }
-        }
-        while (!userChoiceFalse);
-
-        boolean activityStatus = false;
-        String activity;
-        do {
-            System.out.println("--------------------------------------------------------");
-            System.out.print("Input new member activity status (passive/active): ");
-
-            activity = scanner.nextLine().trim().toLowerCase();
-            if (activity.equals("active")||activity.equals("a")) {
-                activityStatus = true;
-            } else if (activity.equals("passive")||activity.equals("p")) {
-                activityStatus = false;
-            } else {
-                System.out.println("Invalid input");
-                System.out.println("please enter active or passive: ");
-            }
-        } while (activity.isEmpty());
-
-        System.out.println("--------------------------------------------------------");
-        System.out.print("Input new member activity status (junior/senior): ");
-        String membership = scanner.nextLine().trim().toLowerCase();
-
-        while (membership.isEmpty() || membership.equals(" ")) {
-            System.out.print("Invalid input try again:");
-            membership = scanner.nextLine();
-        }
-
-        System.out.println("--------------------------------------------------------");
-        System.out.print("Input new member activity status (Exerciser/competition): ");
-        String swim = scanner.nextLine().trim().toLowerCase();
-
-        while (swim.isEmpty() || swim.equals(" ")) {
-            System.out.print("Invalid input try again:");
-            swim = scanner.nextLine();
-        }
-
-        controller.createClubMember(nameinput, ageInput, activityStatus, membership, swim, 0);
-
-        controller.saveData();
     }
 
-        public void exitProgram() {
+        public void createMember() {
+            System.out.println("--------------------------------------------------------");
+            System.out.println("Input new member name: ");
+            String nameinput = scanner.nextLine();
+            while (nameinput.isEmpty() || nameinput.equals(" ")) {
+                System.out.print("Invalid input try again:");
+                nameinput = scanner.nextLine();
+            }
+            System.out.println("--------------------------------------------------------");
+            System.out.print("Input new member age: ");
+
+            int ageInput = 0;
+            do {
+                try {
+                    String ageInputString = scanner.nextLine();
+                    ageInput = Integer.parseInt(ageInputString);
+                    userChoiceFalse = true;
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input try again:");
+                }
+            }
+            while (!userChoiceFalse);
+
+            boolean activityStatus = false;
+            String activity;
+            do {
+                System.out.println("--------------------------------------------------------");
+                System.out.print("Input new member activity status (passive/active): ");
+
+                activity = scanner.nextLine().trim().toLowerCase();
+                if (activity.equals("active") || activity.equals("a")) {
+                    activityStatus = true;
+                } else if (activity.equals("passive") || activity.equals("p")) {
+                    activityStatus = false;
+                } else {
+                    System.out.println("Invalid input");
+                    System.out.println("please enter active or passive: ");
+                }
+            } while (activity.isEmpty());
+
+            System.out.println("--------------------------------------------------------");
+            System.out.print("Input new member activity status (junior/senior): ");
+            String membership = scanner.nextLine().trim().toLowerCase();
+
+            while (membership.isEmpty() || membership.equals(" ")) {
+                System.out.print("Invalid input try again:");
+                membership = scanner.nextLine();
+            }
+
+            System.out.println("--------------------------------------------------------");
+            System.out.print("Input new member activity status (Exerciser/competition): ");
+            String swim = scanner.nextLine().trim().toLowerCase();
+
+            while (swim.isEmpty() || swim.equals(" ")) {
+                System.out.print("Invalid input try again:");
+                swim = scanner.nextLine();
+            }
+
+            controller.createClubMember(nameinput, ageInput, activityStatus, membership, swim, 0);
+
+            controller.saveData();
+        }
+
+        public void exitProgram () {
             try {
                 System.out.print("Exiting Program");
                 TimeUnit.SECONDS.sleep(1);
@@ -134,5 +160,4 @@ public class UserInterface {
 
         }
 
-
-}
+    }
