@@ -148,10 +148,23 @@ public class UserInterface {
             swim = scanner.nextLine();
         }
 
+        int memberNumber = 0;
+        memberNumber = controller.getSizeOfDatabase();
+        String finalMemberNumber = "";
+
+
+        if (juniorOrSenior.equals("senior"))  {
+            finalMemberNumber = "S" + memberNumber;
+        } else {
+            finalMemberNumber = "J" + memberNumber;
+        }
+
+
+
 
 
         //Create member
-        controller.createClubMember(nameInput, ageInput, activity, juniorOrSenior, swim, 0);
+        controller.createClubMember(finalMemberNumber, nameInput, ageInput, activity, juniorOrSenior, swim);
 
         controller.saveData(); //save to the file every time we make a new member.
     }
@@ -159,12 +172,12 @@ public class UserInterface {
     public void showMenmbers() {
         for (ClubMember controller : controller.getMembers()) {
             System.out.println("------------------\n"
-                    + "Superheltenavn:... " + controller.getName() + "\n"
-                    + "Superkraft:....... " + controller.getAge() + "\n"
-                    + "Virkelige navn:... " + controller.isActivityStatus() + "\n"
-                    + "Oprindelsesår:.... " + controller.isSwimType() + "\n"
-                    + "Er menneske:...... " + controller.getMembershipType() + "\n"
-                    + "Styrke:........... " + controller.getMembershipNumber());
+                    + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
+                    + "Name:...................... " + controller.getName() + "\n"
+                    + "Age:....................... " + controller.getAge() + "\n"
+                    + "Active Status:............. " + controller.isActivityStatus() + "\n"
+                    + "Junior or senior:.......... " + controller.isSwimType() + "\n"
+                    + "Exerciser or competition:.. " + controller.getMembershipType());
         }
     }
 

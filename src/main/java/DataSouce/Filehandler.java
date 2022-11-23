@@ -13,6 +13,8 @@ public class Filehandler {
         PrintStream output = new PrintStream(new File("data/clubmembersData.csv"));
 
         for (ClubMember member : clubMembers) {
+            output.print(member.getMembershipNumber());
+            output.print(";");
             output.print(member.getName());
             output.print(";");
             output.print(member.getAge());
@@ -22,8 +24,6 @@ public class Filehandler {
             output.print(member.getMembershipType());
             output.print(";");
             output.print(member.isSwimType());
-            output.print(";");
-            output.print(member.getMembershipNumber());
             output.println();
 
 
@@ -45,35 +45,19 @@ public class Filehandler {
             String[] parts = line.split(";");
 
             ClubMember loadClubmemberData = new ClubMember();
-            loadClubmemberData.setName(parts[0]);
-            loadClubmemberData.setAge(parts[1]);
-            loadClubmemberData.setActivityStatus(parts[2]);
-            loadClubmemberData.setMembershipType(parts[3]);
-            loadClubmemberData.setSwimType(parts[4]);
-            loadClubmemberData.setMembershipNumber(parts[5]);
+            loadClubmemberData.setMembershipNumber(parts[0]);
+            loadClubmemberData.setName(parts[1]);
+            loadClubmemberData.setAge(parts[2]);
+            loadClubmemberData.setActivityStatus(parts[3]);
+            loadClubmemberData.setMembershipType(parts[4]);
+            loadClubmemberData.setSwimType(parts[5]);
+
             return loadClubmemberData;
 
         } catch (NumberFormatException e ){
             System.out.println("Kan ikke loade data");
             return null;
         }
-    }
-
-    public int numberOfMembers() throws FileNotFoundException {
-
-        Scanner reader = new Scanner(new File("data/clubmembersData.csv"));
-        int memberShipNumber = 0;
-
-        while (reader.hasNextLine()) {
-            memberShipNumber++;
-        }
-        return memberShipNumber;
-
-
-
-
-
-
     }
 
 }

@@ -6,18 +6,19 @@ public class ClubMember {
     private String activityStatus;
     private String membershipType;
     private String swimType;
-    private int membershipNumber;
+    private String membershipNumber;
 
     public ClubMember(){
 
     }
-    public ClubMember(String name, int age, String activityStatus, String membershipType, String swimType, int membershipNumber) {
+    public ClubMember(String membershipNumber, String name, int age, String activityStatus, String membershipType, String swimType) {
+        this.membershipNumber = membershipNumber;
         this.name = name;
         this.age = age;
         this.activityStatus = activityStatus;
         this.membershipType = membershipType;
         this.swimType = swimType;
-        this.membershipNumber = membershipNumber;
+
     }
 
     public String getName() {
@@ -60,12 +61,12 @@ public class ClubMember {
         this.swimType = swimType;
     }
 
-    public int getMembershipNumber() {
+    public String getMembershipNumber() {
         return membershipNumber;
     }
 
     public void setMembershipNumber(String membershipNumber) {
-        this.membershipNumber = Integer.parseInt(membershipNumber);
+        this.membershipNumber = membershipNumber;
     }
 
 
