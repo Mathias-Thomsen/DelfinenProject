@@ -1,9 +1,12 @@
 package Controller;
 
+import ClubMember.ClubMember;
 import DataSouce.Database;
 import org.junit.jupiter.api.Test;
 
 import javax.xml.crypto.Data;
+
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -52,8 +55,29 @@ class ControllerTest {
     @Test
     void deleteMember() {
         //Arrange
+        Database database = new Database();
+        Controller controller = new Controller();
+        controller.createClubMember("SN132524", "Anton", 25, "false", "junior", "exerciser");
+        String userDeleteMember = "Anton";
+        ArrayList<ClubMember> searchDeleteMember = new ArrayList<>();
         //Act
+        int index = 1;
+
+        for (ClubMember deleteMember : controller.getClubMembers()){
+            String nameInput = deleteMember.getName().toLowerCase();
+            if (nameInput.contains(userDeleteMember.toLowerCase())){
+                searchDeleteMember.add(deleteMember);
+            }
+        }
+        String userDeleteNumberString = "1";
+        int userDeleteNumberInt = Integer.parseInt(userDeleteNumberString);
+        ClubMember deleteMember = searchDeleteMember.get(userDeleteNumberInt - 1);
+        controller.deleteMember(deleteMember);
+
+        int actual = controller.getClubMembers().size();
+        int expected = 0;
         //Assert
+        assertEquals(actual, expected);
     }
 
     @Test
