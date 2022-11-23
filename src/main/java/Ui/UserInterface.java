@@ -26,10 +26,10 @@ public class UserInterface {
                     1. Club manager
                     2. Coach
                     3. Cashier
-                    4. Exit program
+                    9. Exit program
                     """);
 
-            do {
+            do{
                 String valg = scanner.nextLine().trim();
                 try {
                     menuChoise = Integer.parseInt(valg);
@@ -41,20 +41,17 @@ public class UserInterface {
 
             } while (!userChoiceFalse);
 
-            InitiateProgram(menuChoise);
+            switch (menuChoise) {
+                case 1 -> clubManagerMenu();
+                //case 2 -> coachMenu();
+                //case 3 -> cashierMenu();
+                case 9 -> exitProgram();
+                default -> System.out.println("Invalid Input\n");
+            }
         }
 
     }
 
-    public void InitiateProgram(int menuChoice) {
-        switch (menuChoice) {
-            case 1 -> clubManagerMenu();
-            //case 2 -> coachMenu();
-            //case 3 -> cashierMenu();
-            //case 4 -> exitProgram();
-            default -> System.out.println("Invalid Input\n");
-        }
-    }
     public void clubManagerMenu() {
         int menuChoise = 0;
         while (menuChoise != 9) {
@@ -62,10 +59,10 @@ public class UserInterface {
                     -------------------------
                     Club manager menu:
                     -------------------------
-                    1. Create
-                    2. Coach
-                    3. Cashier
-                    4. Exit program
+                    1. Create new member
+                    2. delete current member
+                    3. edit member info
+                    9. go back to sign in
                     """);
 
             do {
@@ -79,6 +76,15 @@ public class UserInterface {
                 }
 
             } while (!userChoiceFalse);
+
+
+        }
+        switch (menuChoise) {
+            case 1 -> createMember();
+            case 2 -> deleteMember();
+            //case 3 ->
+            case 9 -> menu();
+            default -> System.out.println("Invalid Input\n");
         }
     }
 
