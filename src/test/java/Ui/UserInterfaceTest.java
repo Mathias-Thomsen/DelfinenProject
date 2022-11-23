@@ -26,8 +26,8 @@ class UserInterfaceTest {
         Database database = new Database();
         Controller controller = new Controller();
         //Act
-        controller.createClubMember("Christian", 22, true, "senior", "exerciser", 132523);
-        controller.createClubMember("Anton", 25, false, "junior", "exerciser", 132524);
+        controller.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
+        controller.createClubMember("SN132524", "Anton", 25, "false", "junior", "exerciser");
         controller.getClubMembers();
         int actual = controller.getClubMembers().size();
         int expected = 2;
@@ -41,17 +41,17 @@ class UserInterfaceTest {
         Database database = new Database();
         Controller controller = new Controller();
         //Act
-        controller.createClubMember("Christian", 22, true, "senior", "exerciser", 132523);
-        controller.createClubMember("Anton", 25, false, "junior", "exerciser", 132524);
+        controller.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
+        controller.createClubMember("SN132524", "Anton", 25, "false", "junior", "exerciser");
 
         for (ClubMember controllerr : controller.getMembers()) {
             System.out.println("------------------\n"
-                    + "Name:................. " + controllerr.getName() + "\n"
-                    + "Age:.................. " + controllerr.getAge() + "\n"
-                    + "activityStatus:....... " + controllerr.isActivityStatus() + "\n"
-                    + "membershipType:....... " + controllerr.isSwimType() + "\n"
-                    + "swimType:............. " + controllerr.getMembershipType() + "\n"
-                    + "membershipNumber:..... " + controllerr.getMembershipNumber());
+                    + "Membership Number:......... " + controllerr.getMembershipNumber() + "\n"
+                    + "Name:...................... " + controllerr.getName() + "\n"
+                    + "Age:....................... " + controllerr.getAge() + "\n"
+                    + "Active Status:............. " + controllerr.isActivityStatus() + "\n"
+                    + "Junior or senior:.......... " + controllerr.isSwimType() + "\n"
+                    + "Exerciser or competition:.. " + controllerr.getMembershipType());
         }
 
         int actual = controller.getClubMembers().size();
@@ -70,7 +70,7 @@ class UserInterfaceTest {
         ArrayList<ClubMember> searchEditResult = new ArrayList<>();
 
         //Act
-        controller.createClubMember("Anton", 25, false, "junior", "exerciser", 132524);
+        controller.createClubMember("SN132524", "Anton", 25, "false", "junior", "exerciser");
         String userEditMember = "Anton";
 
         int index = 1;
@@ -104,7 +104,7 @@ class UserInterfaceTest {
         //Arrange
         Database database = new Database();
         Controller controller = new Controller();
-        controller.createClubMember("Anton", 25, false, "junior", "exerciser", 132524);
+        controller.createClubMember("SN132524", "Anton", 25, "false", "junior", "exerciser");
         String userDeleteMember = "Anton";
         ArrayList<ClubMember> searchDeleteMember = new ArrayList<>();
         //Act
