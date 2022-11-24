@@ -60,7 +60,7 @@ class ControllerTest {
         //Arrange
         Database database = new Database();
         Controller controller = new Controller();
-        controller.createClubMember("SN132524", "Anton", 25, "false", "junior", "exerciser");
+        database.createClubMember("Christian", 22, "senior", "exerciser");
         String userDeleteMember = "Anton";
         ArrayList<ClubMember> searchDeleteMember = new ArrayList<>();
         //Act
@@ -88,7 +88,7 @@ class ControllerTest {
         //Arrange
         Filehandler filehandler = new Filehandler();
         Database database = new Database();
-        database.createClubMember("SN132524", "Anton", 25, "false", "junior", "exerciser");
+        database.createClubMember("Christian", 22, "senior", "exerciser");
         //Act
         filehandler.saveData(database.getClubMembers());
         System.out.println(database.getClubMembers());
@@ -104,7 +104,7 @@ class ControllerTest {
         //Arrange
         Database database = new Database();
         Filehandler filehandler = new Filehandler();
-        database.createClubMember("SN132524", "Anton", 25, "false", "junior", "exerciser");
+        database.createClubMember("Christian", 22, "senior", "exerciser");
         //Act
         System.out.println(database.getClubMembers());
         database.clearData();
