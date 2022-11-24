@@ -9,8 +9,8 @@ public class Database {
     public ArrayList<ClubMember> clubMembers = new ArrayList<>();
 
 
-    public void createClubMember(String membershipNumber, String name, int age, String activityStatus, String membershipType, String swimType) {
-        ClubMember clubMember = new ClubMember(membershipNumber,name, age, activityStatus, membershipType, swimType);
+    public void createClubMember(String name, int age, String activityStatus,  String swimType) {
+        ClubMember clubMember = new ClubMember(name, age, activityStatus, swimType);
         clubMembers.add(clubMember);
 
         change = true; // To the save method, so we only save to the txt file if a change has been made.
@@ -43,6 +43,38 @@ public class Database {
         }return searchResult;
 
     }
+
+    public int getSizeOfDatabase(int number) {
+        return number;
+    }
+
+
+    public void juniorOrSenior(){
+        for (ClubMember member : clubMembers) {
+            if (member.getAge() >= 18) {
+                member.setMembershipType("Senior");
+            } else if (member.getAge() < 18) {
+                member.setMembershipType("Junior");
+            }
+        }
+    }
+
+    public void setClubMemberNumber() {
+        int number = 1;
+        for (ClubMember member : clubMembers) {
+            if(member.getMembershipType() == "Senior") {
+                member.setMembershipNumber("S" + number++);
+            }else {
+                member.setMembershipNumber("J" + number++);
+            }
+        }
+    }
+
+
+
+
+
+
 
 
 }
