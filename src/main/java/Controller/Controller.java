@@ -11,8 +11,8 @@ public class Controller {
     Database database = new Database();
     Filehandler filehandler = new Filehandler();
     ClubMember clubMember = new ClubMember();
-    public void createClubMember(String membershipNumber, String name, int age, String activityStatus, String membershipType, String swimType){
-        database.createClubMember(membershipNumber, name, age, activityStatus, membershipType, swimType);
+    public void createClubMember(String name, int age, String activityStatus, String swimType){
+        database.createClubMember( name, age, activityStatus, swimType);
     }
 
     public ArrayList<ClubMember> getClubMembers(){
@@ -43,17 +43,20 @@ public class Controller {
         return database.getClubMembers();
     }
 
-    public int getSizeOfDatabase() {
-        int sizeOfDatabase = database.getClubMembers().size();
-        return sizeOfDatabase + 1;
-
-    }
 
 
     public ArrayList<ClubMember> findMember(String searchTerm) {
         return database.findMember(searchTerm);
     }
 
+
+    public void junoirOrsenoir() {
+        database.juniorOrSenior();
+    }
+
+    public void setClubMemberNumber(){
+        database.setClubMemberNumber();
+    }
 
 
 }

@@ -26,8 +26,8 @@ class UserInterfaceTest {
         Database database = new Database();
         Controller controller = new Controller();
         //Act
-        controller.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
-        controller.createClubMember("SN132524", "Anton", 25, "false", "junior", "exerciser");
+        controller.createClubMember("Christian", 22, "j", "exerciser");
+        controller.createClubMember( "Anton", 25, "false",  "exerciser");
         controller.getClubMembers();
         int actual = controller.getClubMembers().size();
         int expected = 2;
@@ -41,8 +41,8 @@ class UserInterfaceTest {
         Database database = new Database();
         Controller controller = new Controller();
         //Act
-        controller.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
-        controller.createClubMember("SN132524", "Anton", 25, "false", "junior", "exerciser");
+        controller.createClubMember( "Christian", 22, "j", "exerciser");
+        controller.createClubMember( "Anton", 25, "false", "exerciser");
 
         for (ClubMember controllerr : controller.getMembers()) {
             System.out.println("------------------\n"
@@ -70,7 +70,7 @@ class UserInterfaceTest {
         ArrayList<ClubMember> searchEditResult = new ArrayList<>();
 
         //Act
-        controller.createClubMember("SN132524", "Anton", 25, "false", "junior", "exerciser");
+        controller.createClubMember( "Anton", 25, "false", "exerciser");
         String userEditMember = "Anton";
 
         int index = 1;
@@ -104,7 +104,7 @@ class UserInterfaceTest {
         //Arrange
         Database database = new Database();
         Controller controller = new Controller();
-        controller.createClubMember("SN132524", "Anton", 25, "false", "junior", "exerciser");
+        controller.createClubMember("Anton", 25, "false", "exerciser");
         String userDeleteMember = "Anton";
         ArrayList<ClubMember> searchDeleteMember = new ArrayList<>();
         //Act

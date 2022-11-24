@@ -123,22 +123,7 @@ public class UserInterface {
             activity = scanner.nextLine();
         }
 
-
-        //Junior or senior
-        System.out.println("--------------------------------------------------------");
-        String juniorOrSenior = "";
-
-        if (ageInput < 18) {
-            juniorOrSenior = "Junior";
-        } else {
-            juniorOrSenior = "Senior";
-        }
-        System.out.println("The age of the member is " + ageInput + " so the person's membership is a " + juniorOrSenior + " membership");
-
-
-
         //Exerciser/competition
-
         System.out.println("--------------------------------------------------------");
         System.out.print("Input new member activity status (Exerciser/competition): ");
         String swim = scanner.nextLine().trim().toLowerCase();
@@ -148,24 +133,10 @@ public class UserInterface {
             swim = scanner.nextLine();
         }
 
-        int memberNumber = 0;
-        memberNumber = controller.getSizeOfDatabase();
-        String finalMemberNumber = "";
-
-
-        if (juniorOrSenior.equals("Senior"))  {
-            finalMemberNumber = "S" + memberNumber;
-        } else {
-            finalMemberNumber = "J" + memberNumber;
-        }
-
-
-
-
-
         //Create member
-        controller.createClubMember(finalMemberNumber, nameInput, ageInput, activity, juniorOrSenior, swim);
-
+        controller.createClubMember(nameInput, ageInput, activity, swim);
+        controller.junoirOrsenoir();
+        controller.setClubMemberNumber();
         controller.saveData(); //save to the file every time we make a new member.
     }
 
@@ -307,6 +278,10 @@ public class UserInterface {
                 System.out.println("Skriv venligst din rettelse med (j/n) eller ENTER hvis du ikke vil rette!");
             }
         } while (!userChoiceFalse);
+
+        controller.junoirOrsenoir();
+        controller.saveData();
+
 
     }
     public void deleteMember(){
