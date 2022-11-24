@@ -2,10 +2,12 @@ package Controller;
 
 import ClubMember.ClubMember;
 import DataSouce.Database;
+import DataSouce.Filehandler;
 import org.junit.jupiter.api.Test;
 
 import javax.xml.crypto.Data;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -81,17 +83,37 @@ class ControllerTest {
     }
 
     @Test
-    void saveData() {
+    void saveData() throws FileNotFoundException {
         //Arrange
+        Filehandler filehandler = new Filehandler();
+        Database database = new Database();
+        database.createClubMember("SN132524", "Anton", 25, "false", "junior", "exerciser");
         //Act
+        filehandler.saveData(database.getClubMembers());
+        System.out.println(database.getClubMembers());
         //Assert
+        int actual = database.getClubMembers().size();
+        int expected = 1;
+
+        assertEquals(actual, expected);
     }
 
     @Test
-    void loadData() {
+    void loadData() throws FileNotFoundException {
         //Arrange
+        Database database = new Database();
+        Filehandler filehandler = new Filehandler();
+        database.createClubMember("SN132524", "Anton", 25, "false", "junior", "exerciser");
         //Act
+        System.out.println(database.getClubMembers());
+        database.clearData();
+        System.out.println(database.getClubMembers());
+        filehandler.loadData(database.getClubMembers());
+        System.out.println(database.getClubMembers());
         //Assert
+        int actual = database.getClubMembers().size();
+        int expected = 1;
+        assertEquals(actual, expected);
     }
 
     @Test
