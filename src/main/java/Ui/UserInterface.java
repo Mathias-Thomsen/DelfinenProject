@@ -3,8 +3,6 @@ package Ui;
 import ClubMember.ClubMember;
 import Controller.Controller;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -60,8 +58,9 @@ public class UserInterface {
                     -------------------------
                     1. Create new member
                     2. Show list of members
-                    3. edit member information
-                    4. Delete current member
+                    3. Search for members
+                    4. edit member information
+                    5. Delete current member
                     9. go back to sign in
                     """);
 
@@ -80,8 +79,9 @@ public class UserInterface {
         switch (menuChoise) {
             case 1 -> createMember();
             case 2 -> showMenmbers();
-            case 3 -> editMember();
-            case 4 -> deleteMember();
+            case 3 -> searchMember();
+            case 4 -> editMember();
+            case 5 -> deleteMember();
             case 9 -> menu();
             default -> System.out.println("Invalid Input\n");
         }
@@ -129,9 +129,9 @@ public class UserInterface {
         String juniorOrSenior = "";
 
         if (ageInput < 18) {
-            juniorOrSenior = "junior";
+            juniorOrSenior = "Junior";
         } else {
-            juniorOrSenior = "senior";
+            juniorOrSenior = "Senior";
         }
         System.out.println("The age of the member is " + ageInput + " so the person's membership is a " + juniorOrSenior + " membership");
 
@@ -153,7 +153,7 @@ public class UserInterface {
         String finalMemberNumber = "";
 
 
-        if (juniorOrSenior.equals("senior"))  {
+        if (juniorOrSenior.equals("Senior"))  {
             finalMemberNumber = "S" + memberNumber;
         } else {
             finalMemberNumber = "J" + memberNumber;
@@ -179,6 +179,26 @@ public class UserInterface {
                     + "Junior or senior:.......... " + controller.isSwimType() + "\n"
                     + "Exerciser or competition:.. " + controller.getMembershipType());
         }
+    }
+
+    public void searchMember() {
+        System.out.println("-----------------------------------------------------");
+        System.out.println("Type in the member you want to search for: ");
+
+        String searchTerm = scanner.nextLine().toLowerCase();
+        for (ClubMember controller : controller.findMember(searchTerm)) {
+            System.out.println("------------------\n"
+                    + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
+                    + "Name:...................... " + controller.getName() + "\n"
+                    + "Age:....................... " + controller.getAge() + "\n"
+                    + "Active Status:............. " + controller.isActivityStatus() + "\n"
+                    + "Junior or senior:.......... " + controller.isSwimType() + "\n"
+                    + "Exerciser or competition:.. " + controller.getMembershipType());
+        }
+        if (controller.findMember(searchTerm).isEmpty()) {
+            System.out.println("No result");
+        }
+
     }
 
     public void editMember() {
@@ -222,7 +242,7 @@ public class UserInterface {
             } catch (NumberFormatException var11) {
                 System.out.println("Skriv venligst din rettelse med tekst bogstaver eller ENTER hvis du ikke vil rette!");
             }
-        } while (userChoiceFalse);
+        } while (!userChoiceFalse);
 
         do {
             System.out.println("Member age: " + editMember.getAge());
@@ -238,7 +258,7 @@ public class UserInterface {
             } catch (NumberFormatException var10) {
                 System.out.println("Skriv venligst din rettelse med tekst bogstaver eller ENTER hvis du ikke vil rette!");
             }
-        } while (userChoiceFalse);
+        } while (!userChoiceFalse);
 
         do {
             System.out.println("Activity status " + editMember.isActivityStatus());
@@ -254,7 +274,7 @@ public class UserInterface {
             } catch (NumberFormatException var9) {
                 System.out.println("Skriv venligst din rettelse med tekst bogstaver eller ENTER hvis du ikke vil rette!");
             }
-        } while (userChoiceFalse);
+        } while (!userChoiceFalse);
 
         do {
             System.out.println("Membership type " + editMember.getMembershipType());
@@ -270,7 +290,7 @@ public class UserInterface {
             } catch (NumberFormatException var8) {
                 System.out.println("Skriv venligst din rettelse med tal eller ENTER hvis du ikke vil rette!");
             }
-        } while (userChoiceFalse);
+        } while (!userChoiceFalse);
 
         do {
             System.out.println("Membership number: " + editMember.getMembershipNumber());
@@ -286,7 +306,7 @@ public class UserInterface {
             } catch (NumberFormatException var7) {
                 System.out.println("Skriv venligst din rettelse med (j/n) eller ENTER hvis du ikke vil rette!");
             }
-        } while (userChoiceFalse);
+        } while (!userChoiceFalse);
 
     }
     public void deleteMember(){
