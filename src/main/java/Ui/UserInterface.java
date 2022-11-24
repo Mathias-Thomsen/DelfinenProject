@@ -113,10 +113,21 @@ public class UserInterface {
         //Activity status
         System.out.println("--------------------------------------------------------");
         System.out.println("Input new member activity status (active/passive): ");
-        String activity = scanner.nextLine();
-        while (activity.isEmpty() || activity.equals(" ")) {
-            System.out.print("Invalid input try again:");
-            activity = scanner.nextLine();
+        String activity;
+        boolean activeOrPassive;
+        while (true){
+            activity = scanner.nextLine().trim().toLowerCase();
+            if (activity.equals("active") || activity.equals("a")){
+                activeOrPassive = true;
+                activity = "Active";
+                break;
+            } else if (activity.equals("passive") || activity.equals("p")) {
+                activeOrPassive = true;
+                activity = "Passive";
+                break;
+            } else {
+                System.out.println("You have to type active/passive or (a/p)");
+            }
         }
 
         //Exerciser/competition
