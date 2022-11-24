@@ -20,6 +20,12 @@ public class ClubMember {
         this.swimType = swimType;
 
     }
+    public ClubMember(String name, int age, String activityStatus, String swimType) {
+        this.name = name;
+        this.age = age;
+        this.activityStatus = activityStatus;
+        this.swimType = swimType;
+    }
 
     public String getName() {
         return name;
@@ -66,6 +72,7 @@ public class ClubMember {
     }
 
     public void setMembershipNumber(String membershipNumber) {
+
         this.membershipNumber = membershipNumber;
     }
 
