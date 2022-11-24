@@ -34,5 +34,15 @@ public class Database {
 
     }
 
+    public ArrayList<ClubMember> findMember(String searchTerm){
+        ArrayList<ClubMember> searchResult = new ArrayList<>();
+        for (ClubMember member : clubMembers) {
+            if (member.getName().toLowerCase().contains(searchTerm)) {
+                searchResult.add(member);
+            }
+        }return searchResult;
+
+    }
+
 
 }

@@ -44,12 +44,17 @@ public class Controller {
     }
 
     public int getSizeOfDatabase() {
-
         int sizeOfDatabase = database.getClubMembers().size();
-
         return sizeOfDatabase + 1;
 
     }
+
+
+    public ArrayList<ClubMember> findMember(String searchTerm) {
+        return database.findMember(searchTerm);
+    }
+
+
 
 }
 
