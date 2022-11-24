@@ -14,20 +14,21 @@ class ControllerTest {
         //Arrange
         Database database = new Database();
         //Act
-        database.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
-        database.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
-        database.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
-        database.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
-        database.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
-        database.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
-        database.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
-        database.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
-        database.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
-        database.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
-        database.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
-        database.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
-        database.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
-        database.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
+        database.createClubMember("Christian", 22, "senior", "exerciser");
+        database.createClubMember("Christian", 22, "senior", "exerciser");
+        database.createClubMember("Christian", 22, "senior", "exerciser");
+        database.createClubMember("Christian", 22, "senior", "exerciser");
+        database.createClubMember("Christian", 22, "senior", "exerciser");
+        database.createClubMember("Christian", 22, "senior", "exerciser");
+        database.createClubMember("Christian", 22, "senior", "exerciser");
+        database.createClubMember("Christian", 22, "senior", "exerciser");
+        database.createClubMember("Christian", 22, "senior", "exerciser");
+        database.createClubMember("Christian", 22, "senior", "exerciser");
+        database.createClubMember("Christian", 22, "senior", "exerciser");
+        database.createClubMember("Christian", 22, "senior", "exerciser");
+        database.createClubMember("Christian", 22, "senior", "exerciser");
+        database.createClubMember("Christian", 22, "senior", "exerciser");
+
 
 
         int actual = database.getClubMembers().size();
@@ -40,7 +41,7 @@ class ControllerTest {
     void getClubMembers() {
         //Arrange
         Database database = new Database();
-        database.createClubMember("JN123523", "Christian", 22, "j", "senior", "exerciser");
+        database.createClubMember("Christian", 22, "senior", "exerciser");
         //Act
         database.getClubMembers();
         int actual = database.getClubMembers().size();
