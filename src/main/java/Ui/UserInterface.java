@@ -27,7 +27,7 @@ public class UserInterface {
                     9. Exit program
                     """);
 
-            do{
+            do {
                 String valg = scanner.nextLine().trim();
                 try {
                     menuChoise = Integer.parseInt(valg);
@@ -52,29 +52,29 @@ public class UserInterface {
 
     public void clubManagerMenu() {
         int menuChoise = 0;
-            System.out.println("""
-                    -------------------------
-                    Club manager menu:
-                    -------------------------
-                    1. Create new member
-                    2. Show list of members
-                    3. Search for members
-                    4. edit member information
-                    5. Delete current member
-                    9. go back to sign in
-                    """);
+        System.out.println("""
+                -------------------------
+                Club manager menu:
+                -------------------------
+                1. Create new member
+                2. Show list of members
+                3. Search for members
+                4. edit member information
+                5. Delete current member
+                9. go back to sign in
+                """);
 
-            do{
-                String valg = scanner.nextLine().trim();
-                try {
-                    menuChoise = Integer.parseInt(valg);
-                    userChoiceFalse = true;
-                } catch (NumberFormatException e) {
-                    System.out.print("There has been a error enter a valid number: ");
-                    scanner.nextLine();
-                }
+        do {
+            String valg = scanner.nextLine().trim();
+            try {
+                menuChoise = Integer.parseInt(valg);
+                userChoiceFalse = true;
+            } catch (NumberFormatException e) {
+                System.out.print("There has been a error enter a valid number: ");
+                scanner.nextLine();
+            }
 
-            } while (!userChoiceFalse);
+        } while (!userChoiceFalse);
 
         switch (menuChoise) {
             case 1 -> createMember();
@@ -103,7 +103,7 @@ public class UserInterface {
         System.out.print("Input new member age: ");
 
 
-        while (!scanner.hasNextInt()){
+        while (!scanner.hasNextInt()) {
             System.out.println("Member age can only be numbers, try again");
             scanner.nextLine();
         }
@@ -115,9 +115,9 @@ public class UserInterface {
         System.out.println("Input new member activity status (active/passive): ");
         String activity;
         boolean activeOrPassive;
-        while (true){
+        while (true) {
             activity = scanner.nextLine().trim().toLowerCase();
-            if (activity.equals("active") || activity.equals("a")){
+            if (activity.equals("active") || activity.equals("a")) {
                 activeOrPassive = true;
                 activity = "Active";
                 break;
@@ -132,12 +132,23 @@ public class UserInterface {
 
         //Exerciser/competition
         System.out.println("--------------------------------------------------------");
-        System.out.print("Input new member activity status (Exerciser/competition): ");
-        String swim = scanner.nextLine().trim().toLowerCase();
+        System.out.println("Input new member activity status (Exerciser/competition): ");
+        String swim;
+        boolean exerciserOrCompetition;
 
-        while (swim.isEmpty() || swim.equals(" ")) {
-            System.out.print("Invalid input try again:");
-            swim = scanner.nextLine();
+        while (true) {
+            swim = scanner.nextLine().trim().toLowerCase();
+            if (swim.equals("exerciser") || swim.equals("e")) {
+                exerciserOrCompetition = true;
+                swim = "Exerciser";
+                break;
+            } else if (swim.equals("competition") || swim.equals("c")) {
+                exerciserOrCompetition = true;
+                swim = "Competition";
+                break;
+            } else {
+                System.out.println("You have to type exerciser/competition or (e/c)");
+            }
         }
 
         //Create member
@@ -291,7 +302,8 @@ public class UserInterface {
 
 
     }
-    public void deleteMember(){
+
+    public void deleteMember() {
         System.out.println("--------------------------------------------------------");
         System.out.println("Input the name of a member you want to delete: ");
         String userDeleteMember = scanner.nextLine().trim().toLowerCase();
@@ -299,9 +311,9 @@ public class UserInterface {
 
         int index = 1;
 
-        for (ClubMember deleteMember : controller.getClubMembers()){
+        for (ClubMember deleteMember : controller.getClubMembers()) {
             nameInput = deleteMember.getName().toLowerCase();
-            if (nameInput.contains(userDeleteMember.toLowerCase())){
+            if (nameInput.contains(userDeleteMember.toLowerCase())) {
                 searchDeleteMember.add(deleteMember);
                 System.out.println(index++ + ": " + deleteMember.getName());
             }
@@ -316,6 +328,7 @@ public class UserInterface {
 
         controller.saveData();
     }
+
     public void exitProgram() {
         try {
             System.out.print("Exiting Program");
