@@ -102,17 +102,13 @@ public class UserInterface {
         System.out.println("--------------------------------------------------------");
         System.out.print("Input new member age: ");
 
-        int ageInput = 0;
-        do {
-            try {
-                String ageInputString = scanner.nextLine();
-                ageInput = Integer.parseInt(ageInputString);
-                userChoiceFalse = true;
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid input try again:");
-            }
-        } while (!userChoiceFalse);
 
+        while (!scanner.hasNextInt()){
+            System.out.println("Member age can only be numbers, try again");
+            scanner.nextLine();
+        }
+        int ageInput = scanner.nextInt();
+        scanner.nextLine();
 
         //Activity status
         System.out.println("--------------------------------------------------------");
