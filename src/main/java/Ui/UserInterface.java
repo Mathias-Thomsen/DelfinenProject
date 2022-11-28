@@ -3,6 +3,7 @@ package Ui;
 import ClubMember.ClubMember;
 import Controller.Controller;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -100,15 +101,34 @@ public class UserInterface {
 
         //Age
         System.out.println("--------------------------------------------------------");
-        System.out.print("Input new member age: ");
-
-
+        System.out.println("Input new member birthday: ");
+        System.out.print("Year (fx 2000): ");
         while (!scanner.hasNextInt()) {
             System.out.println("Member age can only be numbers, try again");
             scanner.nextLine();
         }
-        int ageInput = scanner.nextInt();
+        int getBirthYear = scanner.nextInt();
         scanner.nextLine();
+        System.out.print("Month (fx 9): ");
+        while (!scanner.hasNextInt()) {
+            System.out.println("Member age can only be numbers, try again");
+            scanner.nextLine();
+        }
+        int getBirthMonth = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Day (fx 18):");
+        while (!scanner.hasNextInt()) {
+            System.out.println("Member age can only be numbers, try again");
+            scanner.nextLine();
+        }
+        int getBirthDay = scanner.nextInt();
+        scanner.nextLine();
+
+        LocalDate currentDate = LocalDate.now();
+        LocalDate birthDate = LocalDate.of(getBirthYear, getBirthMonth, getBirthDay);
+
+        int ageInput = controller.calculateAge(birthDate, currentDate);
+
 
         //Activity status
         System.out.println("--------------------------------------------------------");

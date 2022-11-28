@@ -4,6 +4,8 @@ import ClubMember.ClubMember;
 import DataSource.Database;
 import DataSource.Filehandler;
 import java.io.FileNotFoundException;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 
 public class Controller {
@@ -55,6 +57,16 @@ public class Controller {
     public void setClubMemberNumber(){
         database.setClubMemberNumber();
     }
+
+
+    public int calculateAge(LocalDate birthDate, LocalDate currentDate) {
+        if ((birthDate != null) && (currentDate != null)) {
+            return Period.between(birthDate, currentDate).getYears();
+        } else {
+            return 0;
+            }
+        }
+
 
 
 }

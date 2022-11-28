@@ -6,6 +6,7 @@ import DataSource.Filehandler;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -120,5 +121,29 @@ class ControllerTest {
         //Arrange
         //Act
         //Assert
+    }
+
+    @Test
+    void findMember() {
+    }
+
+    @Test
+    void junoirOrsenoir() {
+    }
+
+    @Test
+    void setClubMemberNumber() {
+    }
+
+    @Test
+    void calculateAge() {
+        // setup
+        Controller controller = new Controller();
+        LocalDate birthDate = LocalDate.of(2002, 06, 18);
+        // exercise
+        int actual = controller.calculateAge(birthDate, LocalDate.now());
+        // assert
+        System.out.println(actual);
+        assertEquals(20, actual);
     }
 }
