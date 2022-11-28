@@ -59,9 +59,9 @@ public class UserInterface {
                 1. Create new member
                 2. Show list of members
                 3. Search for members
-                4. edit member information
+                4. Edit member information
                 5. Delete current member
-                9. go back to sign in
+                9. Go back to sign in
                 """);
 
         do {
@@ -208,15 +208,15 @@ public class UserInterface {
             }
         }
 
-        System.out.print("Indtast nummeret på den superhero du vil redigere: ");
+        System.out.print("Type in that member you want to edit: ");
         String userEditNumberString = scanner.nextLine();
         int userEditNumberInteger = Integer.parseInt(userEditNumberString);
 
 
         ClubMember editMember = searchEditResult.get(userEditNumberInteger - 1);
-        System.out.println("Du har valgt at redigere: " + editMember.getName());
+        System.out.println("You have selected: " + editMember.getName());
 
-        System.out.println("Ønsker du ikke redigere tryk ENTER for at fortsætte!");
+        System.out.println("If you don't want to edit press ENTER!");
 
 
         do {
@@ -230,7 +230,7 @@ public class UserInterface {
                 }
                 userChoiceFalse = true;
             } catch (NumberFormatException var11) {
-                System.out.println("Skriv venligst din rettelse med tekst bogstaver eller ENTER hvis du ikke vil rette!");
+                System.out.println("Type a name with letters. If you don't want to edit press ENTER!");
             }
         } while (!userChoiceFalse);
 
@@ -246,7 +246,7 @@ public class UserInterface {
 
                 userChoiceFalse = true;
             } catch (NumberFormatException var10) {
-                System.out.println("Skriv venligst din rettelse med tekst bogstaver eller ENTER hvis du ikke vil rette!");
+                System.out.println("Type a age with numbers. If you don't want to edit press ENTER!");
             }
         } while (!userChoiceFalse);
 
@@ -275,7 +275,7 @@ public class UserInterface {
                 }
                 userChoiceFalse = true;
             } catch (NumberFormatException var9) {
-                System.out.println("Skriv venligst din rettelse med tekst bogstaver eller ENTER hvis du ikke vil rette!");
+                System.out.println("Type with letters. If you don't want to edit press ENTER!");
             }
         } while (!userChoiceFalse);
 
@@ -291,23 +291,7 @@ public class UserInterface {
 
                 userChoiceFalse = true;
             } catch (NumberFormatException var8) {
-                System.out.println("Skriv venligst din rettelse med tal eller ENTER hvis du ikke vil rette!");
-            }
-        } while (!userChoiceFalse);
-
-        do {
-            System.out.println("Membership number: " + editMember.getMembershipNumber());
-
-            try {
-                System.out.print("Type your update here: ");
-                String newMembershipNumber = scanner.nextLine().trim();
-                if (!newMembershipNumber.isEmpty()) {
-                    editMember.setMembershipNumber(newMembershipNumber);
-                }
-
-                userChoiceFalse = true;
-            } catch (NumberFormatException var7) {
-                System.out.println("Skriv venligst din rettelse med (j/n) eller ENTER hvis du ikke vil rette!");
+                System.out.println("Type af name with letters. If you don't want to edit press ENTER!");
             }
         } while (!userChoiceFalse);
 
