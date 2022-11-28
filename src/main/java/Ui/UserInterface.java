@@ -165,7 +165,7 @@ public class UserInterface {
                     + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
                     + "Name:...................... " + controller.getName() + "\n"
                     + "Age:....................... " + controller.getAge() + "\n"
-                    + "Active Status:............. " + controller.isActivityStatus() + "\n"
+                    + "Active Status:............. " + (controller.isActivityStatus() ? "Active" : "Passive" )+ "\n"
                     + "Junior or senior:.......... " + controller.getMembershipType() + "\n"
                     + "Exerciser or competition:.. " + controller.isSwimType());
         }
@@ -181,7 +181,7 @@ public class UserInterface {
                     + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
                     + "Name:...................... " + controller.getName() + "\n"
                     + "Age:....................... " + controller.getAge() + "\n"
-                    + "Active Status:............. " + controller.isActivityStatus() + "\n"
+                    + "Active Status:............. " + (controller.isActivityStatus() ? "Active" : "Passive") + "\n"
                     + "Junior or senior:.......... " + controller.getMembershipType() + "\n"
                     + "Exerciser or competition:.. " + controller.isSwimType());
         }

@@ -19,7 +19,7 @@ public class Filehandler {
             output.print(";");
             output.print(member.getAge());
             output.print(";");
-            output.print(member.isActivityStatus());
+            output.print(member.isActivityStatus() ? "Active" : "Passive");
             output.print(";");
             output.print(member.getMembershipType());
             output.print(";");
