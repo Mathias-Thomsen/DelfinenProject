@@ -1,4 +1,4 @@
-package DataSouce;
+package DataSource;
 
 import ClubMember.ClubMember;
 
@@ -9,7 +9,7 @@ public class Database {
     public ArrayList<ClubMember> clubMembers = new ArrayList<>();
 
 
-    public void createClubMember(String name, int age, String activityStatus,  String swimType) {
+    public void createClubMember(String name, int age, boolean activityStatus,  String swimType) {
         ClubMember clubMember = new ClubMember(name, age, activityStatus, swimType);
         clubMembers.add(clubMember);
 
@@ -60,7 +60,9 @@ public class Database {
     }
 
     public void setClubMemberNumber() {
+
         int number = 1;
+
         for (ClubMember member : clubMembers) {
             if(member.getMembershipType() == "Senior") {
                 member.setMembershipNumber("S" + number++);

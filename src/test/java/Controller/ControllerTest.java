@@ -1,11 +1,9 @@
 package Controller;
 
 import ClubMember.ClubMember;
-import DataSouce.Database;
-import DataSouce.Filehandler;
+import DataSource.Database;
+import DataSource.Filehandler;
 import org.junit.jupiter.api.Test;
-
-import javax.xml.crypto.Data;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -19,20 +17,20 @@ class ControllerTest {
         //Arrange
         Database database = new Database();
         //Act
-        database.createClubMember("Christian", 22, "senior", "exerciser");
-        database.createClubMember("Christian", 22, "senior", "exerciser");
-        database.createClubMember("Christian", 22, "senior", "exerciser");
-        database.createClubMember("Christian", 22, "senior", "exerciser");
-        database.createClubMember("Christian", 22, "senior", "exerciser");
-        database.createClubMember("Christian", 22, "senior", "exerciser");
-        database.createClubMember("Christian", 22, "senior", "exerciser");
-        database.createClubMember("Christian", 22, "senior", "exerciser");
-        database.createClubMember("Christian", 22, "senior", "exerciser");
-        database.createClubMember("Christian", 22, "senior", "exerciser");
-        database.createClubMember("Christian", 22, "senior", "exerciser");
-        database.createClubMember("Christian", 22, "senior", "exerciser");
-        database.createClubMember("Christian", 22, "senior", "exerciser");
-        database.createClubMember("Christian", 22, "senior", "exerciser");
+        database.createClubMember("Christian", 22, true, "exerciser");
+        database.createClubMember("Christian", 22, false, "exerciser");
+        database.createClubMember("Christian", 22, true, "exerciser");
+        database.createClubMember("Christian", 22, true, "exerciser");
+        database.createClubMember("Christian", 22, true, "exerciser");
+        database.createClubMember("Christian", 22, true, "exerciser");
+        database.createClubMember("Christian", 22, false, "exerciser");
+        database.createClubMember("Christian", 22, false, "exerciser");
+        database.createClubMember("Christian", 22, false, "exerciser");
+        database.createClubMember("Christian", 22, false, "exerciser");
+        database.createClubMember("Christian", 22, false, "exerciser");
+        database.createClubMember("Christian", 22, false, "exerciser");
+        database.createClubMember("Christian", 22, false, "exerciser");
+        database.createClubMember("Christian", 22, false, "exerciser");
 
 
 
@@ -46,7 +44,7 @@ class ControllerTest {
     void getClubMembers() {
         //Arrange
         Database database = new Database();
-        database.createClubMember("Christian", 22, "senior", "exerciser");
+        database.createClubMember("Christian", 22, false, "exerciser");
         //Act
         database.getClubMembers();
         int actual = database.getClubMembers().size();
@@ -60,7 +58,7 @@ class ControllerTest {
         //Arrange
         Database database = new Database();
         Controller controller = new Controller();
-        database.createClubMember("Christian", 22, "senior", "exerciser");
+        database.createClubMember("Christian", 22, true, "exerciser");
         String userDeleteMember = "Anton";
         ArrayList<ClubMember> searchDeleteMember = new ArrayList<>();
         //Act
@@ -88,7 +86,7 @@ class ControllerTest {
         //Arrange
         Filehandler filehandler = new Filehandler();
         Database database = new Database();
-        database.createClubMember("Christian", 22, "senior", "exerciser");
+        database.createClubMember("Christian", 22, false, "exerciser");
         //Act
         filehandler.saveData(database.getClubMembers());
         System.out.println(database.getClubMembers());
@@ -104,7 +102,7 @@ class ControllerTest {
         //Arrange
         Database database = new Database();
         Filehandler filehandler = new Filehandler();
-        database.createClubMember("Christian", 22, "senior", "exerciser");
+        database.createClubMember("Christian", 22, true, "exerciser");
         //Act
         System.out.println(database.getClubMembers());
         database.clearData();

@@ -2,11 +2,10 @@ package Ui;
 
 import ClubMember.ClubMember;
 import Controller.Controller;
-import DataSouce.Database;
+import DataSource.Database;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -26,8 +25,8 @@ class UserInterfaceTest {
         Database database = new Database();
         Controller controller = new Controller();
         //Act
-        controller.createClubMember("Christian", 22, "j", "exerciser");
-        controller.createClubMember( "Anton", 25, "false",  "exerciser");
+        controller.createClubMember("Christian", 22, true, "exerciser");
+        controller.createClubMember( "Anton", 25, false,  "exerciser");
         controller.getClubMembers();
         int actual = controller.getClubMembers().size();
         int expected = 2;
@@ -41,8 +40,8 @@ class UserInterfaceTest {
         Database database = new Database();
         Controller controller = new Controller();
         //Act
-        controller.createClubMember( "Christian", 22, "j", "exerciser");
-        controller.createClubMember( "Anton", 25, "false", "exerciser");
+        controller.createClubMember( "Christian", 22, true, "exerciser");
+        controller.createClubMember( "Anton", 25, false, "exerciser");
 
         for (ClubMember controllerr : controller.getMembers()) {
             System.out.println("------------------\n"
@@ -70,7 +69,7 @@ class UserInterfaceTest {
         ArrayList<ClubMember> searchEditResult = new ArrayList<>();
 
         //Act
-        controller.createClubMember( "Anton", 25, "false", "exerciser");
+        controller.createClubMember( "Anton", 25, false, "exerciser");
         String userEditMember = "Anton";
 
         int index = 1;
@@ -104,7 +103,7 @@ class UserInterfaceTest {
         //Arrange
         Database database = new Database();
         Controller controller = new Controller();
-        controller.createClubMember("Anton", 25, "false", "exerciser");
+        controller.createClubMember("Anton", 25, false, "exerciser");
         String userDeleteMember = "Anton";
         ArrayList<ClubMember> searchDeleteMember = new ArrayList<>();
         //Act

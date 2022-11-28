@@ -1,8 +1,6 @@
-package DataSouce;
+package DataSource;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class DatabaseTest {
 

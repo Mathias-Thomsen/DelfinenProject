@@ -113,17 +113,18 @@ public class UserInterface {
         //Activity status
         System.out.println("--------------------------------------------------------");
         System.out.println("Input new member activity status (active/passive): ");
-        String activity;
+        String activityInput;
+        boolean setActive;
         boolean activeOrPassive;
         while (true) {
-            activity = scanner.nextLine().trim().toLowerCase();
-            if (activity.equals("active") || activity.equals("a")) {
+            activityInput = scanner.nextLine().trim().toLowerCase();
+            if (activityInput.equals("active") || activityInput.equals("a")) {
                 activeOrPassive = true;
-                activity = "Active";
+                setActive = true;
                 break;
-            } else if (activity.equals("passive") || activity.equals("p")) {
+            } else if (activityInput.equals("passive") || activityInput.equals("p")) {
                 activeOrPassive = true;
-                activity = "Passive";
+                setActive = false;
                 break;
             } else {
                 System.out.println("You have to type active/passive or (a/p)");
@@ -152,7 +153,7 @@ public class UserInterface {
         }
 
         //Create member
-        controller.createClubMember(nameInput, ageInput, activity, swim);
+        controller.createClubMember(nameInput, ageInput, setActive, swim);
         controller.junoirOrsenoir();
         controller.setClubMemberNumber();
         controller.saveData(); //save to the file every time we make a new member.
@@ -165,8 +166,8 @@ public class UserInterface {
                     + "Name:...................... " + controller.getName() + "\n"
                     + "Age:....................... " + controller.getAge() + "\n"
                     + "Active Status:............. " + controller.isActivityStatus() + "\n"
-                    + "Junior or senior:.......... " + controller.isSwimType() + "\n"
-                    + "Exerciser or competition:.. " + controller.getMembershipType());
+                    + "Junior or senior:.......... " + controller.getMembershipType() + "\n"
+                    + "Exerciser or competition:.. " + controller.isSwimType());
         }
     }
 
@@ -181,8 +182,8 @@ public class UserInterface {
                     + "Name:...................... " + controller.getName() + "\n"
                     + "Age:....................... " + controller.getAge() + "\n"
                     + "Active Status:............. " + controller.isActivityStatus() + "\n"
-                    + "Junior or senior:.......... " + controller.isSwimType() + "\n"
-                    + "Exerciser or competition:.. " + controller.getMembershipType());
+                    + "Junior or senior:.......... " + controller.getMembershipType() + "\n"
+                    + "Exerciser or competition:.. " + controller.isSwimType());
         }
         if (controller.findMember(searchTerm).isEmpty()) {
             System.out.println("No result");
@@ -253,12 +254,25 @@ public class UserInterface {
             System.out.println("Activity status " + editMember.isActivityStatus());
 
             try {
-                System.out.print("Type your update here:  ");
-                String newActivityStatus = scanner.nextLine().trim();//trim cutter mellemrum fra brugerinputet.
-                if (!newActivityStatus.isEmpty()) {
-                    editMember.setActivityStatus(newActivityStatus);
-                }
+                System.out.print("Type your update here (active/passive):  ");
+                boolean activeOrPassive;
+                while (true) {
+                    String activityEditInput = scanner.nextLine().trim().toLowerCase();
+                    if (!activityEditInput.isEmpty()) {
 
+                        if (activityEditInput.equals("active") || activityEditInput.equals("a")) {
+                            activeOrPassive = true;
+                            editMember.setActivityStatus(true);
+                            break;
+                        } else if (activityEditInput.equals("passive") || activityEditInput.equals("p")) {
+                            activeOrPassive = true;
+                            editMember.setActivityStatus(false);
+                            break;
+                        } else {
+                            System.out.println("You have to type active/passive or (a/p)");
+                        }
+                    }
+                }
                 userChoiceFalse = true;
             } catch (NumberFormatException var9) {
                 System.out.println("Skriv venligst din rettelse med tekst bogstaver eller ENTER hvis du ikke vil rette!");
@@ -298,6 +312,7 @@ public class UserInterface {
         } while (!userChoiceFalse);
 
         controller.junoirOrsenoir();
+        controller.setClubMemberNumber();
         controller.saveData();
 
 

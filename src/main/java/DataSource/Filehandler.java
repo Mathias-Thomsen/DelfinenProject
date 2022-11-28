@@ -1,4 +1,4 @@
-package DataSouce;
+package DataSource;
 
 import ClubMember.ClubMember;
 
@@ -48,7 +48,7 @@ public class Filehandler {
             loadClubmemberData.setMembershipNumber(parts[0]);
             loadClubmemberData.setName(parts[1]);
             loadClubmemberData.setAge(parts[2]);
-            loadClubmemberData.setActivityStatus(parts[3]);
+            loadClubmemberData.setActivityStatus(Boolean.parseBoolean(parts[3]));
             loadClubmemberData.setMembershipType(parts[4]);
             loadClubmemberData.setSwimType(parts[5]);
 

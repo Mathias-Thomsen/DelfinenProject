@@ -1,5 +1,11 @@
-S1;Mathias Thomsen;23;active;Senior;competition
-J2;qwe;0;active;Junior;ex
-S3;qweq;44;a;Senior;exerciser
-J4;chrill;3;Active;Junior;exiceser
-J5;qwe;4;Active;Junior;Exerciser
+J1;Mathias Thomsen;14;false;Junior;competition
+J2;Mathias ;11;false;Junior;competition
+S3;Marcus;23;false;Senior;exerciser
+J4;Hans ;11;false;Junior;exerciser
+J5;Mathias haha;17;true;Junior;exerciser
+J6;Marcus ;17;false;Junior;exersicer
+J7;Marcus ;11;false;Junior;exerciser
+S8;Christian ;44;false;Senior;competition
+S9;Hans ;23;false;Senior;competition
+S10;Hans;23;false;Senior;exerciser
+S11;mathias thomsen;23;false;Senior;Exerciser

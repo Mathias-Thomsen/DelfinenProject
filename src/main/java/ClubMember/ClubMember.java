@@ -3,7 +3,7 @@ package ClubMember;
 public class ClubMember {
     private String name;
     private int age;
-    private String activityStatus;
+    private boolean active;
     private String membershipType;
     private String swimType;
     private String membershipNumber;
@@ -11,19 +11,19 @@ public class ClubMember {
     public ClubMember(){
 
     }
-    public ClubMember(String membershipNumber, String name, int age, String activityStatus, String membershipType, String swimType) {
+    public ClubMember(String membershipNumber, String name, int age, boolean active, String membershipType, String swimType) {
         this.membershipNumber = membershipNumber;
         this.name = name;
         this.age = age;
-        this.activityStatus = activityStatus;
+        this.active = active;
         this.membershipType = membershipType;
         this.swimType = swimType;
 
     }
-    public ClubMember(String name, int age, String activityStatus, String swimType) {
+    public ClubMember(String name, int age, boolean active, String swimType) {
         this.name = name;
         this.age = age;
-        this.activityStatus = activityStatus;
+        this.active = active;
         this.swimType = swimType;
     }
 
@@ -43,12 +43,12 @@ public class ClubMember {
         this.age = Integer.parseInt(age);
     }
 
-    public String isActivityStatus() {
-        return activityStatus;
+    public boolean isActivityStatus() {
+        return active;
     }
 
-    public void setActivityStatus(String activityStatus) {
-        this.activityStatus = activityStatus;
+    public void setActivityStatus(boolean active) {
+        this.active = active;
     }
 
     public String getMembershipType() {
@@ -76,16 +76,4 @@ public class ClubMember {
         this.membershipNumber = membershipNumber;
     }
 
-
-    @Override
-    public String toString() {
-        return "ClubMember{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", activityStatus=" + activityStatus +
-                ", membershipType=" + membershipType +
-                ", swimType='" + swimType + '\'' +
-                ", membershipNumber=" + membershipNumber +
-                '}';
-    }
 }

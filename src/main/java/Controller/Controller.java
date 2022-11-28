@@ -1,17 +1,15 @@
 package Controller;
 
 import ClubMember.ClubMember;
-import DataSouce.Database;
-import DataSouce.Filehandler;
-
+import DataSource.Database;
+import DataSource.Filehandler;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class Controller {
     Database database = new Database();
     Filehandler filehandler = new Filehandler();
-    ClubMember clubMember = new ClubMember();
-    public void createClubMember(String name, int age, String activityStatus, String swimType){
+    public void createClubMember(String name, int age, boolean activityStatus, String swimType){
         database.createClubMember( name, age, activityStatus, swimType);
     }
 
