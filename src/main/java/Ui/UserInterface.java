@@ -347,7 +347,7 @@ public class UserInterface {
 
 
         do {
-            System.out.println("Activity status " + (editMember.active() ? "active" : "passive"));
+            System.out.println("Activity status: " + (editMember.active() ? "active" : "passive"));
 
             try {
                 System.out.print("Type your update here (active/passive):  ");
@@ -376,6 +376,38 @@ public class UserInterface {
                 System.out.println("Type with letters. If you don't want to edit press ENTER!");
             }
         } while (!userChoiceFalse);
+
+        do {
+            System.out.println("Member paid: " + (editMember.isRandomPay() ? "Has paid" : "Haven't paid"));
+
+            try {
+                System.out.print("Type your update here (Has paid/Has not paid):  ");
+                boolean activeOrPassive;
+                while (true) {
+                    String isRandomInput = scanner.nextLine().trim().toLowerCase();
+                    if (!isRandomInput.isEmpty()) {
+
+                        if (isRandomInput.trim().toLowerCase().equals("has paid") || isRandomInput.trim().toLowerCase().equals("p")) {
+                            activeOrPassive = true;
+                            editMember.setRandomPay(true);
+                            break;
+                        } else if (isRandomInput.trim().toLowerCase().equals("has not paid") || isRandomInput.equals("n")) {
+                            activeOrPassive = true;
+                            editMember.setRandomPay(false);
+                            break;
+                        } else {
+                            System.out.println("You have to type (has paid/has not paid) or (p/n)");
+                        }
+                    } else {
+                        break;
+                    }
+                }
+                userChoiceFalse = true;
+            } catch (NumberFormatException var9) {
+                System.out.println("Type with letters. If you don't want to edit press ENTER!");
+            }
+        } while (!userChoiceFalse);
+
 
 
         controller.junoirOrsenoir();
