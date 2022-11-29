@@ -103,6 +103,26 @@ public class Controller {
         return database.getTotalPassiveMembers();
     }
 
+    public void getRandomPay(){
+        database.getRandomPay();
+    }
+
+    public void setRandomPay(boolean randomPay){
+        clubMember.setRandomPay(randomPay);
+    }
+
+    public int getTotalRandomPay(){
+        return database.getTotalRandomPay();
+    }
+
+    public int getUnpaidMember(){
+        return database.getUnpaidMember();
+    }
+
+    public int getTotalAmount(){
+        return database.getTotalAmount();
+    }
+
 
 
 

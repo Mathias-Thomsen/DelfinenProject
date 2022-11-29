@@ -1,5 +1,7 @@
 package ClubMember;
 
+import java.time.LocalDate;
+
 public class ClubMember {
     private String name;
     private int age;
@@ -8,12 +10,13 @@ public class ClubMember {
     private String swimType;
     private String membershipNumber;
     private int payment;
+    private boolean randomPay;
 
 
     public ClubMember(){
 
     }
-    public ClubMember(String membershipNumber, String name, int age, boolean active, boolean membershipType, String swimType, int payment) {
+    public ClubMember(String membershipNumber, String name, int age, boolean active, boolean membershipType, String swimType, int payment, boolean randomPay) {
         this.membershipNumber = membershipNumber;
         this.name = name;
         this.age = age;
@@ -21,6 +24,7 @@ public class ClubMember {
         this.isSenior = membershipType;
         this.swimType = swimType;
         this.payment = payment;
+        this.randomPay = randomPay;
 
     }
     public ClubMember(String name, int age, boolean active, String swimType) {
@@ -41,6 +45,7 @@ public class ClubMember {
     public int getAge() {
         return age;
     }
+
 
     public void setAge(String age) {
         this.age = Integer.parseInt(age);
@@ -85,5 +90,13 @@ public class ClubMember {
 
     public void setPayment(int payment) {
         this.payment = payment;
+    }
+
+    public boolean isRandomPay() {
+        return randomPay;
+    }
+
+    public void setRandomPay(boolean randomPay) {
+        this.randomPay = randomPay;
     }
 }

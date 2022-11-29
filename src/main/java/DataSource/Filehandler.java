@@ -26,6 +26,8 @@ public class Filehandler {
             output.print(member.isSwimType());
             output.print(";");
             output.print(member.getPayment());
+            output.print(";");
+            output.print(member.isRandomPay());
             output.println();
         }
         output.close();
@@ -52,6 +54,7 @@ public class Filehandler {
             loadClubmemberData.setSenior(Boolean.parseBoolean(parts[4]));
             loadClubmemberData.setSwimType(parts[5]);
             loadClubmemberData.setPayment(Integer.parseInt(parts[6]));
+            loadClubmemberData.setRandomPay(Boolean.parseBoolean(parts[7]));
 
 
             return loadClubmemberData;

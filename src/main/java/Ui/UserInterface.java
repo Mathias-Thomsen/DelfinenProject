@@ -5,6 +5,7 @@ import Controller.Controller;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -132,8 +133,8 @@ public class UserInterface {
                 + "Total senior plus members (1200)..........: " + controller.getTotalSeniorPlusMembers() + "\n"
                 + "Total passive members (500)...............: " + controller.getTotalPassiveMembers() + "\n"
                 + "Total expected amount.....................: " + controller.getTotalIncome() + "\n"
-                + "Total income..............................: " + "\n"
-                + "Unpaid income from members................: "
+                + "Total income..............................: " + controller.getTotalAmount() + "\n"
+                + "Unpaid income from members................: " + controller.getUnpaidMember()
 
         );
 
@@ -223,8 +224,12 @@ public class UserInterface {
             }
         }
 
+        Random random = new Random();
+        boolean randomPay = random.nextBoolean();
+
         //Create member
         controller.createClubMember(nameInput, ageInput, setActive, swim);
+        controller.getRandomPay();
         controller.junoirOrsenoir();
         controller.setClubMemberNumber();
         controller.getCreatePayment();
@@ -252,7 +257,8 @@ public class UserInterface {
                     + "Active Status:............. " + (controller.active() ? "Active" : "Passive" )+ "\n"
                     + "Junior or senior:.......... " + (controller.getSenior() ? "Senior" : "Junior") + "\n"
                     + "Exerciser or competition:.. " + controller.isSwimType() + "\n"
-                    + "Subscription............... " + controller.getPayment());
+                    + "Subscription............... " + controller.getPayment() + "\n"
+                    + "Subscription is paid....... " + (controller.isRandomPay() ? "Paid" : "Not paid"));
         }
     }
 

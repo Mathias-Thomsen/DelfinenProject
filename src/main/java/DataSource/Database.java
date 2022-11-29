@@ -5,6 +5,7 @@ import Financials.Financials;
 import Subscription.Subscription;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Database {
     Subscription subscription = new Subscription();
@@ -132,6 +133,43 @@ public class Database {
             }
         }
         return totalPassiveMembers;
+    }
 
+    public void getRandomPay(){
+        Random random = new Random();
+        for (ClubMember member : clubMembers){
+                member.setRandomPay(random.nextBoolean());
+
+        }
+    }
+
+    public int getTotalRandomPay(){
+        int totalRandomPay = 0;
+        for (ClubMember member : clubMembers){
+            if (!member.isRandomPay()){
+                totalRandomPay++;
+            }
+        }
+        return totalRandomPay;
+    }
+
+    public int getUnpaidMember() {
+        int total = 0;
+        for (ClubMember member : clubMembers) {
+            if (!member.isRandomPay()) {
+                total += member.getPayment();
+            }
+        }
+        return total;
+    }
+
+    public int getTotalAmount(){
+        int total = 0;
+        for (ClubMember member : clubMembers){
+            if (member.isRandomPay()){
+                total += member.getPayment();
+            }
+        }
+        return total;
     }
 }
