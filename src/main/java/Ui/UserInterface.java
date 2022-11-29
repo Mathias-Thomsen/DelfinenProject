@@ -14,7 +14,7 @@ public class UserInterface {
     private String nameInput;
     Controller controller = new Controller();
 
-    public void menu() {
+    public void mainMenu() {
         controller.loadData();
         int menuChoise = 0;
         while (menuChoise != 9) {
@@ -43,7 +43,7 @@ public class UserInterface {
             switch (menuChoise) {
                 case 1 -> clubManagerMenu();
                 //case 2 -> coachMenu();
-                //case 3 -> cashierMenu();
+                case 3 -> cashierMenu();
                 case 9 -> exitProgram();
                 default -> System.out.println("Invalid Input\n");
             }
@@ -83,9 +83,45 @@ public class UserInterface {
             case 3 -> searchMember();
             case 4 -> editMember();
             case 5 -> deleteMember();
-            case 9 -> menu();
+            case 9 -> mainMenu();
             default -> System.out.println("Invalid Input\n");
         }
+    }
+
+    public void cashierMenu(){
+        int menuChoise = 0;
+        System.out.println("""
+                -------------------------
+                Cashier menu:
+                -------------------------
+                1. Show list of members
+                2. Search for members
+                3. Edit member subscription
+                4. Show financials
+                9. Go back to sign in
+                """);
+
+        do {
+            String valg = scanner.nextLine().trim();
+            try {
+                menuChoise = Integer.parseInt(valg);
+                userChoiceFalse = true;
+            } catch (NumberFormatException e) {
+                System.out.print("There has been a error enter a valid number: ");
+                scanner.nextLine();
+            }
+
+        } while (!userChoiceFalse);
+
+        switch (menuChoise) {
+            case 1 -> showMenmbersWithCashier();
+            case 2 -> searchMemberCashier();
+            case 3 -> editMember();
+            //case 4 ->
+            case 9 -> mainMenu();
+            default -> System.out.println("Invalid Input\n");
+        }
+
     }
 
     public void createMember() {
@@ -192,6 +228,39 @@ public class UserInterface {
         }
     }
 
+    public void showMenmbersWithCashier() {
+        for (ClubMember controller : controller.getMembers()) {
+            System.out.println("------------------\n"
+                    + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
+                    + "Name:...................... " + controller.getName() + "\n"
+                    + "Age:....................... " + controller.getAge() + "\n"
+                    + "Active Status:............. " + (controller.isActivityStatus() ? "Active" : "Passive" )+ "\n"
+                    + "Junior or senior:.......... " + controller.getMembershipType() + "\n"
+                    + "Exerciser or competition:.. " + controller.isSwimType() + "\n"
+                    + "Subscription............... " + controller.getPay());
+        }
+    }
+
+    public void searchMemberCashier() {
+        System.out.println("-----------------------------------------------------");
+        System.out.println("Type in the member you want to search for: ");
+
+        String searchTerm = scanner.nextLine().toLowerCase();
+        for (ClubMember controller : controller.findMember(searchTerm)) {
+            System.out.println("------------------\n"
+                    + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
+                    + "Name:...................... " + controller.getName() + "\n"
+                    + "Age:....................... " + controller.getAge() + "\n"
+                    + "Active Status:............. " + (controller.isActivityStatus() ? "Active" : "Passive") + "\n"
+                    + "Junior or senior:.......... " + controller.getMembershipType() + "\n"
+                    + "Exerciser or competition:.. " + controller.isSwimType() + "\n"
+                    + "Subscription............... " + controller.getPay());
+        }
+        if (controller.findMember(searchTerm).isEmpty()) {
+            System.out.println("No result");
+        }
+
+    }
     public void searchMember() {
         System.out.println("-----------------------------------------------------");
         System.out.println("Type in the member you want to search for: ");
