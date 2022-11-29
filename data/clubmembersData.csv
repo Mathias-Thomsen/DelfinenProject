@@ -1,15 +1,4 @@
-J1;Mathias Thomsen;14;Passive;Junior;competition
-J2;Mathias ;11;Passive;Junior;competition
-S3;Marcus;23;Passive;Senior;exerciser
-J4;Hans ;11;Passive;Junior;exerciser
-J5;Mathias haha;17;Passive;Junior;exerciser
-J6;Marcus ;17;Passive;Junior;exersicer
-J7;Marcus ;11;Passive;Junior;exerciser
-S8;Christian ;44;Passive;Senior;competition
-S9;Hans ;23;Passive;Senior;competition
-S10;Hans;23;Passive;Senior;exerciser
-S11;mathias thomsen;23;Passive;Senior;Exerciser
-S12;Mathias;45;Passive;Senior;Competition
-S13;chill;22;Passive;Senior;Exerciser
-S14;orale;21;Passive;Senior;Exerciser
-S15;d;22;Active;Senior;Exerciser
+S1;Mathias;23;true;Senior;Competition;1600
+J2;Hans;15;true;Junior;Exerciser;1000
+S3;Jens;71;true;Senior;Competition;1200
+S4;Mathias;22;true;Senior;Exerciser;1600

@@ -176,6 +176,7 @@ public class UserInterface {
         controller.createClubMember(nameInput, ageInput, setActive, swim);
         controller.junoirOrsenoir();
         controller.setClubMemberNumber();
+        controller.getCreatePayment();
         controller.saveData(); //save to the file every time we make a new member.
     }
 
@@ -254,24 +255,9 @@ public class UserInterface {
             }
         } while (!userChoiceFalse);
 
-        do {
-            System.out.println("Member age: " + editMember.getAge());
-
-            try {
-                System.out.print("Type your update here: ");
-                String newAge = scanner.nextLine().trim().toLowerCase();
-                if (!newAge.isEmpty()) {
-                    editMember.setAge(newAge);
-                }
-
-                userChoiceFalse = true;
-            } catch (NumberFormatException var10) {
-                System.out.println("Type a age with numbers. If you don't want to edit press ENTER!");
-            }
-        } while (!userChoiceFalse);
 
         do {
-            System.out.println("Activity status " + editMember.isActivityStatus());
+            System.out.println("Activity status " + (editMember.isActivityStatus() ? "active" : "passive"));
 
             try {
                 System.out.print("Type your update here (active/passive):  ");
@@ -291,6 +277,8 @@ public class UserInterface {
                         } else {
                             System.out.println("You have to type active/passive or (a/p)");
                         }
+                    } else {
+                        break;
                     }
                 }
                 userChoiceFalse = true;

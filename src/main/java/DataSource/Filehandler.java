@@ -19,14 +19,14 @@ public class Filehandler {
             output.print(";");
             output.print(member.getAge());
             output.print(";");
-            output.print(member.isActivityStatus() ? "Active" : "Passive");
+            output.print(member.isActivityStatus());
             output.print(";");
             output.print(member.getMembershipType());
             output.print(";");
             output.print(member.isSwimType());
+            output.print(";");
+            output.print(member.getPay());
             output.println();
-
-
         }
         output.close();
     }
@@ -51,6 +51,8 @@ public class Filehandler {
             loadClubmemberData.setActivityStatus(Boolean.parseBoolean(parts[3]));
             loadClubmemberData.setMembershipType(parts[4]);
             loadClubmemberData.setSwimType(parts[5]);
+            loadClubmemberData.setPay(Integer.parseInt(parts[6]));
+
 
             return loadClubmemberData;
 

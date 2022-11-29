@@ -7,17 +7,19 @@ public class ClubMember {
     private String membershipType;
     private String swimType;
     private String membershipNumber;
+    private int pay;
 
     public ClubMember(){
 
     }
-    public ClubMember(String membershipNumber, String name, int age, boolean active, String membershipType, String swimType) {
+    public ClubMember(String membershipNumber, String name, int age, boolean active, String membershipType, String swimType, int pay) {
         this.membershipNumber = membershipNumber;
         this.name = name;
         this.age = age;
         this.active = active;
         this.membershipType = membershipType;
         this.swimType = swimType;
+        this.pay = pay;
 
     }
     public ClubMember(String name, int age, boolean active, String swimType) {
@@ -76,4 +78,11 @@ public class ClubMember {
         this.membershipNumber = membershipNumber;
     }
 
+    public int getPay() {
+        return pay;
+    }
+
+    public void setPay(int pay) {
+        this.pay = pay;
+    }
 }

@@ -60,7 +60,7 @@ class ControllerTest {
         Database database = new Database();
         Controller controller = new Controller();
         database.createClubMember("Christian", 22, true, "exerciser");
-        String userDeleteMember = "Anton";
+        String userDeleteMember = "Christian";
         ArrayList<ClubMember> searchDeleteMember = new ArrayList<>();
         //Act
         int index = 1;

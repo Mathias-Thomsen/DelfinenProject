@@ -1,11 +1,12 @@
 package DataSource;
 
 import ClubMember.ClubMember;
+import Subscription.Subscription;
 
 import java.util.ArrayList;
 
 public class Database {
-    private boolean change = false;
+    Subscription subscription = new Subscription();
     public ArrayList<ClubMember> clubMembers = new ArrayList<>();
 
 
@@ -13,15 +14,11 @@ public class Database {
         ClubMember clubMember = new ClubMember(name, age, activityStatus, swimType);
         clubMembers.add(clubMember);
 
-        change = true; // To the save method, so we only save to the txt file if a change has been made.
 
     }
 
     public boolean deleteMember(ClubMember clubMember){
         boolean result = clubMembers.remove(clubMember);
-
-        change = true;
-
         return result;
     }
 
@@ -44,9 +41,6 @@ public class Database {
 
     }
 
-    public int getSizeOfDatabase(int number) {
-        return number;
-    }
 
 
     public void juniorOrSenior(){
@@ -71,6 +65,26 @@ public class Database {
             }
         }
     }
+
+    public void createSubscriptionInDatabase(){
+        for (ClubMember member : clubMembers) {
+            if (!member.isActivityStatus()) {
+                member.setPay(subscription.getPASSIVE_PAY());
+            } else if (member.getAge() >= 18 && member.getAge() <= 60) {
+                member.setPay(subscription.getSENIOR_PAY());
+            } else if (member.getAge() > 60) {
+                member.setPay(subscription.getSENIOR_PLUS_PAY());
+            } else {
+                member.setPay(subscription.getJUNIOR_PAY());
+            }
+        }
+    }
+
+
+
+
+
+
 
 
 

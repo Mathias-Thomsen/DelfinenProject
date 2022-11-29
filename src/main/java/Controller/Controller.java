@@ -3,6 +3,8 @@ package Controller;
 import ClubMember.ClubMember;
 import DataSource.Database;
 import DataSource.Filehandler;
+import Subscription.Subscription;
+
 import java.io.FileNotFoundException;
 import java.time.LocalDate;
 import java.time.Period;
@@ -11,6 +13,8 @@ import java.util.ArrayList;
 public class Controller {
     Database database = new Database();
     Filehandler filehandler = new Filehandler();
+    ClubMember clubMember = new ClubMember();
+    Subscription subscription = new Subscription();
     public void createClubMember(String name, int age, boolean activityStatus, String swimType){
         database.createClubMember( name, age, activityStatus, swimType);
     }
@@ -64,8 +68,12 @@ public class Controller {
             return Period.between(birthDate, currentDate).getYears();
         } else {
             return 0;
-            }
         }
+    }
+
+    public void getCreatePayment() {
+        database.createSubscriptionInDatabase();
+    }
 
 
 
