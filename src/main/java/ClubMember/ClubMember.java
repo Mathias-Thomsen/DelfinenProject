@@ -4,22 +4,23 @@ public class ClubMember {
     private String name;
     private int age;
     private boolean active;
-    private String membershipType;
+    private boolean isSenior;
     private String swimType;
     private String membershipNumber;
-    private int pay;
+    private int payment;
+
 
     public ClubMember(){
 
     }
-    public ClubMember(String membershipNumber, String name, int age, boolean active, String membershipType, String swimType, int pay) {
+    public ClubMember(String membershipNumber, String name, int age, boolean active, boolean membershipType, String swimType, int payment) {
         this.membershipNumber = membershipNumber;
         this.name = name;
         this.age = age;
         this.active = active;
-        this.membershipType = membershipType;
+        this.isSenior = membershipType;
         this.swimType = swimType;
-        this.pay = pay;
+        this.payment = payment;
 
     }
     public ClubMember(String name, int age, boolean active, String swimType) {
@@ -45,20 +46,20 @@ public class ClubMember {
         this.age = Integer.parseInt(age);
     }
 
-    public boolean isActivityStatus() {
+    public boolean active() {
         return active;
     }
 
-    public void setActivityStatus(boolean active) {
+    public void setActive(boolean active) {
         this.active = active;
     }
 
-    public String getMembershipType() {
-        return membershipType;
+    public boolean getSenior() {
+        return isSenior;
     }
 
-    public void setMembershipType(String membershipType) {
-        this.membershipType = membershipType;
+    public void setSenior(boolean senior) {
+        this.isSenior = senior;
     }
 
     public String isSwimType() {
@@ -78,11 +79,11 @@ public class ClubMember {
         this.membershipNumber = membershipNumber;
     }
 
-    public int getPay() {
-        return pay;
+    public int getPayment() {
+        return payment;
     }
 
-    public void setPay(int pay) {
-        this.pay = pay;
+    public void setPayment(int payment) {
+        this.payment = payment;
     }
 }

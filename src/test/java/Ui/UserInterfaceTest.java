@@ -48,9 +48,9 @@ class UserInterfaceTest {
                     + "Membership Number:......... " + controllerr.getMembershipNumber() + "\n"
                     + "Name:...................... " + controllerr.getName() + "\n"
                     + "Age:....................... " + controllerr.getAge() + "\n"
-                    + "Active Status:............. " + controllerr.isActivityStatus() + "\n"
+                    + "Active Status:............. " + controllerr.active() + "\n"
                     + "Junior or senior:.......... " + controllerr.isSwimType() + "\n"
-                    + "Exerciser or competition:.. " + controllerr.getMembershipType());
+                    + "Exerciser or competition:.. " + controllerr.getSenior());
         }
 
         int actual = controller.getClubMembers().size();

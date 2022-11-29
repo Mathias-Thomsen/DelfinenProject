@@ -19,13 +19,13 @@ public class Filehandler {
             output.print(";");
             output.print(member.getAge());
             output.print(";");
-            output.print(member.isActivityStatus());
+            output.print(member.active());
             output.print(";");
-            output.print(member.getMembershipType());
+            output.print(member.getSenior());
             output.print(";");
             output.print(member.isSwimType());
             output.print(";");
-            output.print(member.getPay());
+            output.print(member.getPayment());
             output.println();
         }
         output.close();
@@ -48,10 +48,10 @@ public class Filehandler {
             loadClubmemberData.setMembershipNumber(parts[0]);
             loadClubmemberData.setName(parts[1]);
             loadClubmemberData.setAge(parts[2]);
-            loadClubmemberData.setActivityStatus(Boolean.parseBoolean(parts[3]));
-            loadClubmemberData.setMembershipType(parts[4]);
+            loadClubmemberData.setActive(Boolean.parseBoolean(parts[3]));
+            loadClubmemberData.setSenior(Boolean.parseBoolean(parts[4]));
             loadClubmemberData.setSwimType(parts[5]);
-            loadClubmemberData.setPay(Integer.parseInt(parts[6]));
+            loadClubmemberData.setPayment(Integer.parseInt(parts[6]));
 
 
             return loadClubmemberData;

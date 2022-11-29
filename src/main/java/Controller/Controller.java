@@ -3,6 +3,7 @@ package Controller;
 import ClubMember.ClubMember;
 import DataSource.Database;
 import DataSource.Filehandler;
+import Financials.Financials;
 import Subscription.Subscription;
 
 import java.io.FileNotFoundException;
@@ -15,6 +16,7 @@ public class Controller {
     Filehandler filehandler = new Filehandler();
     ClubMember clubMember = new ClubMember();
     Subscription subscription = new Subscription();
+    Financials financials = new Financials();
     public void createClubMember(String name, int age, boolean activityStatus, String swimType){
         database.createClubMember( name, age, activityStatus, swimType);
     }
@@ -74,6 +76,46 @@ public class Controller {
     public void getCreatePayment() {
         database.createSubscriptionInDatabase();
     }
+
+
+    public void setTotaleIncome() {
+        financials.setTotalIncome(database.getTotalIncome());
+
+    }
+
+    public int getTotalIncome() {
+        return financials.getTotalIncome();
+    }
+
+    public int getTotalSeniorMembers() {
+        return database.getTotalSeniorMembers();
+    }
+
+    public int getTotalJuniorMembers() {
+        return database.getTotalJuniorMembers();
+    }
+
+    public int getTotalSeniorPlusMembers() {
+        return database.getTotalSeniorPlusMembers();
+    }
+
+    public int getTotalPassiveMembers() {
+        return database.getTotalPassiveMembers();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
