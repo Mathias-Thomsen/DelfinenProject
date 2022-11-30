@@ -153,7 +153,7 @@ public class Database {
         return totalRandomPay;
     }
 
-    public int getUnpaidMember() {
+    public int getUnpaidAmont() {
         int total = 0;
         for (ClubMember member : clubMembers) {
             if (!member.isRandomPay()) {
@@ -172,4 +172,15 @@ public class Database {
         }
         return total;
     }
+
+    public ArrayList<ClubMember> getUnpaidMember(){
+        ArrayList<ClubMember> searchResult = new ArrayList<>();
+        for (ClubMember member : clubMembers) {
+            if (!member.isRandomPay()) {
+                searchResult.add(member);
+            }
+        }return searchResult;
+
+    }
+
 }

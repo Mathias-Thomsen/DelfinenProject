@@ -95,10 +95,11 @@ public class UserInterface {
                 -------------------------
                 Cashier menu:
                 -------------------------
-                1. Show list of members
+                1. Show list of all members
                 2. Search for members
                 3. Edit member subscription
                 4. Show financials
+                5. Show list of unpaid members
                 9. Go back to sign in
                 """);
 
@@ -119,12 +120,26 @@ public class UserInterface {
             case 2 -> searchMemberCashier();
             case 3 -> editMember();
             case 4 -> showFinancialData();
+            case 5 -> showUnpaidMembers();
             case 9 -> mainMenu();
             default -> System.out.println("Invalid Input\n");
         }
 
     }
 
+
+    public void showUnpaidMembers(){
+        for(ClubMember controller : controller.getUndpaidMembers())
+        System.out.println("------------------\n"
+                + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
+                + "Name:...................... " + controller.getName() + "\n"
+                + "Age:....................... " + controller.getAge() + "\n"
+                + "Active Status:............. " + (controller.active() ? "Active" : "Passive" )+ "\n"
+                + "Junior or senior:.......... " + (controller.getSenior() ? "Senior" : "Junior") + "\n"
+                + "Exerciser or competition:.. " + controller.isSwimType() + "\n"
+                + "Subscription............... " + controller.getPayment() + "\n"
+                + "Subscription is paid....... " + (controller.isRandomPay() ? "Paid" : "Not paid"));
+    }
     public void showFinancialData() {
         controller.setTotaleIncome();
         System.out.println("------------------\n"
@@ -134,12 +149,11 @@ public class UserInterface {
                 + "Total passive members (500)...............: " + controller.getTotalPassiveMembers() + "\n"
                 + "Total expected amount.....................: " + controller.getTotalIncome() + "\n"
                 + "Total income..............................: " + controller.getTotalAmount() + "\n"
-                + "Unpaid income from members................: " + controller.getUnpaidMember()
+                + "Unpaid income from members................: " + controller.getUnpaidAmount()
 
         );
 
     }
-
     public void createMember() {
 
         //Name
@@ -235,7 +249,6 @@ public class UserInterface {
         controller.getCreatePayment();
         controller.saveData(); //save to the file every time we make a new member.
     }
-
     public void showMenmbers() {
         for (ClubMember controller : controller.getMembers()) {
             System.out.println("------------------\n"
@@ -247,7 +260,6 @@ public class UserInterface {
                     + "Exerciser or competition:.. " + controller.isSwimType());
         }
     }
-
     public void showMenmbersWithCashier() {
         for (ClubMember controller : controller.getMembers()) {
             System.out.println("------------------\n"
@@ -261,7 +273,6 @@ public class UserInterface {
                     + "Subscription is paid....... " + (controller.isRandomPay() ? "Paid" : "Not paid"));
         }
     }
-
     public void searchMemberCashier() {
         System.out.println("-----------------------------------------------------");
         System.out.println("Type in the member you want to search for: ");
@@ -301,7 +312,6 @@ public class UserInterface {
         }
 
     }
-
     public void editMember() {
         System.out.println("-----------------------------------------------------");
         System.out.println("Search for the member you want to edit: ");
@@ -416,7 +426,6 @@ public class UserInterface {
 
 
     }
-
     public void deleteMember() {
         System.out.println("--------------------------------------------------------");
         System.out.println("Input the name of a member you want to delete: ");
@@ -442,7 +451,6 @@ public class UserInterface {
 
         controller.saveData();
     }
-
     public void exitProgram() {
         try {
             System.out.print("Exiting Program");

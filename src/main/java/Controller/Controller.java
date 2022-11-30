@@ -115,12 +115,16 @@ public class Controller {
         return database.getTotalRandomPay();
     }
 
-    public int getUnpaidMember(){
-        return database.getUnpaidMember();
+    public int getUnpaidAmount(){
+        return database.getUnpaidAmont();
     }
 
     public int getTotalAmount(){
         return database.getTotalAmount();
+    }
+
+    public ArrayList<ClubMember> getUndpaidMembers() {
+        return database.getUnpaidMember();
     }
 
 
