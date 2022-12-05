@@ -1,6 +1,7 @@
 package DataSource;
 
 import ClubMember.ClubMember;
+import ClubMember.Coach;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -32,16 +33,18 @@ public class Filehandler {
         }
         output.close();
     }
+
     public void loadData(ArrayList<ClubMember> allClubmember) throws FileNotFoundException {
 
         Scanner reader = new Scanner(new File("data/clubmembersData.csv"));
-        while(reader.hasNextLine()) {
+        while (reader.hasNextLine()) {
             String line = reader.nextLine();
 
             ClubMember dataObjekt = parseCsvLine(line);
             allClubmember.add(dataObjekt);
         }
     }
+
     private ClubMember parseCsvLine(String line) {
         try {
             String[] parts = line.split(";");
@@ -59,10 +62,55 @@ public class Filehandler {
 
             return loadClubmemberData;
 
-        } catch (NumberFormatException e ){
-            System.out.println("Kan ikke loade data");
+        } catch (NumberFormatException e) {
+            System.out.println("cannot load data");
             return null;
         }
     }
+    public void saveCoachData(ArrayList<Coach> Coaches) throws FileNotFoundException {
+        PrintStream output = new PrintStream(new File("data/coachesData.csv"));
 
+        for (Coach coach : Coaches) {
+            output.print(coach.getCoachTime());
+            output.print(";");
+            output.print(coach.getName());
+            output.print(";");
+            output.print(coach.getAge());
+            output.print(";");
+            output.print(coach.getTeam());
+            output.print(";");
+            output.print(coach.getCoachTime());
+            output.println();
+        }
+        output.close();
+    }
+    public void loadCoachData(ArrayList<Coach> coaches) throws FileNotFoundException {
+
+        Scanner reader = new Scanner(new File("data/coachData.csv"));
+        while (reader.hasNextLine()) {
+            String line = reader.nextLine();
+
+            Coach coachDataObjekt = parseCsvLineCoach(line);
+            coaches.add(coachDataObjekt);
+        }
+    }
+    private Coach parseCsvLineCoach(String line) {
+        try {
+            String[] parts = line.split(";");
+
+            Coach loadCoachData = new Coach();
+            loadCoachData.setEmployeeNumber(parts[0]);
+            loadCoachData.setName(parts[1]);
+            loadCoachData.setAge(Integer.parseInt(parts[2]));
+            loadCoachData.setTeam(Integer.parseInt(parts[3]));
+            loadCoachData.setCoachTime(Integer.parseInt(parts[4]));
+
+            return loadCoachData;
+
+        } catch (NumberFormatException e) {
+            System.out.println("cannot load data");
+            return null;
+        }
+    }
 }
+
