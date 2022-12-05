@@ -52,6 +52,42 @@ public class UserInterface {
 
     }
 
+    public void coachMenu(){
+        int menuChoise = 0;
+        System.out.println("""
+                -------------------------
+                Club manager menu:
+                -------------------------
+                1. Show competitive swimmers
+                2. Search for members
+                3. Edit member results and swim categories
+                4. Show results
+                9. Go back to sign in
+                """);
+
+        do {
+            String valg = scanner.nextLine().trim();
+            try {
+                menuChoise = Integer.parseInt(valg);
+                userChoiceFalse = true;
+            } catch (NumberFormatException e) {
+                System.out.print("There has been a error enter a valid number: ");
+                scanner.nextLine();
+            }
+
+        } while (!userChoiceFalse);
+
+        switch (menuChoise) {
+            //case 1 -> createMember();
+            //case 2 -> showMenmbers();
+            //case 3 -> searchMember();
+            //case 4 -> editMember();
+            //case 5 -> deleteMember();
+            //case 9 -> mainMenu();
+            default -> System.out.println("Invalid Input\n");
+        }
+    }
+
     public void clubManagerMenu() {
         int menuChoise = 0;
         System.out.println("""
@@ -247,6 +283,7 @@ public class UserInterface {
         controller.junoirOrsenoir();
         controller.setClubMemberNumber();
         controller.getCreatePayment();
+
         controller.saveData(); //save to the file every time we make a new member.
     }
     public void showMenmbers() {
