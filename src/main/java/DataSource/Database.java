@@ -26,8 +26,8 @@ public class Database {
         coaches.add(coach);
     }
 
-    public void createCompetitive(String membershipNumber, String name, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime, String teamName){
-        Competitive competitive = new Competitive(membershipNumber, name, isCrawl, crawlTime, isBackCrawl, backCrawlTime, isButterfly, butterflyTime, isBreaststroke, breaststrokeTime, teamName);
+    public void createCompetitive(String membershipNumber, String name, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime){
+        Competitive competitive = new Competitive(membershipNumber, name, isCrawl, crawlTime, isBackCrawl, backCrawlTime, isButterfly, butterflyTime, isBreaststroke, breaststrokeTime);
         competitors.add(competitive);
     }
 
@@ -84,9 +84,9 @@ public class Database {
 
     public void teamName(){
         for (ClubMember member : clubMembers){
-            if (member.getSwimType().equals("Competition") && member.getSenior()){
+            if (member.getSwimType().equals("Competition") && member.isSenior()){
                 member.setTeamName("Team senior dolphins");
-            } else if (member.getSwimType().equals("Competition") && !member.getSenior()) {
+            } else if (member.getSwimType().equals("Competition") && !member.isSenior()) {
                 member.setTeamName("Team junior dolphins");
             } else {
                 member.setTeamName("No team");
@@ -100,7 +100,7 @@ public class Database {
         int number = 1;
 
         for (ClubMember member : clubMembers) {
-            if(member.getSenior()) {
+            if(member.isSenior()) {
                 member.setMembershipNumber("S" + number++);
             }else {
                 member.setMembershipNumber("J" + number++);
@@ -143,7 +143,7 @@ public class Database {
         int totalSeniorMembers = 0;
 
         for(ClubMember members : clubMembers) {
-            if (members.getSenior()){
+            if (members.isSenior()){
                 totalSeniorMembers++;
             }
         }
@@ -154,7 +154,7 @@ public class Database {
         int totalJuniorMembers = 0;
 
         for(ClubMember members : clubMembers) {
-            if (!members.getSenior()){
+            if (!members.isSenior()){
                 totalJuniorMembers++;
             }
         }
@@ -190,17 +190,6 @@ public class Database {
 
         }
     }
-
-    public int getTotalRandomPay(){
-        int totalRandomPay = 0;
-        for (ClubMember member : clubMembers){
-            if (!member.isRandomPay()){
-                totalRandomPay++;
-            }
-        }
-        return totalRandomPay;
-    }
-
     public int getUnpaidAmount() {
         int total = 0;
         for (ClubMember member : clubMembers) {

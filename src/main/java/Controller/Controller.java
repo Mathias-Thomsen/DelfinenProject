@@ -5,7 +5,6 @@ import Competitive.Competitive;
 import DataSource.Database;
 import DataSource.Filehandler;
 import Financials.Financials;
-import Subscription.Subscription;
 
 import java.io.FileNotFoundException;
 import java.time.LocalDate;
@@ -16,25 +15,20 @@ public class Controller {
     Competitive competitive = new Competitive();
     Database database = new Database();
     Filehandler filehandler = new Filehandler();
-    ClubMember clubMember = new ClubMember();
-    Subscription subscription = new Subscription();
     Financials financials = new Financials();
+
+
     public void createClubMember(String name, int age, boolean activityStatus, String swimType){
         database.createClubMember( name, age, activityStatus, swimType);
     }
-
     public void createCoach(String name, int age){
         database.createCoach(name, age);
     }
 
+
     public ArrayList<ClubMember> getClubMembers(){
         return database.getClubMembers();
     }
-
-    public String getMembershipNumber(){
-        return clubMember.getMembershipNumber();
-    }
-
     public void deleteMember(ClubMember deleteMember){
         database.deleteMember(deleteMember);
     }
@@ -129,6 +123,10 @@ public class Controller {
         }
     }
 
+
+
+    //________________Financials______________________
+
     public void getCreatePayment() {
         database.createSubscriptionInDatabase();
     }
@@ -163,14 +161,6 @@ public class Controller {
         database.getRandomPay();
     }
 
-    public void setRandomPay(boolean randomPay){
-        clubMember.setRandomPay(randomPay);
-    }
-
-    public int getTotalRandomPay(){
-        return database.getTotalRandomPay();
-    }
-
     public int getUnpaidAmount(){
         return database.getUnpaidAmount();
     }
@@ -183,10 +173,14 @@ public class Controller {
         return database.getUnpaidMember();
     }
 
-    //Competitive
 
-    public void createCompetitive(String membershipNumber, String name, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime, String teamName){
-        database.createCompetitive(membershipNumber, name, isCrawl, crawlTime, isBackCrawl, backCrawlTime, isButterfly, butterflyTime, isBreaststroke, breaststrokeTime, teamName);
+
+
+
+    //___________Competitive_________________
+
+    public void createCompetitive(String membershipNumber, String name, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime){
+        database.createCompetitive(membershipNumber, name, isCrawl, crawlTime, isBackCrawl, backCrawlTime, isButterfly, butterflyTime, isBreaststroke, breaststrokeTime);
     }
 
     public void setCrawl(){

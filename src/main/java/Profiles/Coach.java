@@ -5,9 +5,7 @@ public class Coach {
     private String name;
     private int age;
     public Coach(){
-
     }
-
     public Coach(String employeeNumber, String name, int age) {
         this.employeeNumber = employeeNumber;
         this.name = name;
@@ -31,7 +29,6 @@ public class Coach {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -39,7 +36,6 @@ public class Coach {
     public int getAge() {
         return age;
     }
-
     public void setAge(int age) {
         this.age = age;
     }

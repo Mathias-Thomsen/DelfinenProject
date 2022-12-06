@@ -1,3 +1,4 @@
-S1;christian;21;true;true;Competition;1600;true;Team senior dolphins
+S1;christian;21;true;true;Competition;1600;false;Team senior dolphins
 J2;Marcus;12;true;false;Competition;1000;false;Team junior dolphins
-S3;Mathias;22;false;true;Exerciser;500;true;No team
+S3;Mathias;22;false;true;Exerciser;500;false;No team
+S4;Mathias Thomsen;23;true;true;Competition;1600;false;Team senior dolphins

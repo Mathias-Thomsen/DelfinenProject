@@ -11,13 +11,11 @@ public class Competitive {
     private double breaststrokeTime;
     private String name;
     private String membershipNumber;
-    private String getTime;
-    private String teamName;
 
     public Competitive(){
     }
 
-    public Competitive(String membershipNumber, String name, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime, String teamName){
+    public Competitive(String membershipNumber, String name, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime){
         this.membershipNumber = membershipNumber;
         this.name = name;
         this.isCrawl = isCrawl;
@@ -28,7 +26,7 @@ public class Competitive {
         this.butterflyTime = butterflyTime;
         this.isBreaststroke = isBreaststroke;
         this.breaststrokeTime = breaststrokeTime;
-        this.teamName = teamName;
+
     }
 
     public Competitive(boolean isCrawl, boolean isBackCrawl, boolean isButterfly, boolean isBreaststroke){
@@ -38,92 +36,76 @@ public class Competitive {
         this.isBreaststroke = isBreaststroke;
     }
 
-    public boolean isButterfly() {
-        return isButterfly;
+    public String getMembershipNumber() {
+        return membershipNumber;
+    }
+    public void setMembershipNumber(String membershipNumber) {
+        this.membershipNumber = membershipNumber;
     }
 
-    public void setButterfly(boolean butterfly) {
-        isButterfly = butterfly;
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getGetTime() {
-        return getTime;
-    }
 
-    public void setGetTime(String getTime) {
-        this.getTime = getTime;
+    public boolean isCrawl() {
+        return isCrawl;
+    }
+    public void setCrawl(boolean crawl) {
+        isCrawl = crawl;
+    }
+    public double getCrawlTime() {
+        return crawlTime;
+    }
+    public void setCrawlTime(String crawlTime) {
+        this.crawlTime = Double.parseDouble(crawlTime);
     }
 
 
     public boolean isBackCrawl() {
         return isBackCrawl;
     }
-
     public void setBackCrawl(boolean backCrawl) {
         isBackCrawl = backCrawl;
     }
-
-    public void setCrawl(boolean crawl) {
-        isCrawl = crawl;
-    }
-
-    public void setBreaststroke(boolean breaststroke) {
-        isBreaststroke = breaststroke;
-    }
-
-    public boolean isCrawl() {
-        return isCrawl;
-    }
-
-    public boolean isBreaststroke() {
-        return isBreaststroke;
-    }
-
-    public double getCrawlTime() {
-        return crawlTime;
-    }
-
-    public void setCrawlTime(String crawlTime) {
-        this.crawlTime = Double.parseDouble(crawlTime);
-    }
-
     public double getBackCrawlTime() {
         return backCrawlTime;
     }
-
     public void setBackCrawlTime(String backCrawlTime) {
         this.backCrawlTime = Double.parseDouble(backCrawlTime);
     }
 
+
+    public boolean isButterfly() {
+        return isButterfly;
+    }
+    public void setButterfly(boolean butterfly) {
+        isButterfly = butterfly;
+    }
     public double getButterflyTime() {
         return butterflyTime;
     }
-
     public void setButterflyTime(String butterflyTime) {
         this.butterflyTime = Double.parseDouble(butterflyTime);
     }
 
+
+    public boolean isBreaststroke() {
+        return isBreaststroke;
+    }
     public double getBreaststrokeTime() {
         return breaststrokeTime;
     }
-
+    public void setBreaststroke(boolean breaststroke) {
+        isBreaststroke = breaststroke;
+    }
     public void setBreaststrokeTime(String breaststrokeTime) {
         this.breaststrokeTime = Double.parseDouble(breaststrokeTime);
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getMembershipNumber() {
-        return membershipNumber;
-    }
-
-    public void setMembershipNumber(String membershipNumber) {
-        this.membershipNumber = membershipNumber;
-    }
 }

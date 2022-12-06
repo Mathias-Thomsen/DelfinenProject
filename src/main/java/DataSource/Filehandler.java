@@ -23,9 +23,9 @@ public class Filehandler {
             output.print(";");
             output.print(member.active());
             output.print(";");
-            output.print(member.getSenior());
+            output.print(member.isSenior());
             output.print(";");
-            output.print(member.isSwimType());
+            output.print(member.getSwimType());
             output.print(";");
             output.print(member.getPayment());
             output.print(";");
