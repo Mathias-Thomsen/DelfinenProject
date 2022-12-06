@@ -1,6 +1,6 @@
 package Ui;
 
-import ClubMember.ClubMember;
+import Profiles.ClubMember;
 import Controller.Controller;
 import DataSource.Database;
 import org.junit.jupiter.api.Test;

@@ -1,17 +1,19 @@
 package DataSource;
 
-import ClubMember.ClubMember;
+import Profiles.ClubMember;
 import Subscription.Subscription;
 
 import java.util.ArrayList;
 import java.util.Random;
-import ClubMember.Coach;
+import Profiles.Coach;
+import Competitive.Competitive;
 
 
 public class Database {
     Subscription subscription = new Subscription();
     public ArrayList<ClubMember> clubMembers = new ArrayList<>();
     public ArrayList<Coach> coaches = new ArrayList<>();
+    public ArrayList<Competitive> competitors = new ArrayList<>();
 
 
     public void createClubMember(String name, int age, boolean activityStatus,  String swimType) {
@@ -22,8 +24,13 @@ public class Database {
     public void createCoach(String name, int age){
         Coach coach = new Coach(name, age);
         coaches.add(coach);
-
     }
+
+    public void createCompetitive(boolean isCrawl, boolean isBackCrawl, boolean isbutterfly, boolean isBreaststroke){
+        Competitive competitive = new Competitive(isCrawl, isBackCrawl, isbutterfly, isBreaststroke);
+        competitors.add(competitive);
+    }
+
 
     public boolean deleteMember(ClubMember clubMember){
         boolean result = clubMembers.remove(clubMember);
@@ -38,13 +45,19 @@ public class Database {
         return coaches;
     }
 
+    public ArrayList<Competitive> getCompetitors(){
+        return competitors;
+    }
+
     public void clearDataMember() {
         clubMembers.clear();
-
     }
 
     public void clearDataCoach() {
         coaches.clear();
+    }
+    public void clearCompetitive(){
+        competitors.clear();
     }
 
     public ArrayList<ClubMember> findMember(String searchTerm){

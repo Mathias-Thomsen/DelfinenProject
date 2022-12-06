@@ -1,8 +1,5 @@
 package Financials;
 
-import ClubMember.ClubMember;
-import DataSource.Database;
-
 public class Financials {
     private int totalIncome;
     private int unpayedAmount;

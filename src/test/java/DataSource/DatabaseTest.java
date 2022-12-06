@@ -1,6 +1,6 @@
 package DataSource;
 
-import ClubMember.ClubMember;
+import Profiles.ClubMember;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

@@ -1,11 +1,10 @@
 package Ui;
 
-import ClubMember.ClubMember;
+import Profiles.ClubMember;
 import Controller.Controller;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -18,6 +17,7 @@ public class UserInterface {
     public void mainMenu() {
         controller.loadData();
         controller.loadDataCoach();
+        controller.loadCompetitiveData();
         int menuChoise = 0;
         while (menuChoise != 9) {
             System.out.println("""
@@ -330,17 +330,99 @@ public class UserInterface {
             }
         }
 
-        Random random = new Random();
-        boolean randomPay = random.nextBoolean();
+        if (swim.equals("Competition")){
+            System.out.println("Please, select which category you swim");
+            System.out.println("Crawl active/passive?");
+            String crawl;
+            boolean setCrawlActive;
+            boolean crawlActiveOrPassive;
+            while (true) {
+                crawl = scanner.nextLine().trim().toLowerCase();
+                if (crawl.equals("active") || crawl.equals("a")) {
+                    crawlActiveOrPassive = true;
+                    setCrawlActive = true;
+                    controller.setCrawl();
+                    break;
+                } else if (crawl.equals("passive") || crawl.equals("p")) {
+                    crawlActiveOrPassive = true;
+                    setCrawlActive = false;
+                    break;
+                } else {
+                    System.out.println("You have to type active/passive or (a/p)");
+                }
+            }
+            System.out.println("Backcrawl active/passive?");
+            String backCrawl;
+            boolean setBackCrawl;
+            boolean backCrawlActiveOrPassive;
+            while (true) {
+                backCrawl = scanner.nextLine().trim().toLowerCase();
+                if (backCrawl.equals("active") || backCrawl.equals("a")) {
+                    backCrawlActiveOrPassive = true;
+                    setBackCrawl = true;
+                    controller.setBackCrawl();
+                    break;
+                } else if (backCrawl.equals("passive") || backCrawl.equals("p")) {
+                    backCrawlActiveOrPassive = true;
+                    setBackCrawl = false;
+                    break;
+                } else {
+                    System.out.println("You have to type active/passive or (a/p)");
+                }
+            }
+            System.out.println("Butterfly active/passive?");
+            String butterfly;
+            boolean setButterfly;
+            boolean butterflyActiveOrPassive;
+            while (true) {
+                butterfly = scanner.nextLine().trim().toLowerCase();
+                if (butterfly.equals("active") || butterfly.equals("a")) {
+                    butterflyActiveOrPassive = true;
+                    setButterfly = true;
+                    controller.setButterfly();
+                    break;
+                } else if (butterfly.equals("passive") || butterfly.equals("p")) {
+                    butterflyActiveOrPassive = true;
+                    setButterfly = false;
+                    break;
+                } else {
+                    System.out.println("You have to type active/passive or (a/p)");
+                }
+            }
+            System.out.println("Breaststroke active/passive?");
+            String breaststroke;
+            boolean setBreastActive;
+            boolean breastActiveOrPassive;
+            while (true) {
+                breaststroke = scanner.nextLine().trim().toLowerCase();
+                if (breaststroke.equals("active") || breaststroke.equals("a")) {
+                    breastActiveOrPassive = true;
+                    setBreastActive = true;
+                    controller.setBreaststroke();
+                    break;
+                } else if (breaststroke.equals("passive") || breaststroke.equals("p")) {
+                    breastActiveOrPassive = true;
+                    setBreastActive = false;
+                    break;
+                } else {
+                    System.out.println("You have to type active/passive or (a/p)");
+                }
+            }
+        }
+
 
         //Create member
         controller.createClubMember(nameInput, ageInput, setActive, swim);
+        controller.createCompetitive(controller.isCrawl(), controller.isBackCrawl(), controller.isButterfly(), controller.isBreaststroke());
         controller.getRandomPay();
         controller.junoirOrsenoir();
         controller.setClubMemberNumber();
         controller.getCreatePayment();
 
         controller.saveData(); //save to the file every time we make a new member.
+
+        controller.saveCompetitiveData();
+
     }
     public void showMenmbers() {
         for (ClubMember controller : controller.getMembers()) {

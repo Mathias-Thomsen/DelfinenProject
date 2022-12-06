@@ -1,7 +1,8 @@
 package DataSource;
 
-import ClubMember.ClubMember;
-import ClubMember.Coach;
+import Profiles.ClubMember;
+import Profiles.Coach;
+import Competitive.Competitive;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -100,6 +101,51 @@ public class Filehandler {
             loadCoachData.setAge(Integer.parseInt(parts[2]));
 
             return loadCoachData;
+
+        } catch (NumberFormatException e) {
+            System.out.println("cannot load data");
+            return null;
+        }
+    }
+
+    public void saveCompetitiveData(ArrayList<Competitive> competitors) throws FileNotFoundException {
+        PrintStream output = new PrintStream(new File("data/competitive.csv"));
+
+        for (Competitive member : competitors) {
+            output.print(member.isCrawl());
+            output.print(";");
+            output.print(member.isBackCrawl());
+            output.print(";");
+            output.print(member.isButterfly());
+            output.print(";");
+            output.print(member.isBreaststroke());
+            output.println();
+        }
+        output.close();
+    }
+
+    public void loadCompetitiveData(ArrayList<Competitive> allCompetitores) throws FileNotFoundException {
+
+        Scanner reader = new Scanner(new File("data/competitive.csv"));
+        while (reader.hasNextLine()) {
+            String line = reader.nextLine();
+
+            Competitive CompetitiveDataObjekt = parseCsvLineCompetitive(line);
+            allCompetitores.add(CompetitiveDataObjekt);
+        }
+    }
+
+    private Competitive parseCsvLineCompetitive(String line) {
+        try {
+            String[] parts = line.split(";");
+
+            Competitive loadCompetitiveData = new Competitive();
+            loadCompetitiveData.setCrawl(Boolean.parseBoolean(parts[0]));
+            loadCompetitiveData.setBackCrawl(Boolean.parseBoolean(parts[1]));
+            loadCompetitiveData.setButterfly(Boolean.parseBoolean(parts[2]));
+            loadCompetitiveData.setBreaststroke(Boolean.parseBoolean(parts[3]));
+
+            return loadCompetitiveData;
 
         } catch (NumberFormatException e) {
             System.out.println("cannot load data");

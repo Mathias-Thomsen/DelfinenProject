@@ -1,6 +1,4 @@
-package ClubMember;
-
-import java.time.LocalDate;
+package Profiles;
 
 public class ClubMember {
     private String name;

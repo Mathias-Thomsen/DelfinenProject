@@ -1,6 +1,6 @@
 package Controller;
 
-import ClubMember.ClubMember;
+import Profiles.ClubMember;
 import DataSource.Database;
 import DataSource.Filehandler;
 import org.junit.jupiter.api.Test;

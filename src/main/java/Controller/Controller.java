@@ -1,6 +1,7 @@
 package Controller;
 
-import ClubMember.ClubMember;
+import Profiles.ClubMember;
+import Competitive.Competitive;
 import DataSource.Database;
 import DataSource.Filehandler;
 import Financials.Financials;
@@ -12,6 +13,7 @@ import java.time.Period;
 import java.util.ArrayList;
 
 public class Controller {
+    Competitive competitive = new Competitive();
     Database database = new Database();
     Filehandler filehandler = new Filehandler();
     ClubMember clubMember = new ClubMember();
@@ -49,6 +51,14 @@ public class Controller {
         }
     }
 
+    public void saveCompetitiveData(){
+        try {
+            filehandler.saveCompetitiveData(database.getCompetitors());
+        } catch (FileNotFoundException e) {
+            System.out.println("fail");
+        }
+    }
+
     public void loadDataCoach(){
         try {
             database.clearDataCoach();
@@ -61,6 +71,14 @@ public class Controller {
         try {
             database.clearDataMember();
             filehandler.loadData(database.getClubMembers());
+        } catch (FileNotFoundException e) {
+            System.out.println("fail");
+        }
+    }
+    public void loadCompetitiveData(){
+        try {
+            database.clearCompetitive();
+            filehandler.loadCompetitiveData(database.getCompetitors());
         } catch (FileNotFoundException e) {
             System.out.println("fail");
         }
@@ -152,6 +170,43 @@ public class Controller {
         return database.getUnpaidMember();
     }
 
+    //Competitive
+
+    public void createCompetitive(boolean isCrawl, boolean isBackCrawl, boolean isbutterfly, boolean isBreaststroke){
+        database.createCompetitive(isCrawl, isBackCrawl, isbutterfly, isBreaststroke);
+    }
+
+    public void setCrawl(){
+        competitive.setCrawl(true);
+    }
+
+    public void setBackCrawl(){
+        competitive.setBackCrawl(true);
+    }
+
+    public void setButterfly(){
+        competitive.setButterfly(true);
+    }
+
+    public void setBreaststroke(){
+        competitive.setBreaststroke(true);
+    }
+
+    public boolean isCrawl(){
+        return competitive.isCrawl();
+    }
+
+    public boolean isBackCrawl(){
+        return competitive.isBackCrawl();
+    }
+
+    public boolean isButterfly(){
+        return competitive.isButterfly();
+    }
+
+    public boolean isBreaststroke(){
+        return competitive.isBreaststroke();
+    }
 
 
 
