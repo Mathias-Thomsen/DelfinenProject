@@ -106,7 +106,7 @@ class ControllerTest {
         database.createClubMember("Christian", 22, true, "exerciser");
         //Act
         System.out.println(database.getClubMembers());
-        database.clearData();
+        database.clearDataMember();
         System.out.println(database.getClubMembers());
         filehandler.loadData(database.getClubMembers());
         System.out.println(database.getClubMembers());

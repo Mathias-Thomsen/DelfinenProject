@@ -71,15 +71,9 @@ public class Filehandler {
         PrintStream output = new PrintStream(new File("data/coachesData.csv"));
 
         for (Coach coach : Coaches) {
-            output.print(coach.getCoachTime());
-            output.print(";");
             output.print(coach.getName());
             output.print(";");
             output.print(coach.getAge());
-            output.print(";");
-            output.print(coach.getTeam());
-            output.print(";");
-            output.print(coach.getCoachTime());
             output.println();
         }
         output.close();
@@ -102,8 +96,6 @@ public class Filehandler {
             loadCoachData.setEmployeeNumber(parts[0]);
             loadCoachData.setName(parts[1]);
             loadCoachData.setAge(Integer.parseInt(parts[2]));
-            loadCoachData.setTeam(Integer.parseInt(parts[3]));
-            loadCoachData.setCoachTime(Integer.parseInt(parts[4]));
 
             return loadCoachData;
 

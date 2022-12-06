@@ -21,6 +21,10 @@ public class Controller {
         database.createClubMember( name, age, activityStatus, swimType);
     }
 
+    public void createCoach(String name, int age){
+        database.createCoach(name, age);
+    }
+
     public ArrayList<ClubMember> getClubMembers(){
         return database.getClubMembers();
     }
@@ -36,9 +40,26 @@ public class Controller {
             System.out.println("fail");
         }
     }
+
+    public void saveDataCoach(){
+        try {
+            filehandler.saveCoachData(database.getCoaches());
+        } catch (FileNotFoundException e) {
+            System.out.println("fail");
+        }
+    }
+
+    public void loadDataCoach(){
+        try {
+            database.clearDataCoach();
+            filehandler.loadCoachData(database.getCoaches());
+        } catch (FileNotFoundException e) {
+            System.out.println("fail");
+        }
+    }
     public void loadData(){
         try {
-            database.clearData();
+            database.clearDataMember();
             filehandler.loadData(database.getClubMembers());
         } catch (FileNotFoundException e) {
             System.out.println("fail");
@@ -116,7 +137,7 @@ public class Controller {
     }
 
     public int getUnpaidAmount(){
-        return database.getUnpaidAmont();
+        return database.getUnpaidAmount();
     }
 
     public int getTotalAmount(){

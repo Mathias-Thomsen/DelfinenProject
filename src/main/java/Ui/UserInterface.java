@@ -17,6 +17,7 @@ public class UserInterface {
 
     public void mainMenu() {
         controller.loadData();
+        controller.loadDataCoach();
         int menuChoise = 0;
         while (menuChoise != 9) {
             System.out.println("""
@@ -43,7 +44,7 @@ public class UserInterface {
 
             switch (menuChoise) {
                 case 1 -> clubManagerMenu();
-                //case 2 -> coachMenu();
+                case 2 -> coachMenu();
                 case 3 -> cashierMenu();
                 case 9 -> exitProgram();
                 default -> System.out.println("Invalid Input\n");
@@ -78,7 +79,7 @@ public class UserInterface {
         } while (!userChoiceFalse);
 
         switch (menuChoise) {
-            //case 1 -> createMember();
+            //case 1 -> creat
             //case 2 -> showMenmbers();
             //case 3 -> searchMember();
             //case 4 -> editMember();
@@ -95,10 +96,11 @@ public class UserInterface {
                 Club manager menu:
                 -------------------------
                 1. Create new member
-                2. Show list of members
-                3. Search for members
-                4. Edit member information
-                5. Delete current member
+                2. Create new coach
+                3. Show list of members
+                4. Search for members
+                5. Edit member information
+                6. Delete current member
                 9. Go back to sign in
                 """);
 
@@ -116,10 +118,11 @@ public class UserInterface {
 
         switch (menuChoise) {
             case 1 -> createMember();
-            case 2 -> showMenmbers();
-            case 3 -> searchMember();
-            case 4 -> editMember();
-            case 5 -> deleteMember();
+            case 2 -> createCoach();
+            case 3 -> showMenmbers();
+            case 4 -> searchMember();
+            case 5 -> editMember();
+            case 6 -> deleteMember();
             case 9 -> mainMenu();
             default -> System.out.println("Invalid Input\n");
         }
@@ -160,6 +163,54 @@ public class UserInterface {
             case 9 -> mainMenu();
             default -> System.out.println("Invalid Input\n");
         }
+
+    }
+
+    public void createCoach() {
+        //Name
+        System.out.println("--------------------------------------------------------");
+        System.out.println("Input new coach name: ");
+        String coachNameInput = scanner.nextLine();
+        while (coachNameInput.isEmpty() || coachNameInput.equals(" ")) {
+            System.out.print("Invalid input try again:");
+            coachNameInput = scanner.nextLine();
+        }
+
+        //Age
+        System.out.println("--------------------------------------------------------");
+        System.out.println("Input new coach birthday: ");
+        System.out.print("Year (fx 2000): ");
+        while (!scanner.hasNextInt()) {
+            System.out.println("Coach age can only be numbers, try again");
+            scanner.nextLine();
+        }
+        int getCoachBirthYear = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Month (fx 9): ");
+        while (!scanner.hasNextInt()) {
+            System.out.println("Coach age can only be numbers, try again");
+            scanner.nextLine();
+        }
+        int getCoachBirthMonth = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Day (fx 18):");
+        while (!scanner.hasNextInt()) {
+            System.out.println("Member age can only be numbers, try again");
+            scanner.nextLine();
+        }
+        int getCoachBirthDay = scanner.nextInt();
+        scanner.nextLine();
+
+        LocalDate currentDate = LocalDate.now();
+        LocalDate birthDate = LocalDate.of(getCoachBirthYear, getCoachBirthMonth, getCoachBirthDay);
+
+        int coacheAgeInput = controller.calculateAge(birthDate, currentDate);
+
+
+        //create coach
+
+        controller.createCoach(coachNameInput, coacheAgeInput);
+        controller.saveDataCoach();
 
     }
 

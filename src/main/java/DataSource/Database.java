@@ -6,17 +6,24 @@ import Subscription.Subscription;
 
 import java.util.ArrayList;
 import java.util.Random;
+import ClubMember.Coach;
+
 
 public class Database {
     Subscription subscription = new Subscription();
     Financials financials = new Financials();
     public ArrayList<ClubMember> clubMembers = new ArrayList<>();
+    public ArrayList<Coach> coaches = new ArrayList<>();
 
 
     public void createClubMember(String name, int age, boolean activityStatus,  String swimType) {
         ClubMember clubMember = new ClubMember(name, age, activityStatus, swimType);
         clubMembers.add(clubMember);
+    }
 
+    public void createCoach(String name, int age){
+        Coach coach = new Coach(name, age);
+        coaches.add(coach);
 
     }
 
@@ -29,9 +36,17 @@ public class Database {
         return clubMembers;
     }
 
-    public void clearData() {
+    public ArrayList<Coach> getCoaches(){
+        return coaches;
+    }
+
+    public void clearDataMember() {
         clubMembers.clear();
 
+    }
+
+    public void clearDataCoach() {
+        coaches.clear();
     }
 
     public ArrayList<ClubMember> findMember(String searchTerm){
@@ -153,7 +168,7 @@ public class Database {
         return totalRandomPay;
     }
 
-    public int getUnpaidAmont() {
+    public int getUnpaidAmount() {
         int total = 0;
         for (ClubMember member : clubMembers) {
             if (!member.isRandomPay()) {
