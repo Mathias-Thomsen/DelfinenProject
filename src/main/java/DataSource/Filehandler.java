@@ -30,6 +30,8 @@ public class Filehandler {
             output.print(member.getPayment());
             output.print(";");
             output.print(member.isRandomPay());
+            output.print(";");
+            output.print(member.getTeamName());
             output.println();
         }
         output.close();
@@ -59,6 +61,7 @@ public class Filehandler {
             loadClubmemberData.setSwimType(parts[5]);
             loadClubmemberData.setPayment(Integer.parseInt(parts[6]));
             loadClubmemberData.setRandomPay(Boolean.parseBoolean(parts[7]));
+            loadClubmemberData.setTeamName(parts[8]);
 
 
             return loadClubmemberData;

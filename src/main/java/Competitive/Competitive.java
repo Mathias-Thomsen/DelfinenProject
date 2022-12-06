@@ -12,11 +12,12 @@ public class Competitive {
     private String name;
     private String membershipNumber;
     private String getTime;
+    private String teamName;
 
     public Competitive(){
     }
 
-    public Competitive(String membershipNumber, String name, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime){
+    public Competitive(String membershipNumber, String name, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime, String teamName){
         this.membershipNumber = membershipNumber;
         this.name = name;
         this.isCrawl = isCrawl;
@@ -27,6 +28,7 @@ public class Competitive {
         this.butterflyTime = butterflyTime;
         this.isBreaststroke = isBreaststroke;
         this.breaststrokeTime = breaststrokeTime;
+        this.teamName = teamName;
     }
 
     public Competitive(boolean isCrawl, boolean isBackCrawl, boolean isButterfly, boolean isBreaststroke){

@@ -26,8 +26,8 @@ public class Database {
         coaches.add(coach);
     }
 
-    public void createCompetitive(String membershipNumber, String name, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime){
-        Competitive competitive = new Competitive(membershipNumber, name, isCrawl, crawlTime, isBackCrawl, backCrawlTime, isButterfly, butterflyTime, isBreaststroke, breaststrokeTime);
+    public void createCompetitive(String membershipNumber, String name, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime, String teamName){
+        Competitive competitive = new Competitive(membershipNumber, name, isCrawl, crawlTime, isBackCrawl, backCrawlTime, isButterfly, butterflyTime, isBreaststroke, breaststrokeTime, teamName);
         competitors.add(competitive);
     }
 
@@ -82,6 +82,19 @@ public class Database {
         }
     }
 
+    public void teamName(){
+        for (ClubMember member : clubMembers){
+            if (member.getSwimType().equals("Competition") && member.getSenior()){
+                member.setTeamName("Team senior dolphins");
+            } else if (member.getSwimType().equals("Competition") && !member.getSenior()) {
+                member.setTeamName("Team junior dolphins");
+            } else {
+                member.setTeamName("No team");
+            }
+        }
+    }
+
+
     public void setClubMemberNumber() {
 
         int number = 1;
@@ -94,6 +107,7 @@ public class Database {
             }
         }
     }
+
 
     public void setCoachNumber() {
         int number = 1;

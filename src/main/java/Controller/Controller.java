@@ -107,6 +107,11 @@ public class Controller {
         database.juniorOrSenior();
     }
 
+    public void teamName(){
+        database.teamName();
+    }
+
+
     public void setClubMemberNumber(){
         database.setClubMemberNumber();
     }
@@ -180,8 +185,8 @@ public class Controller {
 
     //Competitive
 
-    public void createCompetitive(String membershipNumber, String name, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime){
-        database.createCompetitive(membershipNumber, name, isCrawl, crawlTime, isBackCrawl, backCrawlTime, isButterfly, butterflyTime, isBreaststroke, breaststrokeTime);
+    public void createCompetitive(String membershipNumber, String name, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime, String teamName){
+        database.createCompetitive(membershipNumber, name, isCrawl, crawlTime, isBackCrawl, backCrawlTime, isButterfly, butterflyTime, isBreaststroke, breaststrokeTime, teamName);
     }
 
     public void setCrawl(){
@@ -215,6 +220,8 @@ public class Controller {
     public boolean isBreaststroke(){
         return competitive.isBreaststroke();
     }
+
+
 
 
 

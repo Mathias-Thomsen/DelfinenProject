@@ -1,12 +1,3 @@
-S1;oralept2;18;true;true;Competition;1600;true
-S2;qwe;18;true;true;Exerciser;1600;false
-S3;oasodoasd;18;false;true;Competition;500;false
-J4;ooasod;9;false;false;Competition;500;false
-S5;Mathias;23;true;true;Competition;1600;false
-S6;Mathias;23;true;true;Competition;1600;true
-S7;qwe;21;true;true;Competition;1600;true
-S8;qwe;21;true;true;Competition;1600;false
-S9;werer;21;true;true;Competition;1600;true
-S10;Marcus;19;true;true;Competition;1600;true
-S11;Mathias;21;true;true;Competition;1600;true
-S12;Christian;21;true;true;Competition;1600;true
+S1;christian;21;true;true;Competition;1600;true;Team senior dolphins
+J2;Marcus;12;true;false;Competition;1000;false;Team junior dolphins
+S3;Mathias;22;false;true;Exerciser;500;true;No team

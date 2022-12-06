@@ -61,10 +61,11 @@ public class UserInterface {
                 Club manager menu:
                 -------------------------
                 1. Show competitive swimmers
-                2. Search for members
-                3. Edit member results and swim categories
-                4. Show results
-                5. Set time results
+                2. Show Senior team
+                3. Show Junior team
+                4. Show top 5 swimmers in each category
+                5. Show tournament result
+                6. Set time results
                 9. Go back to sign in
                 """);
 
@@ -81,13 +82,49 @@ public class UserInterface {
         } while (!userChoiceFalse);
 
         switch (menuChoise) {
-            //case 1 -> creat
-            //case 2 -> showMenmbers();
-            //case 3 -> searchMember();
+            case 1 -> showCompetitiveSwimmers();
+            case 2 -> showSeniorTeams();
+            case 3 -> showJuniorTeams();
             //case 4 -> editMember();
-            case 5 -> setTimeResults();
+            case 6 -> setTimeResults();
             //case 9 -> mainMenu();
             default -> System.out.println("Invalid Input\n");
+        }
+    }
+
+    public void showSeniorTeams(){
+        for (ClubMember controller : controller.getMembers()) {
+            if (controller.getTeamName().equals("Team senior dolphins")){
+                System.out.println("------------------\n"
+                        + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
+                        + "Name:...................... " + controller.getName() + "\n"
+                        + "Age:....................... " + controller.getAge() + "\n"
+                        + "Team:......................" + controller.getTeamName());
+            }
+        }
+    }
+
+    public void showJuniorTeams(){
+        for (ClubMember controller : controller.getMembers()) {
+            if (controller.getTeamName().equals("Team junior dolphins")){
+                System.out.println("------------------\n"
+                        + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
+                        + "Name:...................... " + controller.getName() + "\n"
+                        + "Age:....................... " + controller.getAge() + "\n"
+                        + "Team:......................" + controller.getTeamName());
+            }
+        }
+    }
+
+    public void showCompetitiveSwimmers(){
+        for (Competitive controller : controller.getCompetitors()) {
+            System.out.println("------------------\n"
+                    + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
+                    + "Name:...................... " + controller.getName() + "\n"
+                    + "Crawl:..................... " + (controller.isCrawl() ? "Active" : "Passive" )  + "\n"
+                    + "Backcrawl:................. " + (controller.isBackCrawl() ? "Active" : "Passive" ) + "\n"
+                    + "Butterfly:................. " + (controller.isButterfly() ? "Active" : "Passive") + "\n"
+                    + "Breaststroke:.............. " + (controller.isBreaststroke() ? "Active" : "Passive" ));
         }
     }
 
@@ -509,9 +546,10 @@ public class UserInterface {
         controller.createClubMember(nameInput, ageInput, setActive, swim);
         controller.getRandomPay();
         controller.junoirOrsenoir();
+        controller.teamName();
         controller.setClubMemberNumber();
         controller.getCreatePayment();
-        controller.createCompetitive(controller.getMembershipNumber(), nameInput, controller.isCrawl(), 0, controller.isBackCrawl(), 0, controller.isButterfly(), 0, controller.isBreaststroke(), 0);
+        controller.createCompetitive(null, nameInput, controller.isCrawl(), 0, controller.isBackCrawl(), 0, controller.isButterfly(), 0, controller.isBreaststroke(), 0, null);
 
         controller.saveData(); //save to the file every time we make a new member.
 
