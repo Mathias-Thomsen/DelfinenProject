@@ -112,13 +112,25 @@ public class Filehandler {
         PrintStream output = new PrintStream(new File("data/competitive.csv"));
 
         for (Competitive member : competitors) {
+            output.print(member.getMembershipNumber());
+            output.print(";");
+            output.print(member.getName());
+            output.print(";");
             output.print(member.isCrawl());
+            output.print(";");
+            output.print(member.getCrawlTime());
             output.print(";");
             output.print(member.isBackCrawl());
             output.print(";");
+            output.print(member.getBackCrawlTime());
+            output.print(";");
             output.print(member.isButterfly());
             output.print(";");
+            output.print(member.getButterflyTime());
+            output.print(";");
             output.print(member.isBreaststroke());
+            output.print(";");
+            output.print(member.getBreaststrokeTime());
             output.println();
         }
         output.close();
@@ -140,10 +152,16 @@ public class Filehandler {
             String[] parts = line.split(";");
 
             Competitive loadCompetitiveData = new Competitive();
-            loadCompetitiveData.setCrawl(Boolean.parseBoolean(parts[0]));
-            loadCompetitiveData.setBackCrawl(Boolean.parseBoolean(parts[1]));
-            loadCompetitiveData.setButterfly(Boolean.parseBoolean(parts[2]));
-            loadCompetitiveData.setBreaststroke(Boolean.parseBoolean(parts[3]));
+            loadCompetitiveData.setMembershipNumber(parts[0]);
+            loadCompetitiveData.setName(parts[1]);
+            loadCompetitiveData.setCrawl(Boolean.parseBoolean(parts[2]));
+            loadCompetitiveData.setCrawlTime(parts[3]);
+            loadCompetitiveData.setBackCrawl(Boolean.parseBoolean(parts[4]));
+            loadCompetitiveData.setBackCrawlTime(parts[5]);
+            loadCompetitiveData.setButterfly(Boolean.parseBoolean(parts[6]));
+            loadCompetitiveData.setButterflyTime(parts[7]);
+            loadCompetitiveData.setBreaststroke(Boolean.parseBoolean(parts[8]));
+            loadCompetitiveData.setBreaststrokeTime(parts[9]);
 
             return loadCompetitiveData;
 

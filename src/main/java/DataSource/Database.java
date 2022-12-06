@@ -26,8 +26,8 @@ public class Database {
         coaches.add(coach);
     }
 
-    public void createCompetitive(boolean isCrawl, boolean isBackCrawl, boolean isbutterfly, boolean isBreaststroke){
-        Competitive competitive = new Competitive(isCrawl, isBackCrawl, isbutterfly, isBreaststroke);
+    public void createCompetitive(String membershipNumber, String name, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime){
+        Competitive competitive = new Competitive(membershipNumber, name, isCrawl, crawlTime, isBackCrawl, backCrawlTime, isButterfly, butterflyTime, isBreaststroke, breaststrokeTime);
         competitors.add(competitive);
     }
 

@@ -4,9 +4,6 @@ public class Coach {
     private String employeeNumber;
     private String name;
     private int age;
-
-
-
     public Coach(){
 
     }

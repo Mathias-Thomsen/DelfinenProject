@@ -31,6 +31,10 @@ public class Controller {
         return database.getClubMembers();
     }
 
+    public String getMembershipNumber(){
+        return clubMember.getMembershipNumber();
+    }
+
     public void deleteMember(ClubMember deleteMember){
         database.deleteMember(deleteMember);
     }
@@ -86,6 +90,10 @@ public class Controller {
 
     public ArrayList<ClubMember> getMembers() {
         return database.getClubMembers();
+    }
+
+    public ArrayList<Competitive> getCompetitors(){
+        return database.getCompetitors();
     }
 
 
@@ -172,8 +180,8 @@ public class Controller {
 
     //Competitive
 
-    public void createCompetitive(boolean isCrawl, boolean isBackCrawl, boolean isbutterfly, boolean isBreaststroke){
-        database.createCompetitive(isCrawl, isBackCrawl, isbutterfly, isBreaststroke);
+    public void createCompetitive(String membershipNumber, String name, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime){
+        database.createCompetitive(membershipNumber, name, isCrawl, crawlTime, isBackCrawl, backCrawlTime, isButterfly, butterflyTime, isBreaststroke, breaststrokeTime);
     }
 
     public void setCrawl(){

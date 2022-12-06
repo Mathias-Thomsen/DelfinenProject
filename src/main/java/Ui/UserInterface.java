@@ -2,6 +2,7 @@ package Ui;
 
 import Profiles.ClubMember;
 import Controller.Controller;
+import Competitive.Competitive;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -63,6 +64,7 @@ public class UserInterface {
                 2. Search for members
                 3. Edit member results and swim categories
                 4. Show results
+                5. Set time results
                 9. Go back to sign in
                 """);
 
@@ -83,10 +85,102 @@ public class UserInterface {
             //case 2 -> showMenmbers();
             //case 3 -> searchMember();
             //case 4 -> editMember();
-            //case 5 -> deleteMember();
+            case 5 -> setTimeResults();
             //case 9 -> mainMenu();
             default -> System.out.println("Invalid Input\n");
         }
+    }
+
+    public void setTimeResults(){
+        System.out.println("-----------------------------------------------------");
+        System.out.println("Search for the member you want to set results: ");
+        String editTimeResults = scanner.nextLine();
+        ArrayList<Competitive> searchEditResult = new ArrayList<>();
+
+        int index = 1;
+
+        for (Competitive editMember : controller.getCompetitors()) {
+            String member = editMember.getName().toLowerCase();
+            if (member.contains(editTimeResults.toLowerCase())) {
+                searchEditResult.add(editMember);
+                System.out.println(index++ + ":" + editMember.getName());
+
+            }
+        }
+
+        System.out.print("Type in that member you want to edit: ");
+        String userEditNumberString = scanner.nextLine();
+        int userEditNumberInteger = Integer.parseInt(userEditNumberString);
+
+
+        Competitive editMember = searchEditResult.get(userEditNumberInteger - 1);
+        System.out.println("You have selected: " + editMember.getName());
+        System.out.println("If you don't want to edit press ENTER!");
+        if (editMember.isCrawl()){
+            System.out.println("Crawl: " + (editMember.isCrawl() ? "Active" : "Passvie"));
+            do {
+                System.out.println("Crawl time: " + editMember.getCrawlTime());
+                try {
+                    System.out.println("Type your updated result here: ");
+                    String newCrawlTime = scanner.nextLine();
+                    if (!newCrawlTime.isEmpty()) {
+                        editMember.setCrawlTime(newCrawlTime);
+                    }
+                    userChoiceFalse = true;
+                } catch (Exception e) {
+                    System.out.println("Type a time with '.' (fx. 2.14) with letters. If you don't want to edit press ENTER!");
+                }
+            } while (!userChoiceFalse);
+        } if (editMember.isBackCrawl()) {
+            System.out.println("Backcrawl: " + (editMember.isBackCrawl() ? "Active" : "Passvie"));
+            do {
+                System.out.println("backcrawl time: " + editMember.getBackCrawlTime());
+                try {
+                    System.out.println("Type your updated result here: ");
+                    String newBackCrawlTime = scanner.nextLine();
+                    if (!newBackCrawlTime.isEmpty()) {
+                        editMember.setBackCrawlTime(newBackCrawlTime);
+                    }
+                    userChoiceFalse = true;
+                } catch (Exception e) {
+                    System.out.println("Type a time with '.' (fx. 2.14) with letters. If you don't want to edit press ENTER!");
+                }
+            } while (!userChoiceFalse);
+        } if (editMember.isButterfly()){
+            System.out.println("Butterfly: " + (editMember.isButterfly() ? "Active" : "Passvie"));
+            do {
+                System.out.println("Butterfly time: " + editMember.getButterflyTime());
+                try {
+                    System.out.println("Type your updated result here: ");
+                    String newButterflyTime = scanner.nextLine();
+                    if (!newButterflyTime.isEmpty()) {
+                        editMember.setButterflyTime(newButterflyTime);
+                    }
+                    userChoiceFalse = true;
+                } catch (Exception e) {
+                    System.out.println("Type a time with '.' (fx. 2.14) with letters. If you don't want to edit press ENTER!");
+                }
+            } while (!userChoiceFalse);
+        } if (editMember.isBreaststroke()){
+            System.out.println("Breaststroke: " + (editMember.isBreaststroke() ? "Active" : "Passvie"));
+            do {
+                System.out.println("Breaststroke time: " + editMember.getButterflyTime());
+                try {
+                    System.out.println("Type your updated result here: ");
+                    String newBreastStrokeTime = scanner.nextLine();
+                    if (!newBreastStrokeTime.isEmpty()) {
+                        editMember.setBreaststrokeTime(newBreastStrokeTime);
+                    }
+                    userChoiceFalse = true;
+                } catch (Exception e) {
+                    System.out.println("Type a time with '.' (fx. 2.14) with letters. If you don't want to edit press ENTER!");
+                }
+            } while (!userChoiceFalse);
+        } else {
+            System.out.println("Not active");
+        }
+
+        controller.saveCompetitiveData();
     }
 
     public void clubManagerMenu() {
@@ -413,11 +507,11 @@ public class UserInterface {
 
         //Create member
         controller.createClubMember(nameInput, ageInput, setActive, swim);
-        controller.createCompetitive(controller.isCrawl(), controller.isBackCrawl(), controller.isButterfly(), controller.isBreaststroke());
         controller.getRandomPay();
         controller.junoirOrsenoir();
         controller.setClubMemberNumber();
         controller.getCreatePayment();
+        controller.createCompetitive(controller.getMembershipNumber(), nameInput, controller.isCrawl(), 0, controller.isBackCrawl(), 0, controller.isButterfly(), 0, controller.isBreaststroke(), 0);
 
         controller.saveData(); //save to the file every time we make a new member.
 
