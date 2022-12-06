@@ -71,6 +71,8 @@ public class Filehandler {
         PrintStream output = new PrintStream(new File("data/coachesData.csv"));
 
         for (Coach coach : Coaches) {
+            output.print(coach.getEmployeeNumber());
+            output.print(";");
             output.print(coach.getName());
             output.print(";");
             output.print(coach.getAge());
@@ -104,5 +106,8 @@ public class Filehandler {
             return null;
         }
     }
+
+
+
 }
 

@@ -85,6 +85,10 @@ public class Controller {
         database.setClubMemberNumber();
     }
 
+    public void setCoachNumber(){
+        database.setCoachNumber();
+    }
+
 
     public int calculateAge(LocalDate birthDate, LocalDate currentDate) {
         if ((birthDate != null) && (currentDate != null)) {

@@ -210,6 +210,11 @@ public class UserInterface {
         //create coach
 
         controller.createCoach(coachNameInput, coacheAgeInput);
+        controller.setCoachNumber();
+
+
+
+        //Save Data
         controller.saveDataCoach();
 
     }

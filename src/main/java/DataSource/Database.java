@@ -1,7 +1,6 @@
 package DataSource;
 
 import ClubMember.ClubMember;
-import Financials.Financials;
 import Subscription.Subscription;
 
 import java.util.ArrayList;
@@ -11,7 +10,6 @@ import ClubMember.Coach;
 
 public class Database {
     Subscription subscription = new Subscription();
-    Financials financials = new Financials();
     public ArrayList<ClubMember> clubMembers = new ArrayList<>();
     public ArrayList<Coach> coaches = new ArrayList<>();
 
@@ -81,6 +79,14 @@ public class Database {
             }else {
                 member.setMembershipNumber("J" + number++);
             }
+        }
+    }
+
+    public void setCoachNumber() {
+        int number = 1;
+
+        for(Coach coach : coaches){
+            coach.setEmployeeNumber("COACH" + number++);
         }
     }
 
