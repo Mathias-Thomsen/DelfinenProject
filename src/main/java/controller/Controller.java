@@ -90,6 +90,26 @@ public class Controller {
         return database.getCompetitors();
     }
 
+    //SORT METHODS
+
+    public void sortCrawlTime(){
+        database.sortCrawlTime();
+    }
+
+    public void sortBackCrawlTime(){
+        database.sortBackCrawlTime();
+    }
+
+    public void sortButterflyTime(){
+        database.sortButterflyTime();
+    }
+
+    public void sortBreastStrokeTime(){
+        database.sortBreaststrokeTime();
+    }
+
+    //-------------
+
 
 
     public ArrayList<ClubMember> findMember(String searchTerm) {

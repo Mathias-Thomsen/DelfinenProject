@@ -1,5 +1,9 @@
 package dataSource;
 
+import comparatorer.CompetitiveBackCrawlTime;
+import comparatorer.CompetitiveBreaststrokeSwimmers;
+import comparatorer.CompetitiveButterflySwimmers;
+import comparatorer.CompetitiveCrawlTime;
 import profiles.ClubMember;
 import subscription.Subscription;
 
@@ -70,6 +74,25 @@ public class Database {
 
     }
 
+    //SORT METHODS
+
+    public void sortCrawlTime(){
+        competitors.sort(new CompetitiveCrawlTime());
+    }
+
+    public void sortBackCrawlTime(){
+        competitors.sort(new CompetitiveBackCrawlTime());
+    }
+
+    public void sortButterflyTime(){
+        competitors.sort(new CompetitiveButterflySwimmers());
+    }
+
+    public void sortBreaststrokeTime(){
+        competitors.sort(new CompetitiveBreaststrokeSwimmers());
+    }
+
+    // -----------
 
 
     public void juniorOrSenior(){

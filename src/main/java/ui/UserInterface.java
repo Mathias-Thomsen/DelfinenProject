@@ -4,6 +4,7 @@ import profiles.ClubMember;
 import controller.Controller;
 import competitive.Competitive;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Year;
 import java.util.ArrayList;
@@ -530,7 +531,7 @@ public class UserInterface {
         while (menuChoise != 9) {
             System.out.println("""
                 -------------------------
-                Club manager menu:
+                Coach menu:
                 -------------------------
                 1. Show competitive swimmers
                 2. Show Senior team
@@ -557,7 +558,7 @@ public class UserInterface {
                 case 1 -> showCompetitiveSwimmers();
                 case 2 -> showSeniorTeams();
                 case 3 -> showJuniorTeams();
-                //case 4 -> editMember();
+                case 4 -> showTop5SwimmersMenu();
                 case 6 -> setTimeResults();
                 //case 9 -> mainMenu();
                 default -> System.out.println("Invalid Input\n");
@@ -597,6 +598,94 @@ public class UserInterface {
             }
         }
     }
+
+    public void showTop5SwimmersMenu(){
+        int menuChoise = 0;
+        while (menuChoise != 9) {
+            System.out.println("""
+                -------------------------
+                Select swim category:
+                -------------------------
+                1. Show top 5 crawl swimmers
+                2. Show top 5 backcrawl swimmers
+                3. Show top 5 butterfly swimmers
+                4. Show top 5 breaststroke swimmers
+                5. Go back to coach menu
+                9. Go back to sign in
+                """);
+
+            do {
+                String valg = scanner.nextLine().trim();
+                try {
+                    menuChoise = Integer.parseInt(valg);
+                    userChoice = true;
+                } catch (NumberFormatException e) {
+                    System.out.print("There has been a error enter a valid number: ");
+                    scanner.nextLine();
+                }
+
+            } while (!userChoice);
+
+            switch (menuChoise) {
+                case 1 -> showTop5CrawlSwimmers();
+                case 2 -> showTop5BackCrawlSwimmers();
+                case 3 -> showTop5ButterflySwimmers();
+                case 4 -> showTop5BreaststrokeSwimmers();
+                case 5 -> coachMenu();
+                case 9 -> mainMenu();
+                default -> System.out.println("Invalid Input\n");
+            }
+        }
+    }
+    public void showTop5CrawlSwimmers(){
+        System.out.println("Top 5 crawl swimmers");
+        controller.sortCrawlTime();
+            for (Competitive controller : controller.getCompetitors()){
+                if (controller.getCrawlTime() != 0) {
+                        System.out.println("------------------\n"
+                                + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
+                                + "Name:...................... " + controller.getName() + "\n"
+                                + "Time:...................... " + controller.getCrawlTime());
+                }
+            }
+    }
+    public void showTop5BackCrawlSwimmers(){
+        System.out.println("Top 5 back crawl swimmers");
+        controller.sortBackCrawlTime();
+        for (Competitive controller : controller.getCompetitors()){
+            if (controller.getBackCrawlTime() != 0) {
+                System.out.println("------------------\n"
+                        + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
+                        + "Name:...................... " + controller.getName() + "\n"
+                        + "Time:...................... " + controller.getBackCrawlTime());
+            }
+        }
+    }
+    public void showTop5ButterflySwimmers(){
+        System.out.println("Top 5 butterfly swimmers");
+        controller.sortButterflyTime();
+        for (Competitive controller : controller.getCompetitors()){
+            if (controller.getButterflyTime() != 0) {
+                System.out.println("------------------\n"
+                        + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
+                        + "Name:...................... " + controller.getName() + "\n"
+                        + "Time:...................... " + controller.getButterflyTime());
+            }
+        }
+    }
+    public void showTop5BreaststrokeSwimmers(){
+        System.out.println("Top 5 breaststroke swimmers");
+        controller.sortBreastStrokeTime();
+        for (Competitive controller : controller.getCompetitors()){
+            if (controller.getBreaststrokeTime() != 0) {
+                System.out.println("------------------\n"
+                        + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
+                        + "Name:...................... " + controller.getName() + "\n"
+                        + "Time:...................... " + controller.getBreaststrokeTime());
+            }
+        }
+    }
+
     public void setTimeResults(){
         System.out.println("-----------------------------------------------------");
         System.out.println("Search for the member you want to set results: ");
