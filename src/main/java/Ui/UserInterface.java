@@ -1,8 +1,8 @@
-package delfinePackage.Ui;
+package Ui;
 
-import delfinePackage.Profiles.ClubMember;
-import delfinePackage.Controller.Controller;
-import delfinePackage.Competitive.Competitive;
+import Profiles.ClubMember;
+import Controller.Controller;
+import Competitive.Competitive;
 
 import java.time.LocalDate;
 import java.time.Year;

@@ -1,12 +1,12 @@
-package delfinePackage.DataSource;
+package DataSource;
 
-import delfinePackage.Profiles.ClubMember;
-import delfinePackage.Subscription.Subscription;
+import Profiles.ClubMember;
+import Subscription.Subscription;
 
 import java.util.ArrayList;
 import java.util.Random;
-import delfinePackage.Profiles.Coach;
-import delfinePackage.Competitive.Competitive;
+import Profiles.Coach;
+import Competitive.Competitive;
 
 
 public class Database {

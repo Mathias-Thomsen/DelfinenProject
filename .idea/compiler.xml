@@ -9,8 +9,5 @@
         <module name="DelfinenProject" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="DelfinenProject" target="18" />
-    </bytecodeTargetLevel>
   </component>
 </project>
