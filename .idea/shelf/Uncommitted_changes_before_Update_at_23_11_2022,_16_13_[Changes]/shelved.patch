@@ -1,0 +1,58 @@
+Index: .idea/workspace.xml
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,9 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="642c5adc-9b4c-4118-b77d-b0582f721d79" name="Changes" comment="First commit">
++    <list default="true" id="642c5adc-9b4c-4118-b77d-b0582f721d79" name="Changes" comment="ClubMembers">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/ClubMember/clubMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClubMember/ClubMember.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -57,6 +56,7 @@
+       <workItem from="1668787460416" duration="1387000" />
+       <workItem from="1668804412421" duration="1106000" />
+       <workItem from="1669110780074" duration="1202000" />
++      <workItem from="1669198758128" duration="6000" />
+     </task>
+     <task id="LOCAL-00001" summary="First commit">
+       <created>1668771434329</created>
+@@ -79,7 +79,21 @@
+       <option name="project" value="LOCAL" />
+       <updated>1668771833924</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="ClubMember">
++      <created>1669148527381</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1669148527382</updated>
++    </task>
++    <task id="LOCAL-00005" summary="ClubMembers">
++      <created>1669148596438</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1669148596438</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -110,6 +124,8 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="First commit" />
+-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
++    <MESSAGE value="ClubMember" />
++    <MESSAGE value="ClubMembers" />
++    <option name="LAST_COMMIT_MESSAGE" value="ClubMembers" />
+   </component>
+ </project>
+\ No newline at end of file

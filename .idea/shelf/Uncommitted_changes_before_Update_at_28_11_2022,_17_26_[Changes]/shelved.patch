@@ -1,0 +1,27 @@
+Index: src/test/java/DataSouce/DatabaseTest.java
+===================================================================
+diff --git a/src/test/java/DataSouce/DatabaseTest.java b/src/test/java/DataSouce/DatabaseTest.java
+--- a/src/test/java/DataSouce/DatabaseTest.java	
++++ b/src/test/java/DataSouce/DatabaseTest.java	
+@@ -21,4 +21,20 @@
+     @Test
+     void clearData() {
+     }
++
++    @Test
++    void findMember() {
++    }
++
++    @Test
++    void getSizeOfDatabase() {
++    }
++
++    @Test
++    void juniorOrSenior() {
++    }
++
++    @Test
++    void setClubMemberNumber() {
++    }
+ }
+\ No newline at end of file
