@@ -1,8 +1,8 @@
-package delfinePackage.DataSource;
+package DataSource;
 
-import delfinePackage.Profiles.ClubMember;
-import delfinePackage.Profiles.Coach;
-import delfinePackage.Competitive.Competitive;
+import Profiles.ClubMember;
+import Profiles.Coach;
+import Competitive.Competitive;
 
 import java.io.File;
 import java.io.FileNotFoundException;

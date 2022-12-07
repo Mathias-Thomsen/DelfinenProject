@@ -1,10 +1,10 @@
-package delfinePackage.Controller;
+package Controller;
 
-import delfinePackage.Profiles.ClubMember;
-import delfinePackage.Competitive.Competitive;
-import delfinePackage.DataSource.Database;
-import delfinePackage.DataSource.Filehandler;
-import delfinePackage.Financials.Financials;
+import Competitive.Competitive;
+import DataSource.Database;
+import DataSource.Filehandler;
+import Profiles.ClubMember;
+import Financials.Financials;
 
 import java.io.FileNotFoundException;
 import java.time.LocalDate;

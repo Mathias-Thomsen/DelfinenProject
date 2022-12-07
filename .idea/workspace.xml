@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="37187699-4e17-4b09-bf9b-6fa99e128523" name="Changes" comment="package edit">
+      <change beforePath="$PROJECT_DIR$/gitignoreFiles/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gitignoreFiles/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Competitive/Competitive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Competitive/Competitive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Competitive/Tournament.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Competitive/Tournament.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/DataSource/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataSource/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/DataSource/Filehandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataSource/Filehandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Financials/Financials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Financials/Financials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/delfinePackage/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Profiles/ClubMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Profiles/ClubMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Profiles/Coach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Profiles/Coach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Subscription/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Subscription/Subscription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ui/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/delfinePackage/Controller/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/delfinePackage/Controller/ControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/delfinePackage/DataSource/DatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/delfinePackage/DataSource/DatabaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/delfinePackage/Ui/UserInterfaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/delfinePackage/Ui/UserInterfaceTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IDVNNEf9Ug3cqhUOzBUBSGvBfN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_directory_selection": "/Users/marcusfrorupnielsen/Documents/IT projects/DelfinenProject/src/main/java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.keymap"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/gitignoreFiles" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Initiation" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="delfinePackage.Main" />
+      <module name="DelfinenProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="37187699-4e17-4b09-bf9b-6fa99e128523" name="Changes" comment="" />
+      <created>1669716103911</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669716103911</updated>
+      <workItem from="1669716113904" duration="17956000" />
+      <workItem from="1670355738425" duration="8125000" />
+    </task>
+    <task id="LOCAL-00001" summary="added saveCoachdata, loadcoachdata and parseCsvlineCoach">
+      <created>1670263502091</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670263502091</updated>
+    </task>
+    <task id="LOCAL-00002" summary="package edit">
+      <created>1670409529209</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670409529209</updated>
+    </task>
+    <task id="LOCAL-00003" summary="package edit">
+      <created>1670409549365</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670409549365</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added saveCoachdata, loadcoachdata and parseCsvlineCoach" />
+    <MESSAGE value="package edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="package edit" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

@@ -1,4 +1,4 @@
-package delfinePackage.Competitive;
+package Competitive;
 
 public class Competitive {
     private boolean isCrawl;

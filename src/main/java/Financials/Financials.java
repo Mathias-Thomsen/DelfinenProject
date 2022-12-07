@@ -1,4 +1,4 @@
-package delfinePackage.Financials;
+package Financials;
 
 public class Financials {
     private int totalIncome;

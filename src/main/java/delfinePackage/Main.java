@@ -1,6 +1,6 @@
 package delfinePackage;
 
-import delfinePackage.Ui.UserInterface;
+import Ui.UserInterface;
 
 public class Main {
     public static void main(String[] args) {
