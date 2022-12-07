@@ -36,6 +36,10 @@ public class Competitive {
         this.isBreaststroke = isBreaststroke;
     }
 
+    public void getCompetitive(){
+
+    }
+
     public String getMembershipNumber() {
         return membershipNumber;
     }

@@ -879,7 +879,6 @@ public class UserInterface {
 
     }
 
-
     //__________________Exit Program_________________
     public void exitProgram() {
         try {
@@ -898,5 +897,4 @@ public class UserInterface {
 
 
     }
-
 }
