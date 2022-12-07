@@ -1,0 +1,278 @@
+Index: src/main/java/DataSouce/Database.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package DataSouce;\r\n\r\nimport ClubMember.ClubMember;\r\n\r\nimport java.util.ArrayList;\r\n\r\npublic class Database {\r\n    private boolean change = false;\r\n    public ArrayList<ClubMember> clubMembers = new ArrayList<>();\r\n\r\n\r\n    public void createClubMember(String name, int age, boolean activityStatus, String membershipType, String swimType, int membershipNumber) {\r\n        ClubMember clubMember = new ClubMember(name, age, activityStatus, membershipType, swimType, membershipNumber);\r\n        clubMembers.add(clubMember);\r\n\r\n        change = true; // To the save method, so we only save to the txt file if a change has been made.\r\n\r\n    }\r\n\r\n    public ArrayList<ClubMember> getClubmembers() {\r\n        return clubMembers;\r\n    }\r\n\r\n    public void clearData() {\r\n        clubMembers.clear();\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/DataSouce/Database.java b/src/main/java/DataSouce/Database.java
+--- a/src/main/java/DataSouce/Database.java	(revision 5a90599c7b700ba16b312f0dcc4fa488d9154298)
++++ b/src/main/java/DataSouce/Database.java	(date 1669203323836)
+@@ -17,7 +17,15 @@
+ 
+     }
+ 
+-    public ArrayList<ClubMember> getClubmembers() {
++    public boolean deleteMember(ClubMember clubMember){
++        boolean result = clubMembers.remove(clubMember);
++
++        change = true;
++
++        return result;
++    }
++
++    public ArrayList<ClubMember> getClubMembers() {
+         return clubMembers;
+     }
+ 
+Index: src/main/java/Ui/UserInterface.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Ui;\r\n\r\nimport ClubMember.ClubMember;\r\nimport Controller.Controller;\r\n\r\nimport java.io.IOException;\r\nimport java.util.ArrayList;\r\nimport java.util.Scanner;\r\nimport java.util.concurrent.TimeUnit;\r\n\r\npublic class UserInterface {\r\n    Scanner scanner = new Scanner(System.in);\r\n    boolean userChoiceFalse = false;\r\n    Controller controller = new Controller();\r\n\r\n    public void menu() {\r\n        controller.loadData();\r\n        int menuChoise = 0;\r\n        while (menuChoise != 9) {\r\n            System.out.println(\"\"\"\r\n                    -------------------------\r\n                    Sign in as:\r\n                    -------------------------\r\n                    1. Club manager\r\n                    2. Coach\r\n                    3. Cashier\r\n                    4. Exit program\r\n                    \"\"\");\r\n\r\n            do {\r\n                String valg = scanner.nextLine().trim();\r\n                try {\r\n                    menuChoise = Integer.parseInt(valg);\r\n                    userChoiceFalse = true;\r\n                } catch (NumberFormatException e) {\r\n                    System.out.print(\"There has been a error enter a valid number: \");\r\n                    scanner.nextLine();\r\n                }\r\n\r\n            } while (!userChoiceFalse);\r\n\r\n            InitiateProgram(menuChoise);\r\n        }\r\n\r\n    }\r\n\r\n    public void InitiateProgram(int menuChoice) {\r\n        switch (menuChoice) {\r\n            case 1 -> createMember();\r\n            //case 2 ->\r\n            //case 3 ->\r\n            case 4 -> exitProgram();\r\n            default -> System.out.println(\"Invalid Input\\n\");\r\n        }\r\n    }\r\n\r\n\r\n\r\n    public void createMember() {\r\n        System.out.println(\"--------------------------------------------------------\");\r\n        System.out.println(\"Input new member name: \");\r\n        String nameinput = scanner.nextLine();\r\n        while (nameinput.isEmpty() || nameinput.equals(\" \")) {\r\n            System.out.print(\"Invalid input try again:\");\r\n            nameinput = scanner.nextLine();\r\n        }\r\n        System.out.println(\"--------------------------------------------------------\");\r\n        System.out.print(\"Input new member age: \");\r\n\r\n        int ageInput = 0;\r\n        do {\r\n            try {\r\n                String ageInputString = scanner.nextLine();\r\n                ageInput = Integer.parseInt(ageInputString);\r\n                userChoiceFalse = true;\r\n            } catch (NumberFormatException e) {\r\n                System.out.println(\"Invalid input try again:\");\r\n            }\r\n        }\r\n        while (!userChoiceFalse);\r\n\r\n        boolean activityStatus = false;\r\n        String activity;\r\n        do {\r\n            System.out.println(\"--------------------------------------------------------\");\r\n            System.out.print(\"Input new member activity status (passive/active): \");\r\n\r\n            activity = scanner.nextLine().trim().toLowerCase();\r\n            if (activity.equals(\"active\")||activity.equals(\"a\")) {\r\n                activityStatus = true;\r\n            } else if (activity.equals(\"passive\")||activity.equals(\"p\")) {\r\n                activityStatus = false;\r\n            } else {\r\n                System.out.println(\"Invalid input\");\r\n                System.out.println(\"please enter active or passive: \");\r\n            }\r\n        } while (activity.isEmpty());\r\n\r\n        System.out.println(\"--------------------------------------------------------\");\r\n        System.out.print(\"Input new member activity status (junior/senior): \");\r\n        String membership = scanner.nextLine().trim().toLowerCase();\r\n\r\n        while (membership.isEmpty() || membership.equals(\" \")) {\r\n            System.out.print(\"Invalid input try again:\");\r\n            membership = scanner.nextLine();\r\n        }\r\n\r\n        System.out.println(\"--------------------------------------------------------\");\r\n        System.out.print(\"Input new member activity status (Exerciser/competition): \");\r\n        String swim = scanner.nextLine().trim().toLowerCase();\r\n\r\n        while (swim.isEmpty() || swim.equals(\" \")) {\r\n            System.out.print(\"Invalid input try again:\");\r\n            swim = scanner.nextLine();\r\n        }\r\n\r\n        controller.createClubMember(nameinput, ageInput, activityStatus, membership, swim, 0);\r\n\r\n        controller.saveData();\r\n    }\r\n\r\n    public void showMenmbers() throws IOException {\r\n        for (ClubMember controller : controller.getMembers()) {\r\n            System.out.println(\"------------------\\n\"\r\n                    + \"Superheltenavn:... \" + controller.getName() + \"\\n\"\r\n                    + \"Superkraft:....... \" + controller.getAge() + \"\\n\"\r\n                    + \"Virkelige navn:... \" + controller.isActivityStatus() + \"\\n\"\r\n                    + \"Oprindelsesår:.... \" + controller.isSwimType() + \"\\n\"\r\n                    + \"Er menneske:...... \" + controller.getMembershipType() + \"\\n\"\r\n                    + \"Styrke:........... \" + controller.getMembershipNumber());\r\n        }\r\n    }\r\n\r\n    public void editMember() {\r\n        System.out.println(\"-----------------------------------------------------\");\r\n        System.out.println(\"Search for the member you want to edit: \");\r\n        String userEditMember = scanner.nextLine();\r\n        ArrayList<ClubMember> searchEditResult = new ArrayList<>();\r\n\r\n        int index = 1;\r\n\r\n        for (ClubMember editMember : controller.getMembers()) {\r\n            String member = editMember.getName().toLowerCase();\r\n            if (member.contains(userEditMember.toLowerCase())) {\r\n                searchEditResult.add(editMember);\r\n                System.out.println(index++ + \":\" + editMember.getName());\r\n\r\n            }\r\n        }\r\n\r\n        System.out.print(\"Indtast nummeret på den superhero du vil redigere: \");\r\n        String userEditNumberString = scanner.nextLine();\r\n        int userEditNumberInteger = Integer.parseInt(userEditNumberString);\r\n\r\n\r\n        ClubMember editMember = searchEditResult.get(userEditNumberInteger - 1);\r\n        System.out.println(\"Du har valgt at redigere: \" + editMember.getName());\r\n\r\n        System.out.println(\"Ønsker du ikke redigere tryk ENTER for at fortsætte!\");\r\n\r\n\r\n        do {\r\n            System.out.println(\"Member name: \" + editMember.getName());\r\n\r\n            try {\r\n                System.out.print(\"Type your update here: \");\r\n                String newMemberName = scanner.nextLine().trim();\r\n                if (!newMemberName.isEmpty()) {\r\n                    editMember.setName(newMemberName);\r\n                }\r\n                userChoiceFalse = true;\r\n            } catch (NumberFormatException var11) {\r\n                System.out.println(\"Skriv venligst din rettelse med tekst bogstaver eller ENTER hvis du ikke vil rette!\");\r\n            }\r\n        } while (userChoiceFalse);\r\n\r\n        do {\r\n            System.out.println(\"Member age: \" + editMember.getAge());\r\n\r\n            try {\r\n                System.out.print(\"Type your update here: \");\r\n                String newAge = scanner.nextLine().trim().toLowerCase();\r\n                if (!newAge.isEmpty()) {\r\n                    editMember.setAge(newAge);\r\n                }\r\n\r\n                userChoiceFalse = true;\r\n            } catch (NumberFormatException var10) {\r\n                System.out.println(\"Skriv venligst din rettelse med tekst bogstaver eller ENTER hvis du ikke vil rette!\");\r\n            }\r\n        } while (userChoiceFalse);\r\n\r\n        do {\r\n            System.out.println(\"Activity status \" + editMember.isActivityStatus());\r\n\r\n            try {\r\n                System.out.print(\"Type your update here:  \");\r\n                String newActivityStatus = scanner.nextLine().trim();//trim cutter mellemrum fra brugerinputet.\r\n                if (!newActivityStatus.isEmpty()) {\r\n                    editMember.setActivityStatus(newActivityStatus);\r\n                }\r\n\r\n                userChoiceFalse = true;\r\n            } catch (NumberFormatException var9) {\r\n                System.out.println(\"Skriv venligst din rettelse med tekst bogstaver eller ENTER hvis du ikke vil rette!\");\r\n            }\r\n        } while (userChoiceFalse);\r\n\r\n        do {\r\n            System.out.println(\"Membership type \" + editMember.getMembershipType());\r\n\r\n            try {\r\n                System.out.print(\"Type your update here: \");\r\n                String newMembershipType = scanner.nextLine().trim();\r\n                if (!newMembershipType.isEmpty()) {\r\n                    editMember.setMembershipType(newMembershipType);\r\n                }\r\n\r\n                userChoiceFalse = true;\r\n            } catch (NumberFormatException var8) {\r\n                System.out.println(\"Skriv venligst din rettelse med tal eller ENTER hvis du ikke vil rette!\");\r\n            }\r\n        } while (userChoiceFalse);\r\n\r\n        do {\r\n            System.out.println(\"Membership number: \" + editMember.getMembershipNumber());\r\n\r\n            try {\r\n                System.out.print(\"Type your update here: \");\r\n                String newMembershipNumber = scanner.nextLine().trim();\r\n                if (!newMembershipNumber.isEmpty()) {\r\n                    editMember.setMembershipNumber(newMembershipNumber);\r\n                }\r\n\r\n                userChoiceFalse = true;\r\n            } catch (NumberFormatException var7) {\r\n                System.out.println(\"Skriv venligst din rettelse med (j/n) eller ENTER hvis du ikke vil rette!\");\r\n            }\r\n        } while (userChoiceFalse);\r\n\r\n    }\r\n\r\n\r\n\r\n\r\n    public void exitProgram() {\r\n            try {\r\n                System.out.print(\"Exiting Program\");\r\n                TimeUnit.SECONDS.sleep(1);\r\n                System.out.print(\".\");\r\n                TimeUnit.SECONDS.sleep(1);\r\n                System.out.print(\".\");\r\n                TimeUnit.SECONDS.sleep(1);\r\n                System.out.print(\".\");\r\n                System.exit(1);\r\n\r\n            } catch (InterruptedException e) {\r\n                System.out.println(\"System can not exit\");\r\n            }\r\n\r\n\r\n    }\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Ui/UserInterface.java b/src/main/java/Ui/UserInterface.java
+--- a/src/main/java/Ui/UserInterface.java	(revision 5a90599c7b700ba16b312f0dcc4fa488d9154298)
++++ b/src/main/java/Ui/UserInterface.java	(date 1669203323838)
+@@ -11,6 +11,7 @@
+ public class UserInterface {
+     Scanner scanner = new Scanner(System.in);
+     boolean userChoiceFalse = false;
++    private String nameInput;
+     Controller controller = new Controller();
+ 
+     public void menu() {
+@@ -46,14 +47,27 @@
+ 
+     public void InitiateProgram(int menuChoice) {
+         switch (menuChoice) {
+-            case 1 -> createMember();
+-            //case 2 ->
+-            //case 3 ->
+-            case 4 -> exitProgram();
++            case 1 -> clubManagerMenu();
++            //case 2 -> coachMenu();
++            //case 3 -> cashierMenu();
++            //case 4 -> exitProgram();
+             default -> System.out.println("Invalid Input\n");
+         }
+     }
++    public void clubManagerMenu() {
++        int menuChoise = 0;
++        while (menuChoise != 9) {
++            System.out.println("""
++                    -------------------------
++                    Club manager menu:
++                    -------------------------
++                    1. Create
++                    2. Coach
++                    3. Cashier
++                    4. Exit program
++                    """);
+ 
++<<<<<<< HEAD
+ 
+ 
+     public void createMember() {
+@@ -63,62 +77,91 @@
+         while (nameinput.isEmpty() || nameinput.equals(" ")) {
+             System.out.print("Invalid input try again:");
+             nameinput = scanner.nextLine();
++=======
++            do {
++                String valg = scanner.nextLine().trim();
++                try {
++                    menuChoise = Integer.parseInt(valg);
++                    userChoiceFalse = true;
++                } catch (NumberFormatException e) {
++                    System.out.print("There has been a error enter a valid number: ");
++                    scanner.nextLine();
++                }
++
++            } while (!userChoiceFalse);
++>>>>>>> origin/main
+         }
+-        System.out.println("--------------------------------------------------------");
+-        System.out.print("Input new member age: ");
++    }
++
++        public void createMember() {
++            System.out.println("--------------------------------------------------------");
++            System.out.println("Input new member name: ");
++            String nameinput = scanner.nextLine();
++            while (nameinput.isEmpty() || nameinput.equals(" ")) {
++                System.out.print("Invalid input try again:");
++                nameinput = scanner.nextLine();
++            }
++            System.out.println("--------------------------------------------------------");
++            System.out.print("Input new member age: ");
+ 
+-        int ageInput = 0;
+-        do {
+-            try {
+-                String ageInputString = scanner.nextLine();
+-                ageInput = Integer.parseInt(ageInputString);
+-                userChoiceFalse = true;
+-            } catch (NumberFormatException e) {
+-                System.out.println("Invalid input try again:");
+-            }
+-        }
+-        while (!userChoiceFalse);
++            int ageInput = 0;
++            do {
++                try {
++                    String ageInputString = scanner.nextLine();
++                    ageInput = Integer.parseInt(ageInputString);
++                    userChoiceFalse = true;
++                } catch (NumberFormatException e) {
++                    System.out.println("Invalid input try again:");
++                }
++            }
++            while (!userChoiceFalse);
+ 
+-        boolean activityStatus = false;
+-        String activity;
+-        do {
+-            System.out.println("--------------------------------------------------------");
+-            System.out.print("Input new member activity status (passive/active): ");
++            boolean activityStatus = false;
++            String activity;
++            do {
++                System.out.println("--------------------------------------------------------");
++                System.out.print("Input new member activity status (passive/active): ");
+ 
+-            activity = scanner.nextLine().trim().toLowerCase();
+-            if (activity.equals("active")||activity.equals("a")) {
+-                activityStatus = true;
+-            } else if (activity.equals("passive")||activity.equals("p")) {
+-                activityStatus = false;
+-            } else {
+-                System.out.println("Invalid input");
+-                System.out.println("please enter active or passive: ");
+-            }
+-        } while (activity.isEmpty());
++                activity = scanner.nextLine().trim().toLowerCase();
++                if (activity.equals("active") || activity.equals("a")) {
++                    activityStatus = true;
++                } else if (activity.equals("passive") || activity.equals("p")) {
++                    activityStatus = false;
++                } else {
++                    System.out.println("Invalid input");
++                    System.out.println("please enter active or passive: ");
++                }
++            } while (activity.isEmpty());
+ 
+-        System.out.println("--------------------------------------------------------");
+-        System.out.print("Input new member activity status (junior/senior): ");
+-        String membership = scanner.nextLine().trim().toLowerCase();
++            System.out.println("--------------------------------------------------------");
++            System.out.print("Input new member activity status (junior/senior): ");
++            String membership = scanner.nextLine().trim().toLowerCase();
+ 
+-        while (membership.isEmpty() || membership.equals(" ")) {
+-            System.out.print("Invalid input try again:");
+-            membership = scanner.nextLine();
+-        }
++            while (membership.isEmpty() || membership.equals(" ")) {
++                System.out.print("Invalid input try again:");
++                membership = scanner.nextLine();
++            }
+ 
+-        System.out.println("--------------------------------------------------------");
+-        System.out.print("Input new member activity status (Exerciser/competition): ");
+-        String swim = scanner.nextLine().trim().toLowerCase();
++            System.out.println("--------------------------------------------------------");
++            System.out.print("Input new member activity status (Exerciser/competition): ");
++            String swim = scanner.nextLine().trim().toLowerCase();
+ 
+-        while (swim.isEmpty() || swim.equals(" ")) {
+-            System.out.print("Invalid input try again:");
+-            swim = scanner.nextLine();
+-        }
++            while (swim.isEmpty() || swim.equals(" ")) {
++                System.out.print("Invalid input try again:");
++                swim = scanner.nextLine();
++            }
+ 
+-        controller.createClubMember(nameinput, ageInput, activityStatus, membership, swim, 0);
++        controller.createClubMember(nameInput, ageInput, activityStatus, membership, swim, 0);
+ 
+         controller.saveData();
+     }
++    public void deleteMember(){
++        System.out.println("--------------------------------------------------------");
++        System.out.println("Input the name of a member you want to delete: ");
++        String userDeleteMember = scanner.nextLine().trim().toLowerCase();
++        ArrayList<ClubMember> searchDeleteMember = new ArrayList<>();
+ 
++<<<<<<< HEAD
+     public void showMenmbers() throws IOException {
+         for (ClubMember controller : controller.getMembers()) {
+             System.out.println("------------------\n"
+@@ -243,6 +286,27 @@
+ 
+ 
+ 
++=======
++        int index = 1;
++
++        for (ClubMember deleteMember : controller.getClubMembers()){
++            nameInput = deleteMember.getName().toLowerCase();
++            if (nameInput.contains(userDeleteMember.toLowerCase())){
++                searchDeleteMember.add(deleteMember);
++                System.out.println(index++ + ": " + deleteMember.getName());
++            }
++        }
++        System.out.println("Select the number of the member you want to delete: ");
++        String userDeleteNumberString = scanner.nextLine();
++        int userDeleteNumberInt = Integer.parseInt(userDeleteNumberString);
++
++        ClubMember deleteMember = searchDeleteMember.get(userDeleteNumberInt - 1);
++        controller.deleteMember(deleteMember);
++        System.out.println("You have now deleted: " + deleteMember.getName() + " from you membership");
++
++        controller.saveData();
++    }
++>>>>>>> origin/main
+     public void exitProgram() {
+             try {
+                 System.out.print("Exiting Program");
+Index: src/main/java/Controller/Controller.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Controller;\r\n\r\nimport ClubMember.ClubMember;\r\nimport DataSouce.Database;\r\nimport DataSouce.Filehandler;\r\n\r\nimport java.io.FileNotFoundException;\r\nimport java.util.ArrayList;\r\n\r\npublic class Controller {\r\n    Database database = new Database();\r\n    Filehandler filehandler = new Filehandler();\r\n    public void createClubMember(String name, int age, boolean activityStatus, String membershipType, String swimType, int membershipNumber){\r\n    database.createClubMember(name, age, activityStatus, membershipType, swimType, membershipNumber);\r\n    }\r\n\r\n    public void saveData(){\r\n        try {\r\n            filehandler.saveData(database.getClubmembers());\r\n        } catch (FileNotFoundException e) {\r\n            System.out.println(\"fail\");\r\n        }\r\n    }\r\n    public void loadData(){\r\n        try {\r\n            database.clearData();\r\n            filehandler.loadData(database.getClubmembers());\r\n        } catch (FileNotFoundException e) {\r\n            System.out.println(\"fail\");\r\n        }\r\n    }\r\n\r\n    public ArrayList<ClubMember> getMembers() {\r\n        return database.getClubmembers();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Controller/Controller.java b/src/main/java/Controller/Controller.java
+--- a/src/main/java/Controller/Controller.java	(revision 5a90599c7b700ba16b312f0dcc4fa488d9154298)
++++ b/src/main/java/Controller/Controller.java	(date 1669203323835)
+@@ -14,9 +14,17 @@
+     database.createClubMember(name, age, activityStatus, membershipType, swimType, membershipNumber);
+     }
+ 
++    public ArrayList<ClubMember> getClubMembers(){
++        return database.getClubMembers();
++    }
++
++    public void deleteMember(ClubMember deleteMember){
++        database.deleteMember(deleteMember);
++    }
++
+     public void saveData(){
+         try {
+-            filehandler.saveData(database.getClubmembers());
++            filehandler.saveData(database.getClubMembers());
+         } catch (FileNotFoundException e) {
+             System.out.println("fail");
+         }
+@@ -24,7 +32,7 @@
+     public void loadData(){
+         try {
+             database.clearData();
+-            filehandler.loadData(database.getClubmembers());
++            filehandler.loadData(database.getClubMembers());
+         } catch (FileNotFoundException e) {
+             System.out.println("fail");
+         }

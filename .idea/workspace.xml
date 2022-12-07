@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="642c5adc-9b4c-4118-b77d-b0582f721d79" name="Changes" comment="refactor the whole project" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="2b4969350facfb4c7914bcc7f99ffb93660288b2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Hic0zx0nksZLbAJELtjJMfqiMt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mathias\IdeaProjects\DelfinenProject\src\main\java\Ui" />
+      <recent name="C:\Users\Mathias\IdeaProjects\DelfinenProject\src\main\java" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="DataSouce" />
+      <recent name="Controller" />
+      <recent name="Ui" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Initiate Program">
+    <configuration name="Initiate Program" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="DelfinenProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DelfinenProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Controller" />
+      <option name="MAIN_CLASS_NAME" value="Controller.ControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerTest.deleteMember" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DelfinenProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Controller" />
+      <option name="MAIN_CLASS_NAME" value="Controller.ControllerTest" />
+      <option name="METHOD_NAME" value="deleteMember" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ControllerTest.deleteMember" />
+        <item itemvalue="JUnit.ControllerTest" />
+        <item itemvalue="JUnit.ControllerTest.deleteMember" />
+        <item itemvalue="JUnit.ControllerTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="642c5adc-9b4c-4118-b77d-b0582f721d79" name="Changes" comment="" />
+      <created>1668771128225</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668771128225</updated>
+      <workItem from="1668771129632" duration="1196000" />
+      <workItem from="1668772793260" duration="15000" />
+      <workItem from="1668787460416" duration="1387000" />
+      <workItem from="1668804412421" duration="1106000" />
+      <workItem from="1669110780074" duration="14874000" />
+      <workItem from="1669305764202" duration="30511000" />
+      <workItem from="1669795362241" duration="3338000" />
+      <workItem from="1669882057546" duration="32178000" />
+      <workItem from="1670408900633" duration="736000" />
+    </task>
+    <task id="LOCAL-00001" summary="First commit">
+      <created>1668771434329</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668771434330</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First commit">
+      <created>1668771473080</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668771473080</updated>
+    </task>
+    <task id="LOCAL-00003" summary="First commit">
+      <created>1668771833924</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668771833924</updated>
+    </task>
+    <task id="LOCAL-00004" summary="First commit Added UI menu with role selection">
+      <created>1669112055297</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669112055297</updated>
+    </task>
+    <task id="LOCAL-00005" summary="secound commit with added clubMember class">
+      <created>1669129706620</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669129706620</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added constructer and with setter and getter in Clubmember class">
+      <created>1669146851373</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669146851373</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added constructer and with setter and getter in Clubmember class 2.0">
+      <created>1669147410451</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669147410451</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added showMembersMethod and editMembersMethod">
+      <created>1669203312611</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669203312611</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added showMembersMethod and editMembersMethod">
+      <created>1669203379777</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669203379777</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added showMembersMethod and editMembersMethod">
+      <created>1669204108561</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669204108561</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added some test classes">
+      <created>1669206287808</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669206287808</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added automatic junior and senior from age">
+      <created>1669217005798</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669217005798</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added automatic membershipNumber">
+      <created>1669220496616</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669220496616</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added search for member">
+      <created>1669280384779</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1669280384779</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added more data in data">
+      <created>1669281068352</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669281068352</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added fixed membershipNumber">
+      <created>1669286104027</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1669286104027</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added fixed membershipNumber">
+      <created>1669286236405</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669286236405</updated>
+    </task>
+    <task id="LOCAL-00018" summary="change active to boolean">
+      <created>1669641812529</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1669641812529</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Change output is active or passive">
+      <created>1669642885862</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1669642885862</updated>
+    </task>
+    <task id="LOCAL-00020" summary="changed some words to english in UI">
+      <created>1669647690200</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1669647690200</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added subscription and made createSubcriptionMethod">
+      <created>1669717481652</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1669717481652</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Added cashier menu and methods">
+      <created>1669720260702</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1669720260702</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Added Financial class and method in database to calculate det total amount of subscription.">
+      <created>1669732577304</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1669732577304</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Added show all unpaid members for financials">
+      <created>1669797198059</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1669797198059</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Added create coach method">
+      <created>1670315488779</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1670315488779</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Added CoachMemberNumber">
+      <created>1670318897908</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1670318897908</updated>
+    </task>
+    <task id="LOCAL-00027" summary="refactor the whole project">
+      <created>1670349264729</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1670349264729</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit" />
+    <MESSAGE value="First commit Added UI menu with role selection" />
+    <MESSAGE value="secound commit with added clubMember class" />
+    <MESSAGE value="added constructer and with setter and getter in Clubmember class" />
+    <MESSAGE value="added constructer and with setter and getter in Clubmember class 2.0" />
+    <MESSAGE value="Added showMembersMethod and editMembersMethod" />
+    <MESSAGE value="Added some test classes" />
+    <MESSAGE value="Added automatic junior and senior from age" />
+    <MESSAGE value="Added automatic membershipNumber" />
+    <MESSAGE value="Added search for member" />
+    <MESSAGE value="Added more data in data" />
+    <MESSAGE value="Added fixed membershipNumber" />
+    <MESSAGE value="change active to boolean" />
+    <MESSAGE value="Change output is active or passive" />
+    <MESSAGE value="changed some words to english in UI" />
+    <MESSAGE value="Added subscription and made createSubcriptionMethod" />
+    <MESSAGE value="Added cashier menu and methods" />
+    <MESSAGE value="Added Financial class and method in database to calculate det total amount of subscription." />
+    <MESSAGE value="Added show all unpaid members for financials" />
+    <MESSAGE value="Added create coach method" />
+    <MESSAGE value="Added CoachMemberNumber" />
+    <MESSAGE value="refactor the whole project" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor the whole project" />
+  </component>
+</project>
