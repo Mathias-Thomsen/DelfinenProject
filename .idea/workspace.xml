@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37187699-4e17-4b09-bf9b-6fa99e128523" name="Changes" comment="Show senior and junior teams">
-      <change afterPath="$PROJECT_DIR$/src/main/java/comparatorer/CompetitiveBackCrawlTime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/comparatorer/CompetitiveBreaststrokeSwimmers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/comparatorer/CompetitiveButterflySwimmers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/comparatorer/CompetitiveCrawlTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/competitive.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/competitive.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataSource/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataSource/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Competitive/Competitive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Competitive/Competitive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Competitive/Tournament.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Competitive/Tournament.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataSource/Database.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataSource/Filehandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataSource/Filehandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Financials/Financials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Financials/Financials.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Profiles/ClubMember.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Profiles/ClubMember.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Profiles/Coach.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Profiles/Coach.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Subscription/Subscription.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Subscription/Subscription.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Ui/UserInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/delfinePackage/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/delfinePackage/Main.class" afterDir="false" />
-    </list>
+    <list default="true" id="37187699-4e17-4b09-bf9b-6fa99e128523" name="Changes" comment="You can now see the best times in each category1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,7 +115,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670412093453</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="You can now see the best times in each category">
+      <created>1670423229452</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670423229453</updated>
+    </task>
+    <task id="LOCAL-00008" summary="You can now see the best times in each category1">
+      <created>1670423265502</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670423265502</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +151,9 @@
     <MESSAGE value="package edit" />
     <MESSAGE value="package edit succes!!!!!!!!!!!" />
     <MESSAGE value="package edit !!!!!!!!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="package edit !!!!!!!!!!!" />
+    <MESSAGE value="You can now see the best times in each category" />
+    <MESSAGE value="You can now see the best times in each category1" />
+    <option name="LAST_COMMIT_MESSAGE" value="You can now see the best times in each category1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
