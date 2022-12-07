@@ -3,7 +3,6 @@
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-gitignoreFiles/.idea/ .data
 
 
 ### IntelliJ IDEA ###
@@ -15,7 +14,10 @@ gitignoreFiles/.idea/libraries/
 *.iml
 *.ipr
 
-gitignoreFiles/data
+data/clubmembersData.csv
+data/coachesData.csv
+data/competitive.csv
+data/memberNumber.csv
 
 
 ### Eclipse ###
