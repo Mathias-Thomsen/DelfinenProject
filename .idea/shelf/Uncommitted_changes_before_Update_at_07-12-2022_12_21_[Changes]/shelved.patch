@@ -1,0 +1,384 @@
+Index: .idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml
+===================================================================
+diff --git a/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml b/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml
+deleted file mode 100644
+--- a/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
++++ /dev/null	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
+@@ -1,13 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Maven: org.opentest4j:opentest4j:1.2.0">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar!/" />
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__junit_junit_4_13_2.xml
+===================================================================
+diff --git a/.idea/libraries/Maven__junit_junit_4_13_2.xml b/.idea/libraries/Maven__junit_junit_4_13_2.xml
+deleted file mode 100644
+--- a/.idea/libraries/Maven__junit_junit_4_13_2.xml	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
++++ /dev/null	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
+@@ -1,13 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Maven: junit:junit:4.13.2">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.13.2/junit-4.13.2.jar!/" />
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.13.2/junit-4.13.2-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.13.2/junit-4.13.2-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_1.xml
+===================================================================
+diff --git a/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_1.xml b/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_1.xml
+deleted file mode 100644
+--- a/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_1.xml	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
++++ /dev/null	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
+@@ -1,13 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Maven: org.junit.jupiter:junit-jupiter:5.9.1">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter/5.9.1/junit-jupiter-5.9.1.jar!/" />
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter/5.9.1/junit-jupiter-5.9.1-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter/5.9.1/junit-jupiter-5.9.1-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_1.xml
+===================================================================
+diff --git a/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_1.xml b/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_1.xml
+deleted file mode 100644
+--- a/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_1.xml	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
++++ /dev/null	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
+@@ -1,13 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Maven: org.junit.platform:junit-platform-commons:1.9.1">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.9.1/junit-platform-commons-1.9.1.jar!/" />
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.9.1/junit-platform-commons-1.9.1-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.9.1/junit-platform-commons-1.9.1-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml
+===================================================================
+diff --git a/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml b/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml
+deleted file mode 100644
+--- a/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
++++ /dev/null	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
+@@ -1,13 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Maven: org.apiguardian:apiguardian-api:1.1.2">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar!/" />
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml
+===================================================================
+diff --git a/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml b/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml
+deleted file mode 100644
+--- a/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
++++ /dev/null	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
+@@ -1,13 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Maven: org.hamcrest:hamcrest-core:1.3">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/" />
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/modules.xml
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+deleted file mode 100644
+--- a/.idea/modules.xml	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
++++ /dev/null	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/DelfinenProject.iml" filepath="$PROJECT_DIR$/DelfinenProject.iml" />
+-    </modules>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_1.xml
+===================================================================
+diff --git a/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_1.xml b/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_1.xml
+deleted file mode 100644
+--- a/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_1.xml	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
++++ /dev/null	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
+@@ -1,13 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Maven: org.junit.jupiter:junit-jupiter-engine:5.9.1">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.9.1/junit-jupiter-engine-5.9.1.jar!/" />
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.9.1/junit-jupiter-engine-5.9.1-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.9.1/junit-jupiter-engine-5.9.1-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_1.xml
+===================================================================
+diff --git a/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_1.xml b/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_1.xml
+deleted file mode 100644
+--- a/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_1.xml	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
++++ /dev/null	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
+@@ -1,13 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Maven: org.junit.platform:junit-platform-engine:1.9.1">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.9.1/junit-platform-engine-1.9.1.jar!/" />
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.9.1/junit-platform-engine-1.9.1-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.9.1/junit-platform-engine-1.9.1-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_1.xml
+===================================================================
+diff --git a/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_1.xml b/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_1.xml
+deleted file mode 100644
+--- a/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_1.xml	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
++++ /dev/null	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
+@@ -1,13 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Maven: org.junit.jupiter:junit-jupiter-params:5.9.1">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-params/5.9.1/junit-jupiter-params-5.9.1.jar!/" />
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-params/5.9.1/junit-jupiter-params-5.9.1-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-params/5.9.1/junit-jupiter-params-5.9.1-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_1.xml
+===================================================================
+diff --git a/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_1.xml b/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_1.xml
+deleted file mode 100644
+--- a/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_1.xml	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
++++ /dev/null	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
+@@ -1,13 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Maven: org.junit.jupiter:junit-jupiter-api:5.9.1">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.9.1/junit-jupiter-api-5.9.1.jar!/" />
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.9.1/junit-jupiter-api-5.9.1-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.9.1/junit-jupiter-api-5.9.1-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: DelfinenProject.iml
+===================================================================
+diff --git a/DelfinenProject.iml b/DelfinenProject.iml
+deleted file mode 100644
+--- a/DelfinenProject.iml	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
++++ /dev/null	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
+@@ -1,25 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_18">
+-    <output url="file://$MODULE_DIR$/target/classes" />
+-    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+-    <content url="file://$MODULE_DIR$">
+-      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+-      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+-      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+-      <excludeFolder url="file://$MODULE_DIR$/target" />
+-    </content>
+-    <orderEntry type="jdk" jdkName="18" jdkType="JavaSDK" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.13.2" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter:5.9.1" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.9.1" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-commons:1.9.1" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.apiguardian:apiguardian-api:1.1.2" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-params:5.9.1" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.9.1" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.9.1" level="project" />
+-  </component>
+-</module>
+\ No newline at end of file
+Index: data/clubmembersData.csv
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>S1;christian;21;true;true;Competition;1600;false;Team senior dolphins\r\nJ2;Marcus;12;true;false;Competition;1000;false;Team junior dolphins\r\nS3;Mathias;22;false;true;Exerciser;500;false;No team\r\nS4;Mathias Thomsen;23;true;true;Competition;1600;false;Team senior dolphins\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/data/clubmembersData.csv b/data/clubmembersData.csv
+--- a/data/clubmembersData.csv	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
++++ b/data/clubmembersData.csv	(date 1670411984181)
+@@ -1,4 +1,5 @@
+-S1;christian;21;true;true;Competition;1600;false;Team senior dolphins
++S1;christian;21;true;true;Competition;1600;true;Team senior dolphins
+ J2;Marcus;12;true;false;Competition;1000;false;Team junior dolphins
+ S3;Mathias;22;false;true;Exerciser;500;false;No team
+-S4;Mathias Thomsen;23;true;true;Competition;1600;false;Team senior dolphins
++S4;Mathias Thomsen;23;true;true;Competition;1600;true;Team senior dolphins
++S5;Mathias;23;true;true;Exerciser;1600;false;No team
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"37187699-4e17-4b09-bf9b-6fa99e128523\" name=\"Changes\" comment=\"package edit\">\r\n      <change beforePath=\"$PROJECT_DIR$/gitignoreFiles/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/gitignoreFiles/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/delfinePackage/Competitive/Competitive.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Competitive/Competitive.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/delfinePackage/Competitive/Tournament.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Competitive/Tournament.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/delfinePackage/Controller/Controller.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Controller/Controller.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/delfinePackage/DataSource/Database.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/DataSource/Database.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/delfinePackage/DataSource/Filehandler.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/DataSource/Filehandler.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/delfinePackage/Financials/Financials.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Financials/Financials.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/delfinePackage/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/delfinePackage/Main.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/delfinePackage/Profiles/ClubMember.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Profiles/ClubMember.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/delfinePackage/Profiles/Coach.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Profiles/Coach.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/delfinePackage/Subscription/Subscription.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Subscription/Subscription.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/delfinePackage/Ui/UserInterface.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Ui/UserInterface.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/delfinePackage/Controller/ControllerTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/delfinePackage/Controller/ControllerTest.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/delfinePackage/DataSource/DatabaseTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/delfinePackage/DataSource/DatabaseTest.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/delfinePackage/Ui/UserInterfaceTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/delfinePackage/Ui/UserInterfaceTest.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2IDVNNEf9Ug3cqhUOzBUBSGvBfN\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"flattenPackages\" value=\"true\" />\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"last_directory_selection\": \"/Users/marcusfrorupnielsen/Documents/IT projects/DelfinenProject/src/main/java\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"settings.editor.selected.configurable\": \"preferences.keymap\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"$PROJECT_DIR$/gitignoreFiles\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Initiation\" type=\"Application\" factoryName=\"Application\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"delfinePackage.Main\" />\r\n      <module name=\"DelfinenProject\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"37187699-4e17-4b09-bf9b-6fa99e128523\" name=\"Changes\" comment=\"\" />\r\n      <created>1669716103911</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1669716103911</updated>\r\n      <workItem from=\"1669716113904\" duration=\"17956000\" />\r\n      <workItem from=\"1670355738425\" duration=\"8125000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"added saveCoachdata, loadcoachdata and parseCsvlineCoach\">\r\n      <created>1670263502091</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670263502091</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"package edit\">\r\n      <created>1670409529209</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670409529209</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"package edit\">\r\n      <created>1670409549365</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670409549365</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"added saveCoachdata, loadcoachdata and parseCsvlineCoach\" />\r\n    <MESSAGE value=\"package edit\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"package edit\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
++++ b/.idea/workspace.xml	(date 1670412109909)
+@@ -4,22 +4,35 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="37187699-4e17-4b09-bf9b-6fa99e128523" name="Changes" comment="package edit">
+-      <change beforePath="$PROJECT_DIR$/gitignoreFiles/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gitignoreFiles/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Competitive/Competitive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Competitive/Competitive.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Competitive/Tournament.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Competitive/Tournament.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/DataSource/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataSource/Database.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/DataSource/Filehandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataSource/Filehandler.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Financials/Financials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Financials/Financials.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/delfinePackage/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Profiles/ClubMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Profiles/ClubMember.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Profiles/Coach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Profiles/Coach.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Subscription/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Subscription/Subscription.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ui/UserInterface.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/delfinePackage/Controller/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/delfinePackage/Controller/ControllerTest.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/delfinePackage/DataSource/DatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/delfinePackage/DataSource/DatabaseTest.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/delfinePackage/Ui/UserInterfaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/delfinePackage/Ui/UserInterfaceTest.java" afterDir="false" />
++    <list default="true" id="37187699-4e17-4b09-bf9b-6fa99e128523" name="Changes" comment="commit rollback">
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_1.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_1.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_1.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_1.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_1.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_1.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-12-2022_11_39__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-12-2022_11_39__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23-11-2022_12_36__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23-11-2022_12_36__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_2022__19_57__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_2022__19_57__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_11_2022__08_46__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_11_2022__08_46__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/DelfinenProject.iml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/data/clubmembersData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/clubmembersData.csv" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/data/competitive.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/competitive.csv" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/delfinePackage/Competitive/Competitive.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/delfinePackage/Competitive/Tournament.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/delfinePackage/Controller/Controller.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/delfinePackage/DataSource/Database.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/delfinePackage/DataSource/Filehandler.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/delfinePackage/Financials/Financials.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/delfinePackage/Profiles/ClubMember.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/delfinePackage/Profiles/Coach.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/delfinePackage/Subscription/Subscription.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/delfinePackage/Ui/UserInterface.class" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -46,18 +59,18 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "last_directory_selection": "/Users/marcusfrorupnielsen/Documents/IT projects/DelfinenProject/src/main/java",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "settings.editor.selected.configurable": "preferences.keymap"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;last_directory_selection&quot;: &quot;/Users/marcusfrorupnielsen/Documents/IT projects/DelfinenProject/src/main/java&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/gitignoreFiles" />
+Index: data/competitive.csv
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>null;Mathias;true;0.0;true;0.0;false;0.0;false;0.0\r\nnull;Christian;true;1.6;true;1.2;false;0.0;true;1.2\r\nnull;ffff;false;0.0;false;0.0;false;0.0;false;0.0\r\nnull;chri;true;0.0;false;0.0;true;0.0;true;0.0\r\nnull;christian;true;0.0;true;0.0;true;0.0;false;0.0\r\nnull;Marcus;true;0.0;true;0.0;true;0.0;true;0.0\r\nnull;Mathias;true;0.0;true;0.0;true;0.0;true;0.0\r\nnull;Mathias Thomsen;true;0.0;false;0.0;false;0.0;true;0.0\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/data/competitive.csv b/data/competitive.csv
+--- a/data/competitive.csv	(revision 57cf8c5c085c88e9339bc957ef7db8a70e9c761d)
++++ b/data/competitive.csv	(date 1670411984185)
+@@ -6,3 +6,4 @@
+ null;Marcus;true;0.0;true;0.0;true;0.0;true;0.0
+ null;Mathias;true;0.0;true;0.0;true;0.0;true;0.0
+ null;Mathias Thomsen;true;0.0;false;0.0;false;0.0;true;0.0
++null;Mathias;false;0.0;false;0.0;false;0.0;false;0.0
