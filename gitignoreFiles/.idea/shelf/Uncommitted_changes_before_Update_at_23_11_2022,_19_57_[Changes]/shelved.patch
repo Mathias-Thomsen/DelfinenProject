@@ -1,0 +1,85 @@
+Index: .idea/workspace.xml
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,12 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="642c5adc-9b4c-4118-b77d-b0582f721d79" name="Changes" comment="Added showMembersMethod and editMembersMethod">
++    <list default="true" id="642c5adc-9b4c-4118-b77d-b0582f721d79" name="Changes" comment="Userinterface new menu">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/data/clubmembersData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/clubmembersData.csv" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/DataSouce/Filehandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataSouce/Filehandler.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ui/UserInterface.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -24,13 +20,7 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
+-    <option name="RECENT_BRANCH_BY_REPOSITORY">
+-      <map>
+-        <entry key="$PROJECT_DIR$" value="updateFeature" />
+-      </map>
+-    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-    <option name="RESET_MODE" value="MIXED" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -127,21 +117,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1669147410451</updated>
+     </task>
+-    <task id="LOCAL-00008" summary="Added showMembersMethod and editMembersMethod">
+-      <created>1669203312611</created>
++    <task id="LOCAL-00008" summary="Userinterface new menu">
++      <created>1669205459228</created>
+       <option name="number" value="00008" />
+       <option name="presentableId" value="LOCAL-00008" />
+       <option name="project" value="LOCAL" />
+-      <updated>1669203312611</updated>
+-    </task>
+-    <task id="LOCAL-00009" summary="Added showMembersMethod and editMembersMethod">
+-      <created>1669203379777</created>
+-      <option name="number" value="00009" />
+-      <option name="presentableId" value="LOCAL-00009" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1669203379777</updated>
++      <updated>1669205459228</updated>
+     </task>
+-    <option name="localTasksCounter" value="10" />
++    <option name="localTasksCounter" value="9" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -152,13 +135,7 @@
+       <map>
+         <entry key="MAIN">
+           <value>
+-            <State>
+-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+-                <map>
+-                  <entry key="Show.Git.Branches" value="true" />
+-                </map>
+-              </option>
+-            </State>
++            <State />
+           </value>
+         </entry>
+       </map>
+@@ -170,7 +147,7 @@
+     <MESSAGE value="secound commit with added clubMember class" />
+     <MESSAGE value="added constructer and with setter and getter in Clubmember class" />
+     <MESSAGE value="added constructer and with setter and getter in Clubmember class 2.0" />
+-    <MESSAGE value="Added showMembersMethod and editMembersMethod" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Added showMembersMethod and editMembersMethod" />
++    <MESSAGE value="Userinterface new menu" />
++    <option name="LAST_COMMIT_MESSAGE" value="Userinterface new menu" />
+   </component>
+ </project>
+\ No newline at end of file
