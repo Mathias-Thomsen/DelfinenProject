@@ -1,4 +1,4 @@
-package Profiles;
+package profiles;
 
 public class Coach {
     private String employeeNumber;

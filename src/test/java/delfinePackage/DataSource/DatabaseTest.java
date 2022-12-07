@@ -1,7 +1,7 @@
 package delfinePackage.DataSource;
 
-import DataSource.Database;
-import Profiles.ClubMember;
+import dataSource.Database;
+import profiles.ClubMember;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

@@ -1,12 +1,12 @@
-package DataSource;
+package dataSource;
 
-import Profiles.ClubMember;
-import Subscription.Subscription;
+import profiles.ClubMember;
+import subscription.Subscription;
 
 import java.util.ArrayList;
 import java.util.Random;
-import Profiles.Coach;
-import Competitive.Competitive;
+import profiles.Coach;
+import competitive.Competitive;
 
 
 public class Database {

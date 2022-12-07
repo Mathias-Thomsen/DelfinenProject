@@ -1,10 +1,10 @@
-package Controller;
+package controller;
 
-import Competitive.Competitive;
-import DataSource.Database;
-import DataSource.Filehandler;
-import Profiles.ClubMember;
-import Financials.Financials;
+import competitive.Competitive;
+import dataSource.Database;
+import dataSource.Filehandler;
+import profiles.ClubMember;
+import financials.Financials;
 
 import java.io.FileNotFoundException;
 import java.time.LocalDate;

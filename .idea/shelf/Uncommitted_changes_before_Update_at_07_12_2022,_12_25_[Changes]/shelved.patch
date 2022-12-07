@@ -1,0 +1,88 @@
+Index: data/competitive.csv
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>null;Mathias;true;0.0;true;0.0;false;0.0;false;0.0\nnull;Christian;true;1.6;true;1.2;false;0.0;true;1.2\nnull;ffff;false;0.0;false;0.0;false;0.0;false;0.0\nnull;chri;true;0.0;false;0.0;true;0.0;true;0.0\nnull;christian;true;0.0;true;0.0;true;0.0;false;0.0\nnull;Marcus;true;0.0;true;0.0;true;0.0;true;0.0\nnull;Mathias;true;0.0;true;0.0;true;0.0;true;0.0\nnull;Mathias Thomsen;true;0.0;false;0.0;false;0.0;true;0.0\nnull;cdudud;false;0.0;false;0.0;false;0.0;false;0.0\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/data/competitive.csv b/data/competitive.csv
+--- a/data/competitive.csv	(revision 27ac2b8ac437644b3d9eb50bfc98592b25e63c2e)
++++ b/data/competitive.csv	(date 1670412252622)
+@@ -7,3 +7,4 @@
+ null;Mathias;true;0.0;true;0.0;true;0.0;true;0.0
+ null;Mathias Thomsen;true;0.0;false;0.0;false;0.0;true;0.0
+ null;cdudud;false;0.0;false;0.0;false;0.0;false;0.0
++null;dudud;true;0.0;true;0.0;true;0.0;true;0.0
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"37187699-4e17-4b09-bf9b-6fa99e128523\" name=\"Changes\" comment=\"package edit succes!!!!!!!!!!!\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2IDVNNEf9Ug3cqhUOzBUBSGvBfN\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"flattenPackages\" value=\"true\" />\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"WebServerToolWindowFactoryState\": \"false\",\n    \"last_directory_selection\": \"/Users/marcusfrorupnielsen/Documents/IT projects/DelfinenProject/src/main/java\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"settings.editor.selected.configurable\": \"preferences.keymap\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$\" />\n      <recent name=\"$PROJECT_DIR$/gitignoreFiles\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"Initiation\" type=\"Application\" factoryName=\"Application\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"delfinePackage.Main\" />\n      <module name=\"DelfinenProject\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"37187699-4e17-4b09-bf9b-6fa99e128523\" name=\"Changes\" comment=\"\" />\n      <created>1669716103911</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1669716103911</updated>\n      <workItem from=\"1669716113904\" duration=\"17956000\" />\n      <workItem from=\"1670355738425\" duration=\"8466000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"added saveCoachdata, loadcoachdata and parseCsvlineCoach\">\n      <created>1670263502091</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1670263502091</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"package edit\">\n      <created>1670409529209</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1670409529209</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"package edit\">\n      <created>1670409549365</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1670409549365</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"package edit succes!!!!!!!!!!!\">\n      <created>1670410217492</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1670410217492</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"package edit succes!!!!!!!!!!!\">\n      <created>1670410232107</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1670410232107</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"6\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"added saveCoachdata, loadcoachdata and parseCsvlineCoach\" />\n    <MESSAGE value=\"package edit\" />\n    <MESSAGE value=\"package edit succes!!!!!!!!!!!\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"package edit succes!!!!!!!!!!!\" />\n  </component>\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\n    <expand />\n    <select />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 27ac2b8ac437644b3d9eb50bfc98592b25e63c2e)
++++ b/.idea/workspace.xml	(date 1670412221494)
+@@ -4,7 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="37187699-4e17-4b09-bf9b-6fa99e128523" name="Changes" comment="package edit succes!!!!!!!!!!!" />
++    <list default="true" id="37187699-4e17-4b09-bf9b-6fa99e128523" name="Changes" comment="package edit !!!!!!!!!!!" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -66,7 +66,7 @@
+       <option name="presentableId" value="Default" />
+       <updated>1669716103911</updated>
+       <workItem from="1669716113904" duration="17956000" />
+-      <workItem from="1670355738425" duration="8466000" />
++      <workItem from="1670355738425" duration="8926000" />
+     </task>
+     <task id="LOCAL-00001" summary="added saveCoachdata, loadcoachdata and parseCsvlineCoach">
+       <created>1670263502091</created>
+@@ -103,7 +103,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1670410232107</updated>
+     </task>
+-    <option name="localTasksCounter" value="6" />
++    <task id="LOCAL-00006" summary="package edit !!!!!!!!!!!">
++      <created>1670412093453</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1670412093453</updated>
++    </task>
++    <option name="localTasksCounter" value="7" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -124,7 +131,8 @@
+     <MESSAGE value="added saveCoachdata, loadcoachdata and parseCsvlineCoach" />
+     <MESSAGE value="package edit" />
+     <MESSAGE value="package edit succes!!!!!!!!!!!" />
+-    <option name="LAST_COMMIT_MESSAGE" value="package edit succes!!!!!!!!!!!" />
++    <MESSAGE value="package edit !!!!!!!!!!!" />
++    <option name="LAST_COMMIT_MESSAGE" value="package edit !!!!!!!!!!!" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
+Index: data/clubmembersData.csv
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>S1;christian;21;true;true;Competition;1600;true;Team senior dolphins\nJ2;Marcus;12;true;false;Competition;1000;false;Team junior dolphins\nS3;Mathias;22;false;true;Exerciser;500;true;No team\nS4;Mathias Thomsen;23;true;true;Competition;1600;false;Team senior dolphins\nS5;cdudud;22;true;true;Exerciser;1600;false;No team\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/data/clubmembersData.csv b/data/clubmembersData.csv
+--- a/data/clubmembersData.csv	(revision 27ac2b8ac437644b3d9eb50bfc98592b25e63c2e)
++++ b/data/clubmembersData.csv	(date 1670412252616)
+@@ -1,5 +1,6 @@
+ S1;christian;21;true;true;Competition;1600;true;Team senior dolphins
+-J2;Marcus;12;true;false;Competition;1000;false;Team junior dolphins
++J2;Marcus;12;true;false;Competition;1000;true;Team junior dolphins
+ S3;Mathias;22;false;true;Exerciser;500;true;No team
+-S4;Mathias Thomsen;23;true;true;Competition;1600;false;Team senior dolphins
++S4;Mathias Thomsen;23;true;true;Competition;1600;true;Team senior dolphins
+ S5;cdudud;22;true;true;Exerciser;1600;false;No team
++S6;dudud;22;false;true;Competition;500;true;Team senior dolphins

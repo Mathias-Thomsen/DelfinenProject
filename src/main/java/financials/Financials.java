@@ -1,4 +1,4 @@
-package Financials;
+package financials;
 
 public class Financials {
     private int totalIncome;

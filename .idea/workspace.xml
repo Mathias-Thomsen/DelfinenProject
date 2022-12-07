@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37187699-4e17-4b09-bf9b-6fa99e128523" name="Changes" comment="package edit succes!!!!!!!!!!!" />
+    <list default="true" id="37187699-4e17-4b09-bf9b-6fa99e128523" name="Changes" comment="package edit !!!!!!!!!!!">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,18 +32,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_directory_selection": "/Users/marcusfrorupnielsen/Documents/IT projects/DelfinenProject/src/main/java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/marcusfrorupnielsen/Documents/IT projects/DelfinenProject/src/main/java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -66,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669716103911</updated>
       <workItem from="1669716113904" duration="17956000" />
-      <workItem from="1670355738425" duration="8466000" />
+      <workItem from="1670355738425" duration="9407000" />
     </task>
     <task id="LOCAL-00001" summary="added saveCoachdata, loadcoachdata and parseCsvlineCoach">
       <created>1670263502091</created>
@@ -103,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670410232107</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="package edit !!!!!!!!!!!">
+      <created>1670412093453</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670412093453</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +133,8 @@
     <MESSAGE value="added saveCoachdata, loadcoachdata and parseCsvlineCoach" />
     <MESSAGE value="package edit" />
     <MESSAGE value="package edit succes!!!!!!!!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="package edit succes!!!!!!!!!!!" />
+    <MESSAGE value="package edit !!!!!!!!!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="package edit !!!!!!!!!!!" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

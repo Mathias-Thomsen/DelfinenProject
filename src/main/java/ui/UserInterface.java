@@ -1,8 +1,8 @@
-package Ui;
+package ui;
 
-import Profiles.ClubMember;
-import Controller.Controller;
-import Competitive.Competitive;
+import profiles.ClubMember;
+import controller.Controller;
+import competitive.Competitive;
 
 import java.time.LocalDate;
 import java.time.Year;

@@ -1,8 +1,8 @@
-package DataSource;
+package dataSource;
 
-import Profiles.ClubMember;
-import Profiles.Coach;
-import Competitive.Competitive;
+import profiles.ClubMember;
+import profiles.Coach;
+import competitive.Competitive;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,4 +1,4 @@
-package Competitive;
+package competitive;
 
 public class Tournament {
 }
