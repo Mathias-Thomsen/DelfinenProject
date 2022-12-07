@@ -1,19 +1,22 @@
-target/
+../target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-.idea/
+gitignoreFiles/.idea/ .data
 
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+gitignoreFiles/.idea/modules.xml
+gitignoreFiles/.idea/jarRepositories.xml
+gitignoreFiles/.idea/compiler.xml
+gitignoreFiles/.idea/libraries/
 *.iws
 *.iml
 *.ipr
+
+gitignoreFiles/data
+
 
 ### Eclipse ###
 .apt_generated

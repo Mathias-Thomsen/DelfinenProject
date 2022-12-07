@@ -1,4 +1,4 @@
-package Profiles;
+package delfinePackage.Profiles;
 
 public class Coach {
     private String employeeNumber;

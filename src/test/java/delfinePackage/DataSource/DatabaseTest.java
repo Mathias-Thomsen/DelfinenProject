@@ -1,6 +1,6 @@
-package DataSource;
+package delfinePackage.DataSource;
 
-import Profiles.ClubMember;
+import delfinePackage.Profiles.ClubMember;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

@@ -1,11 +1,11 @@
-package Financials;
+package delfinePackage.Financials;
 
 public class Financials {
     private int totalIncome;
     private int unpayedAmount;
     private int seniorAmount;
     private int seniorPlusAmount;
-    private int junoirAmount;
+    private int juniorAmount;
     private int passiveAmount;
 
 
@@ -14,12 +14,12 @@ public class Financials {
 
     }
 
-    public Financials(int totalIncome, int unpayedAmount, int seniorAmount, int seniorPlusAmount, int junoirAmount, int passiveAmount) {
+    public Financials(int totalIncome, int unpayedAmount, int seniorAmount, int seniorPlusAmount, int juniorAmount, int passiveAmount) {
         this.totalIncome = totalIncome;
         this.unpayedAmount = unpayedAmount;
         this.seniorAmount = seniorAmount;
         this.seniorPlusAmount = seniorPlusAmount;
-        this.junoirAmount = junoirAmount;
+        this.juniorAmount = juniorAmount;
         this.passiveAmount = passiveAmount;
     }
 
@@ -55,12 +55,12 @@ public class Financials {
         this.seniorPlusAmount = seniorPlusAmount;
     }
 
-    public int getJunoirAmount() {
-        return junoirAmount;
+    public int getJuniorAmount() {
+        return juniorAmount;
     }
 
-    public void setJunoirAmount(int junoirAmount) {
-        this.junoirAmount = junoirAmount;
+    public void setJuniorAmount(int juniorAmount) {
+        this.juniorAmount = juniorAmount;
     }
 
     public int getPassiveAmount() {

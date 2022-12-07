@@ -1,8 +1,8 @@
-package Ui;
+package delfinePackage.Ui;
 
-import Profiles.ClubMember;
-import Controller.Controller;
-import Competitive.Competitive;
+import delfinePackage.Profiles.ClubMember;
+import delfinePackage.Controller.Controller;
+import delfinePackage.Competitive.Competitive;
 
 import java.time.LocalDate;
 import java.time.Year;
@@ -739,8 +739,8 @@ public class UserInterface {
                     + "Active Status:............. " + (controller.active() ? "Active" : "Passive" )+ "\n"
                     + "Junior or senior:.......... " + (controller.isSenior() ? "Senior" : "Junior") + "\n"
                     + "Exerciser or competition:.. " + controller.getSwimType() + "\n"
-                    + "Subscription............... " + controller.getPayment() + "\n"
-                    + "Subscription is paid....... " + (controller.isRandomPay() ? "Paid" : "Not paid"));
+                    + "adelfineProjectPackage.Subscription............... " + controller.getPayment() + "\n"
+                    + "adelfineProjectPackage.Subscription is paid....... " + (controller.isRandomPay() ? "Paid" : "Not paid"));
         }
     }
     public void searchMemberCashier() {
@@ -756,7 +756,7 @@ public class UserInterface {
                     + "Active Status:............. " + (controller.active() ? "Active" : "Passive") + "\n"
                     + "Junior or senior:.......... " + (controller.isSenior() ? "Senior" : "Junior")+ "\n"
                     + "Exerciser or competition:.. " + controller.getSwimType() + "\n"
-                    + "Subscription............... " + controller.getPayment());
+                    + "adelfineProjectPackage.Subscription............... " + controller.getPayment());
         }
         if (controller.findMember(searchTerm).isEmpty()) {
             System.out.println("No result");
@@ -772,8 +772,8 @@ public class UserInterface {
                     + "Active Status:............. " + (controller.active() ? "Active" : "Passive" )+ "\n"
                     + "Junior or senior:.......... " + (controller.isSenior() ? "Senior" : "Junior") + "\n"
                     + "Exerciser or competition:.. " + controller.getSwimType() + "\n"
-                    + "Subscription............... " + controller.getPayment() + "\n"
-                    + "Subscription is paid....... " + (controller.isRandomPay() ? "Paid" : "Not paid"));
+                    + "adelfineProjectPackage.Subscription............... " + controller.getPayment() + "\n"
+                    + "adelfineProjectPackage.Subscription is paid....... " + (controller.isRandomPay() ? "Paid" : "Not paid"));
     }
     public void showFinancialData() {
         controller.setTotaleIncome();

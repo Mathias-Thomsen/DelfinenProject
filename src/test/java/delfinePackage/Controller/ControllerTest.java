@@ -1,8 +1,8 @@
-package Controller;
+package delfinePackage.Controller;
 
-import Profiles.ClubMember;
-import DataSource.Database;
-import DataSource.Filehandler;
+import delfinePackage.Profiles.ClubMember;
+import delfinePackage.DataSource.Database;
+import delfinePackage.DataSource.Filehandler;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
