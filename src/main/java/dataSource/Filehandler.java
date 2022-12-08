@@ -2,7 +2,7 @@ package dataSource;
 
 import profiles.ClubMember;
 import profiles.Coach;
-import competitive.Competitive;
+
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -32,6 +32,22 @@ public class Filehandler {
             output.print(member.isRandomPay());
             output.print(";");
             output.print(member.getTeamName());
+            output.print(";");
+            output.print(member.isCrawl());
+            output.print(";");
+            output.print(member.getCrawlTime());
+            output.print(";");
+            output.print(member.isBackCrawl());
+            output.print(";");
+            output.print(member.getBackCrawlTime());
+            output.print(";");
+            output.print(member.isButterfly());
+            output.print(";");
+            output.print(member.getButterflyTime());
+            output.print(";");
+            output.print(member.isBreaststroke());
+            output.print(";");
+            output.print(member.getBreaststrokeTime());
             output.println();
         }
         output.close();
@@ -53,7 +69,7 @@ public class Filehandler {
             String[] parts = line.split(";");
 
             ClubMember loadClubmemberData = new ClubMember();
-            loadClubmemberData.setMembershipNumber(parts[0]);
+            loadClubmemberData.setMembershipNumber(Integer.parseInt(parts[0]));
             loadClubmemberData.setName(parts[1]);
             loadClubmemberData.setAge(parts[2]);
             loadClubmemberData.setActive(Boolean.parseBoolean(parts[3]));
@@ -62,6 +78,14 @@ public class Filehandler {
             loadClubmemberData.setPayment(Integer.parseInt(parts[6]));
             loadClubmemberData.setRandomPay(Boolean.parseBoolean(parts[7]));
             loadClubmemberData.setTeamName(parts[8]);
+            loadClubmemberData.setCrawl(Boolean.parseBoolean(parts[9]));
+            loadClubmemberData.setCrawlTime(parts[10]);
+            loadClubmemberData.setBackCrawl(Boolean.parseBoolean(parts[11]));
+            loadClubmemberData.setBackCrawlTime(parts[12]);
+            loadClubmemberData.setButterfly(Boolean.parseBoolean(parts[13]));
+            loadClubmemberData.setButterflyTime(parts[14]);
+            loadClubmemberData.setBreaststroke(Boolean.parseBoolean(parts[15]));
+            loadClubmemberData.setBreaststrokeTime(parts[16]);
 
 
             return loadClubmemberData;
@@ -111,68 +135,14 @@ public class Filehandler {
         }
     }
 
-    public void saveCompetitiveData(ArrayList<Competitive> competitors) throws FileNotFoundException {
-        PrintStream output = new PrintStream(new File("data/competitive.csv"));
 
-        for (Competitive member : competitors) {
-            output.print(member.getMembershipNumber());
-            output.print(";");
-            output.print(member.getName());
-            output.print(";");
-            output.print(member.isCrawl());
-            output.print(";");
-            output.print(member.getCrawlTime());
-            output.print(";");
-            output.print(member.isBackCrawl());
-            output.print(";");
-            output.print(member.getBackCrawlTime());
-            output.print(";");
-            output.print(member.isButterfly());
-            output.print(";");
-            output.print(member.getButterflyTime());
-            output.print(";");
-            output.print(member.isBreaststroke());
-            output.print(";");
-            output.print(member.getBreaststrokeTime());
-            output.println();
-        }
-        output.close();
-    }
 
-    public void loadCompetitiveData(ArrayList<Competitive> allCompetitores) throws FileNotFoundException {
 
-        Scanner reader = new Scanner(new File("data/competitive.csv"));
-        while (reader.hasNextLine()) {
-            String line = reader.nextLine();
 
-            Competitive CompetitiveDataObjekt = parseCsvLineCompetitive(line);
-            allCompetitores.add(CompetitiveDataObjekt);
-        }
-    }
 
-    private Competitive parseCsvLineCompetitive(String line) {
-        try {
-            String[] parts = line.split(";");
 
-            Competitive loadCompetitiveData = new Competitive();
-            loadCompetitiveData.setMembershipNumber(parts[0]);
-            loadCompetitiveData.setName(parts[1]);
-            loadCompetitiveData.setCrawl(Boolean.parseBoolean(parts[2]));
-            loadCompetitiveData.setCrawlTime(parts[3]);
-            loadCompetitiveData.setBackCrawl(Boolean.parseBoolean(parts[4]));
-            loadCompetitiveData.setBackCrawlTime(parts[5]);
-            loadCompetitiveData.setButterfly(Boolean.parseBoolean(parts[6]));
-            loadCompetitiveData.setButterflyTime(parts[7]);
-            loadCompetitiveData.setBreaststroke(Boolean.parseBoolean(parts[8]));
-            loadCompetitiveData.setBreaststrokeTime(parts[9]);
 
-            return loadCompetitiveData;
 
-        } catch (NumberFormatException e) {
-            System.out.println("cannot load data");
-            return null;
-        }
-    }
 
 
 

@@ -2,9 +2,7 @@ package ui;
 
 import profiles.ClubMember;
 import controller.Controller;
-import competitive.Competitive;
 
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Year;
 import java.util.ArrayList;
@@ -20,9 +18,7 @@ public class UserInterface {
     //________________Start program and main menu________________
 
     public void startProgram() {
-        controller.loadData();
-        controller.loadDataCoach();
-        controller.loadCompetitiveData();
+        controller.startProgram();
         mainMenu();
     }
     public void mainMenu() {
@@ -207,102 +203,89 @@ public class UserInterface {
             }
         }
 
-        //If competition selected the swim category
-
-        if (swim.equals("Competition")){
+        //Create member
+        boolean crawl = false;
+        boolean backCrawl = false;
+        boolean butterfly = false;
+        boolean breast = false;
+        int number = controller.getNextMemberNumber();
+        if (swim.equals("Competition")) {
             System.out.println("Please, select which swim catagory you are active in");
             System.out.print("Crawl active/passive: ");
-            String crawl;
-            boolean setCrawlActive;
-            boolean crawlActiveOrPassive;
-            while (true) {
-                crawl = scanner.nextLine().trim().toLowerCase();
-                if (crawl.equals("active") || crawl.equals("a")) {
-                    crawlActiveOrPassive = true;
-                    setCrawlActive = true;
-                    controller.setCrawl();
+
+            String crawlInputString;
+            do {
+                crawlInputString = scanner.nextLine().trim().toLowerCase();
+                if (crawlInputString.equals("active") || crawlInputString.equals("a")) {
+                    crawl = true;
                     break;
-                } else if (crawl.equals("passive") || crawl.equals("p")) {
-                    crawlActiveOrPassive = true;
-                    setCrawlActive = false;
+                } else if (crawlInputString.equals("passive") || crawlInputString.equals("p")) {
+                    crawl = false;
                     break;
                 } else {
                     System.out.println("You have to type active/passive or (a/p)");
                 }
-            }
+            } while (userChoice);
+
             System.out.print("Backcrawl active/passive:");
-            String backCrawl;
-            boolean setBackCrawl;
-            boolean backCrawlActiveOrPassive;
-            while (true) {
-                backCrawl = scanner.nextLine().trim().toLowerCase();
-                if (backCrawl.equals("active") || backCrawl.equals("a")) {
-                    backCrawlActiveOrPassive = true;
-                    setBackCrawl = true;
-                    controller.setBackCrawl();
+            String backCrawlString;
+            while (userChoice) {
+                backCrawlString = scanner.nextLine().trim().toLowerCase();
+                if (backCrawlString.equals("active") || backCrawlString.equals("a")) {
+                    backCrawl = true;
                     break;
-                } else if (backCrawl.equals("passive") || backCrawl.equals("p")) {
-                    backCrawlActiveOrPassive = true;
-                    setBackCrawl = false;
+                } else if (backCrawlString.equals("passive") || backCrawlString.equals("p")) {
+                    backCrawl = false;
                     break;
                 } else {
                     System.out.println("You have to type active/passive or (a/p)");
                 }
             }
+
             System.out.print("Butterfly active/passive:");
-            String butterfly;
-            boolean setButterfly;
-            boolean butterflyActiveOrPassive;
-            while (true) {
-                butterfly = scanner.nextLine().trim().toLowerCase();
-                if (butterfly.equals("active") || butterfly.equals("a")) {
-                    butterflyActiveOrPassive = true;
-                    setButterfly = true;
-                    controller.setButterfly();
+            String butterflyString;
+            while (userChoice) {
+                butterflyString = scanner.nextLine().trim().toLowerCase();
+                if (butterflyString.equals("active") || butterflyString.equals("a")) {
+                    butterfly = true;
                     break;
-                } else if (butterfly.equals("passive") || butterfly.equals("p")) {
-                    butterflyActiveOrPassive = true;
-                    setButterfly = false;
+                } else if (butterflyString.equals("passive") || butterflyString.equals("p")) {
+                    butterfly = false;
                     break;
                 } else {
                     System.out.println("You have to type active/passive or (a/p)");
                 }
             }
             System.out.println("Breaststroke active/passive:");
-            String breaststroke;
-            boolean setBreastActive;
-            boolean breastActiveOrPassive;
-            while (true) {
-                breaststroke = scanner.nextLine().trim().toLowerCase();
-                if (breaststroke.equals("active") || breaststroke.equals("a")) {
-                    breastActiveOrPassive = true;
-                    setBreastActive = true;
-                    controller.setBreaststroke();
+            String breastString;
+
+
+            while (userChoice) {
+                breastString = scanner.nextLine().trim().toLowerCase();
+                if (breastString.equals("active") || breastString.equals("a")) {
+                    breast = true;
                     break;
-                } else if (breaststroke.equals("passive") || breaststroke.equals("p")) {
-                    breastActiveOrPassive = true;
-                    setBreastActive = false;
+                } else if (breastString.equals("passive") || breastString.equals("p")) {
+                    breast = false;
                     break;
                 } else {
                     System.out.println("You have to type active/passive or (a/p)");
                 }
             }
         }
-
-
-        //Create member
-        controller.createClubMember(nameInput, ageInput, setActive, swim);
+        controller.createClubMember(number, nameInput, ageInput, setActive, swim, crawl, 0, backCrawl, 0, butterfly, 0, breast, 0);
         controller.getRandomPay(); // Set random pay true/false
-        controller.junoirOrsenoir(); // calculate from the age and set the member to junior or senoir
-        controller.teamName(); // connect to teams from junior or senoir
-        controller.setClubMemberNumber();
+        controller.junoirOrsenoir(); // calculate from the age and set the member to junior or senior
+        controller.teamName(); // connect to teams from junior or senior
         controller.getCreatePayment();
-        controller.createCompetitive(null, nameInput, controller.isCrawl(), 0, controller.isBackCrawl(), 0, controller.isButterfly(), 0, controller.isBreaststroke(), 0);
 
         controller.saveData(); //save to the file every time we make a new member.
-        controller.saveCompetitiveData();
+
 
     }
+
+
+
     public void createCoach() {
         //Name
         System.out.println("--------------------------------------------------------");
@@ -348,8 +331,6 @@ public class UserInterface {
 
         controller.createCoach(coachNameInput, coacheAgeInput);
         controller.setCoachNumber();
-
-
 
         //Save Data
         controller.saveDataCoach();
@@ -492,7 +473,7 @@ public class UserInterface {
         } while (!userChoice);
 
 
-        controller.setClubMemberNumber();
+
         controller.saveData();
 
 
@@ -566,7 +547,8 @@ public class UserInterface {
         }
     }
     public void showCompetitiveSwimmers(){
-        for (Competitive controller : controller.getCompetitors()) {
+        for (ClubMember controller : controller.getMembers()) {
+            if (controller.getSwimType().equals("Competition")){
             System.out.println("------------------\n"
                     + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
                     + "Name:...................... " + controller.getName() + "\n"
@@ -574,12 +556,13 @@ public class UserInterface {
                     + "Backcrawl:................. " + (controller.isBackCrawl() ? "Active" : "Passive" ) + "\n"
                     + "Butterfly:................. " + (controller.isButterfly() ? "Active" : "Passive") + "\n"
                     + "Breaststroke:.............. " + (controller.isBreaststroke() ? "Active" : "Passive" ));
+            }
         }
     }
     public void showSeniorTeams(){
         for (ClubMember controller : controller.getMembers()) {
-            if (controller.getTeamName().equals("Team senior dolphins: ")){
-                System.out.println("------------------\n"
+            if (controller.getTeamName().equals("Team senior dolphins")){
+                System.out.println("-------------------------------\n"
                         + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
                         + "Name:...................... " + controller.getName() + "\n"
                         + "Age:....................... " + controller.getAge() + "\n"
@@ -590,7 +573,7 @@ public class UserInterface {
     public void showJuniorTeams(){
         for (ClubMember controller : controller.getMembers()) {
             if (controller.getTeamName().equals("Team junior dolphins")){
-                System.out.println("------------------\n"
+                System.out.println("-------------------------------\n"
                         + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
                         + "Name:...................... " + controller.getName() + "\n"
                         + "Age:....................... " + controller.getAge() + "\n"
@@ -606,12 +589,15 @@ public class UserInterface {
                 -------------------------
                 Select swim category:
                 -------------------------
-                1. Show top 5 crawl swimmers
-                2. Show top 5 backcrawl swimmers
-                3. Show top 5 butterfly swimmers
-                4. Show top 5 breaststroke swimmers
-                5. Go back to coach menu
-                9. Go back to sign in
+                1. Show top 5 crawl swimmers (Senior)
+                2. Show top 5 backcrawl swimmers (Senior) 
+                3. Show top 5 butterfly swimmers (Senior)
+                4. Show top 5 breaststroke swimmers (Senior)
+                5. Show top 5 crawl swimmers (Junior)
+                6. Show top 5 backcrawl swimmers (Junior)
+                7. Show top 5 butterfly swimmers (Junior)
+                8. Show top 5 breaststroke swimmers (Junior)
+                9. Go back to coach menu
                 """);
 
             do {
@@ -627,61 +613,126 @@ public class UserInterface {
             } while (!userChoice);
 
             switch (menuChoise) {
-                case 1 -> showTop5CrawlSwimmers();
-                case 2 -> showTop5BackCrawlSwimmers();
-                case 3 -> showTop5ButterflySwimmers();
-                case 4 -> showTop5BreaststrokeSwimmers();
-                case 5 -> coachMenu();
-                case 9 -> mainMenu();
+                case 1 -> showTop5CrawlSwimmersSenior();
+                case 2 -> showTop5BackCrawlSwimmersSenior();
+                case 3 -> showTop5ButterflySwimmersSenior();
+                case 4 -> showTop5BreaststrokeSwimmersSenior();
+                case 5 -> showTop5CrawlSwimmersJunior();
+                case 6 -> showTop5BackCrawlSwimmersJunior();
+                case 7 -> showTop5ButterflySwimmersJunior();
+                case 8 -> showTop5BreaststrokeSwimmersJunior();
+                case 9 -> coachMenu();
+
                 default -> System.out.println("Invalid Input\n");
             }
         }
     }
-    public void showTop5CrawlSwimmers(){
+
+
+    public void showTop5CrawlSwimmersSenior(){
         System.out.println("Top 5 crawl swimmers");
         controller.sortCrawlTime();
-            for (Competitive controller : controller.getCompetitors()){
-                if (controller.getCrawlTime() != 0) {
-                        System.out.println("------------------\n"
-                                + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
-                                + "Name:...................... " + controller.getName() + "\n"
-                                + "Time:...................... " + controller.getCrawlTime());
-                }
+        for (ClubMember controller : controller.getMembers()){
+            if (controller.getCrawlTime() != 0 && controller.getTeamName().equals("Team senior dolphins")) {
+                System.out.println("------------------\n"
+                        + "Team:...................... " + controller.getTeamName() + "\n"
+                        + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
+                        + "Name:...................... " + controller.getName() + "\n"
+                        + "Time:...................... " + controller.getCrawlTime());
             }
+        }
     }
-    public void showTop5BackCrawlSwimmers(){
+    public void showTop5CrawlSwimmersJunior(){
+        System.out.println("Top 5 crawl swimmers");
+        controller.sortCrawlTime();
+        for (ClubMember controller : controller.getMembers()){
+            if (controller.getCrawlTime() != 0 && controller.getTeamName().equals("Team junior dolphins")) {
+                System.out.println("------------------\n"
+                        + "Team:...................... " + controller.getTeamName() + "\n"
+                        + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
+                        + "Name:...................... " + controller.getName() + "\n"
+                        + "Time:...................... " + controller.getCrawlTime());
+            }
+        }
+
+    }
+    public void showTop5BackCrawlSwimmersSenior(){
         System.out.println("Top 5 back crawl swimmers");
         controller.sortBackCrawlTime();
-        for (Competitive controller : controller.getCompetitors()){
-            if (controller.getBackCrawlTime() != 0) {
+        for (ClubMember controller : controller.getMembers()){
+            if (controller.getBackCrawlTime() != 0 && controller.getTeamName().equals("Team senior dolphins")) {
                 System.out.println("------------------\n"
+                        + "Team:...................... " + controller.getTeamName() + "\n"
                         + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
                         + "Name:...................... " + controller.getName() + "\n"
-                        + "Time:...................... " + controller.getBackCrawlTime());
+                        + "Time:...................... " + controller.getCrawlTime());
             }
         }
     }
-    public void showTop5ButterflySwimmers(){
+
+    public void showTop5BackCrawlSwimmersJunior(){
+        System.out.println("Top 5 back crawl swimmers");
+        controller.sortBackCrawlTime();
+        for (ClubMember controller : controller.getMembers()){
+            if (controller.getBackCrawlTime() != 0 && controller.getTeamName().equals("Team junior dolphins")) {
+                System.out.println("------------------\n"
+                        + "Team:...................... " + controller.getTeamName() + "\n"
+                        + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
+                        + "Name:...................... " + controller.getName() + "\n"
+                        + "Time:...................... " + controller.getCrawlTime());
+            }
+        }
+    }
+
+    public void showTop5ButterflySwimmersSenior(){
         System.out.println("Top 5 butterfly swimmers");
         controller.sortButterflyTime();
-        for (Competitive controller : controller.getCompetitors()){
-            if (controller.getButterflyTime() != 0) {
+        for (ClubMember controller : controller.getMembers()){
+            if (controller.getButterflyTime() != 0 && controller.getTeamName().equals("Team senior dolphins")) {
                 System.out.println("------------------\n"
+                        + "Team:...................... " + controller.getTeamName() + "\n"
                         + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
                         + "Name:...................... " + controller.getName() + "\n"
-                        + "Time:...................... " + controller.getButterflyTime());
+                        + "Time:...................... " + controller.getCrawlTime());
             }
         }
     }
-    public void showTop5BreaststrokeSwimmers(){
-        System.out.println("Top 5 breaststroke swimmers");
-        controller.sortBreastStrokeTime();
-        for (Competitive controller : controller.getCompetitors()){
-            if (controller.getBreaststrokeTime() != 0) {
+    public void showTop5ButterflySwimmersJunior(){
+        System.out.println("Top 5 butterfly swimmers");
+        controller.sortButterflyTime();
+        for (ClubMember controller : controller.getMembers()){
+            if (controller.getButterflyTime() != 0 && controller.getTeamName().equals("Team junior dolphins")) {
                 System.out.println("------------------\n"
+                        + "Team:...................... " + controller.getTeamName() + "\n"
                         + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
                         + "Name:...................... " + controller.getName() + "\n"
-                        + "Time:...................... " + controller.getBreaststrokeTime());
+                        + "Time:...................... " + controller.getCrawlTime());
+            }
+        }
+    }
+    public void showTop5BreaststrokeSwimmersSenior(){
+        System.out.println("Top 5 breaststroke swimmers");
+        controller.sortBreastStrokeTime();
+        for (ClubMember controller : controller.getMembers()){
+            if (controller.getBreaststrokeTime() != 0 && controller.getTeamName().equals("Team senior dolphins")) {
+                System.out.println("------------------\n"
+                        + "Team:...................... " + controller.getTeamName() + "\n"
+                        + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
+                        + "Name:...................... " + controller.getName() + "\n"
+                        + "Time:...................... " + controller.getCrawlTime());
+            }
+        }
+    }
+    public void showTop5BreaststrokeSwimmersJunior(){
+        System.out.println("Top 5 breaststroke swimmers");
+        controller.sortBreastStrokeTime();
+        for (ClubMember controller : controller.getMembers()){
+            if (controller.getBreaststrokeTime() != 0 && controller.getTeamName().equals("Team junior dolphins")) {
+                System.out.println("------------------\n"
+                        + "Team:...................... " + controller.getTeamName() + "\n"
+                        + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
+                        + "Name:...................... " + controller.getName() + "\n"
+                        + "Time:...................... " + controller.getCrawlTime());
             }
         }
     }
@@ -690,11 +741,11 @@ public class UserInterface {
         System.out.println("-----------------------------------------------------");
         System.out.println("Search for the member you want to set results: ");
         String editTimeResults = scanner.nextLine();
-        ArrayList<Competitive> searchEditResult = new ArrayList<>();
+        ArrayList<ClubMember> searchEditResult = new ArrayList<>();
 
         int index = 1;
 
-        for (Competitive editMember : controller.getCompetitors()) {
+        for (ClubMember editMember : controller.getMembers()) {
             String member = editMember.getName().toLowerCase();
             if (member.contains(editTimeResults.toLowerCase())) {
                 searchEditResult.add(editMember);
@@ -708,7 +759,7 @@ public class UserInterface {
         int userEditNumberInteger = Integer.parseInt(userEditNumberString);
 
 
-        Competitive editMember = searchEditResult.get(userEditNumberInteger - 1);
+        ClubMember editMember = searchEditResult.get(userEditNumberInteger - 1);
         System.out.println("You have selected: " + editMember.getName());
         System.out.println("If you don't want to edit press ENTER!");
         if (editMember.isCrawl()){
@@ -759,7 +810,7 @@ public class UserInterface {
         } if (editMember.isBreaststroke()){
             System.out.println("Breaststroke: " + (editMember.isBreaststroke() ? "Active" : "Passvie"));
             do {
-                System.out.println("Breaststroke time: " + editMember.getButterflyTime());
+                System.out.println("Breaststroke time: " + editMember.getBreaststrokeTime());
                 try {
                     System.out.println("Type your updated result here: ");
                     String newBreastStrokeTime = scanner.nextLine();
@@ -775,7 +826,8 @@ public class UserInterface {
             System.out.println("Not active");
         }
 
-        controller.saveCompetitiveData();
+        controller.saveData();
+
     }
 
     //__________________Cashier____________________________

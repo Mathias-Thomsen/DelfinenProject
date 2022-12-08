@@ -10,18 +10,17 @@ import subscription.Subscription;
 import java.util.ArrayList;
 import java.util.Random;
 import profiles.Coach;
-import competitive.Competitive;
+
 
 
 public class Database {
     Subscription subscription = new Subscription();
     public ArrayList<ClubMember> clubMembers = new ArrayList<>();
     public ArrayList<Coach> coaches = new ArrayList<>();
-    public ArrayList<Competitive> competitors = new ArrayList<>();
 
 
-    public void createClubMember(String name, int age, boolean activityStatus,  String swimType) {
-        ClubMember clubMember = new ClubMember(name, age, activityStatus, swimType);
+    public void createClubMember(int membershipNumber, String name, int age, boolean activityStatus,  String swimType, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime) {
+        ClubMember clubMember = new ClubMember(membershipNumber, name, age, activityStatus, swimType, isCrawl,  crawlTime,  isBackCrawl,  backCrawlTime,  isButterfly,  butterflyTime,  isBreaststroke,  breaststrokeTime);
         clubMembers.add(clubMember);
     }
 
@@ -29,12 +28,6 @@ public class Database {
         Coach coach = new Coach(name, age);
         coaches.add(coach);
     }
-
-    public void createCompetitive(String membershipNumber, String name, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime){
-        Competitive competitive = new Competitive(membershipNumber, name, isCrawl, crawlTime, isBackCrawl, backCrawlTime, isButterfly, butterflyTime, isBreaststroke, breaststrokeTime);
-        competitors.add(competitive);
-    }
-
 
     public boolean deleteMember(ClubMember clubMember){
         boolean result = clubMembers.remove(clubMember);
@@ -49,9 +42,7 @@ public class Database {
         return coaches;
     }
 
-    public ArrayList<Competitive> getCompetitors(){
-        return competitors;
-    }
+
 
     public void clearDataMember() {
         clubMembers.clear();
@@ -60,9 +51,7 @@ public class Database {
     public void clearDataCoach() {
         coaches.clear();
     }
-    public void clearCompetitive(){
-        competitors.clear();
-    }
+
 
     public ArrayList<ClubMember> findMember(String searchTerm){
         ArrayList<ClubMember> searchResult = new ArrayList<>();
@@ -77,19 +66,19 @@ public class Database {
     //SORT METHODS
 
     public void sortCrawlTime(){
-        competitors.sort(new CompetitiveCrawlTime());
+        clubMembers.sort(new CompetitiveCrawlTime());
     }
 
     public void sortBackCrawlTime(){
-        competitors.sort(new CompetitiveBackCrawlTime());
+        clubMembers.sort(new CompetitiveBackCrawlTime());
     }
 
     public void sortButterflyTime(){
-        competitors.sort(new CompetitiveButterflySwimmers());
+        clubMembers.sort(new CompetitiveButterflySwimmers());
     }
 
     public void sortBreaststrokeTime(){
-        competitors.sort(new CompetitiveBreaststrokeSwimmers());
+        clubMembers.sort(new CompetitiveBreaststrokeSwimmers());
     }
 
     // -----------
@@ -117,18 +106,19 @@ public class Database {
         }
     }
 
+    public void teamNameAge() {
 
-    public void setClubMemberNumber() {
+    }
 
-        int number = 1;
 
-        for (ClubMember member : clubMembers) {
-            if(member.isSenior()) {
-                member.setMembershipNumber("S" + number++);
-            }else {
-                member.setMembershipNumber("J" + number++);
-            }
-        }
+
+
+
+
+
+    public int getNextMemberNumber() {
+        int number = clubMembers.size() + 1;
+        return number;
     }
 
 

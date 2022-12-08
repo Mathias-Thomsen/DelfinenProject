@@ -19,20 +19,20 @@ class ControllerTest {
         //Arrange
         Database database = new Database();
         //Act
-        database.createClubMember("Christian", 22, true, "exerciser");
-        database.createClubMember("Christian", 22, false, "exerciser");
-        database.createClubMember("Christian", 22, true, "exerciser");
-        database.createClubMember("Christian", 22, true, "exerciser");
-        database.createClubMember("Christian", 22, true, "exerciser");
-        database.createClubMember("Christian", 22, true, "exerciser");
-        database.createClubMember("Christian", 22, false, "exerciser");
-        database.createClubMember("Christian", 22, false, "exerciser");
-        database.createClubMember("Christian", 22, false, "exerciser");
-        database.createClubMember("Christian", 22, false, "exerciser");
-        database.createClubMember("Christian", 22, false, "exerciser");
-        database.createClubMember("Christian", 22, false, "exerciser");
-        database.createClubMember("Christian", 22, false, "exerciser");
-        database.createClubMember("Christian", 22, false, "exerciser");
+        database.createClubMember(23, "Christian", 22, true, "exerciser", false, 0, false, 0, false, 0, false, 0);
+        database.createClubMember(23,"Christian", 22, false, "exerciser", false, 0, false, 0, false, 0, false, 0);
+        database.createClubMember(23,"Christian", 22, true, "exerciser", false, 0, false, 0, false, 0, false, 0);
+        database.createClubMember(23,"Christian", 22, true, "exerciser", false, 0, false, 0, false, 0, false, 0);
+        database.createClubMember(23,"Christian", 22, true, "exerciser", false, 0, false, 0, false, 0, false, 0);
+        database.createClubMember(23,"Christian", 22, true, "exerciser", false, 0, false, 0, false, 0, false, 0);
+        database.createClubMember(23,"Christian", 22, false, "exerciser", false, 0, false, 0, false, 0, false, 0);
+        database.createClubMember(23, "Christian", 22, false, "exerciser", false, 0, false, 0, false, 0, false, 0);
+        database.createClubMember(23,"Christian", 22, false, "exerciser", false, 0, false, 0, false, 0, false, 0);
+        database.createClubMember(23,"Christian", 22, false, "exerciser", false, 0, false, 0, false, 0, false, 0);
+        database.createClubMember(23,"Christian", 22, false, "exerciser", false, 0, false, 0, false, 0, false, 0);
+        database.createClubMember(23,"Christian", 22, false, "exerciser", false, 0, false, 0, false, 0, false, 0);
+        database.createClubMember(23,"Christian", 22, false, "exerciser", false, 0, false, 0, false, 0, false, 0);
+        database.createClubMember(23,"Christian", 22, false, "exerciser", false, 0, false, 0, false, 0, false, 0);
 
 
 
@@ -46,7 +46,7 @@ class ControllerTest {
     void getClubMembers() {
         //Arrange
         Database database = new Database();
-        database.createClubMember("Christian", 22, false, "exerciser");
+        database.createClubMember(23,"Christian", 22, false, "exerciser", false, 0, false, 0, false, 0, false, 0);
         //Act
         database.getClubMembers();
         int actual = database.getClubMembers().size();
@@ -60,7 +60,7 @@ class ControllerTest {
         //Arrange
         Database database = new Database();
         Controller controller = new Controller();
-        database.createClubMember("Christian", 22, true, "exerciser");
+        database.createClubMember(23,"Christian", 22, true, "exerciser", false, 0, false, 0, false, 0, false, 0);
         String userDeleteMember = "Christian";
         ArrayList<ClubMember> searchDeleteMember = new ArrayList<>();
         //Act
@@ -88,7 +88,7 @@ class ControllerTest {
         //Arrange
         Filehandler filehandler = new Filehandler();
         Database database = new Database();
-        database.createClubMember("Christian", 22, false, "exerciser");
+        database.createClubMember(23,"Christian", 22, false, "exerciser", false, 0, false, 0, false, 0, false, 0);
         //Act
         filehandler.saveData(database.getClubMembers());
         System.out.println(database.getClubMembers());
@@ -104,7 +104,7 @@ class ControllerTest {
         //Arrange
         Database database = new Database();
         Filehandler filehandler = new Filehandler();
-        database.createClubMember("Christian", 22, true, "exerciser");
+        database.createClubMember(23,"Christian", 22, true, "exerciser", false, 0, false, 0, false, 0, false, 0);
         //Act
         System.out.println(database.getClubMembers());
         database.clearDataMember();

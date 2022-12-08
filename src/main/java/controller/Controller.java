@@ -1,6 +1,6 @@
 package controller;
 
-import competitive.Competitive;
+
 import dataSource.Database;
 import dataSource.Filehandler;
 import profiles.ClubMember;
@@ -12,14 +12,20 @@ import java.time.Period;
 import java.util.ArrayList;
 
 public class Controller {
-    Competitive competitive = new Competitive();
     Database database = new Database();
     Filehandler filehandler = new Filehandler();
     Financials financials = new Financials();
 
 
-    public void createClubMember(String name, int age, boolean activityStatus, String swimType){
-        database.createClubMember( name, age, activityStatus, swimType);
+
+    public void startProgram(){
+        loadData();
+        loadDataCoach();
+    }
+
+
+    public void createClubMember(int membershipNumber, String name, int age, boolean active, String swimType, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime){
+        database.createClubMember(membershipNumber, name, age, active, swimType, isCrawl,  crawlTime,  isBackCrawl,  backCrawlTime,  isButterfly,  butterflyTime,  isBreaststroke,  breaststrokeTime);
     }
     public void createCoach(String name, int age){
         database.createCoach(name, age);
@@ -49,13 +55,7 @@ public class Controller {
         }
     }
 
-    public void saveCompetitiveData(){
-        try {
-            filehandler.saveCompetitiveData(database.getCompetitors());
-        } catch (FileNotFoundException e) {
-            System.out.println("fail");
-        }
-    }
+
 
     public void loadDataCoach(){
         try {
@@ -73,22 +73,11 @@ public class Controller {
             System.out.println("fail");
         }
     }
-    public void loadCompetitiveData(){
-        try {
-            database.clearCompetitive();
-            filehandler.loadCompetitiveData(database.getCompetitors());
-        } catch (FileNotFoundException e) {
-            System.out.println("fail");
-        }
-    }
 
     public ArrayList<ClubMember> getMembers() {
         return database.getClubMembers();
     }
 
-    public ArrayList<Competitive> getCompetitors(){
-        return database.getCompetitors();
-    }
 
     //SORT METHODS
 
@@ -126,8 +115,11 @@ public class Controller {
     }
 
 
-    public void setClubMemberNumber(){
-        database.setClubMemberNumber();
+
+
+    public int getNextMemberNumber(){
+        return database.getNextMemberNumber();
+
     }
 
     public void setCoachNumber(){
@@ -192,62 +184,6 @@ public class Controller {
     public ArrayList<ClubMember> getUndpaidMembers() {
         return database.getUnpaidMember();
     }
-
-
-
-
-
-    //___________Competitive_________________
-
-    public void createCompetitive(String membershipNumber, String name, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime){
-        database.createCompetitive(membershipNumber, name, isCrawl, crawlTime, isBackCrawl, backCrawlTime, isButterfly, butterflyTime, isBreaststroke, breaststrokeTime);
-    }
-
-    public void setCrawl(){
-        competitive.setCrawl(true);
-    }
-
-    public void setBackCrawl(){
-        competitive.setBackCrawl(true);
-    }
-
-    public void setButterfly(){
-        competitive.setButterfly(true);
-    }
-
-    public void setBreaststroke(){
-        competitive.setBreaststroke(true);
-    }
-
-    public boolean isCrawl(){
-        return competitive.isCrawl();
-    }
-
-    public boolean isBackCrawl(){
-        return competitive.isBackCrawl();
-    }
-
-    public boolean isButterfly(){
-        return competitive.isButterfly();
-    }
-
-    public boolean isBreaststroke(){
-        return competitive.isBreaststroke();
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

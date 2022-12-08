@@ -25,8 +25,8 @@ class UserInterfaceTest {
         Database database = new Database();
         Controller controller = new Controller();
         //Act
-        controller.createClubMember("Christian", 22, true, "exerciser");
-        controller.createClubMember( "Anton", 25, false,  "exerciser");
+        controller.createClubMember(23,"Christian", 22, true, "exerciser", false, 0, false, 0, false, 0, false, 0);
+        controller.createClubMember(23, "Anton", 25, false,  "exerciser", false, 0, false, 0, false, 0, false, 0);
         controller.getClubMembers();
         int actual = controller.getClubMembers().size();
         int expected = 2;
@@ -40,8 +40,8 @@ class UserInterfaceTest {
         Database database = new Database();
         Controller controller = new Controller();
         //Act
-        controller.createClubMember( "Christian", 22, true, "exerciser");
-        controller.createClubMember( "Anton", 25, false, "exerciser");
+        controller.createClubMember( 23,"Christian", 22, true, "exerciser", false, 0, false, 0, false, 0, false, 0);
+        controller.createClubMember(23, "Anton", 25, false, "exerciser", false, 0, false, 0, false, 0, false, 0);
 
         for (ClubMember controllerr : controller.getMembers()) {
             System.out.println("------------------\n"
@@ -69,7 +69,7 @@ class UserInterfaceTest {
         ArrayList<ClubMember> searchEditResult = new ArrayList<>();
 
         //Act
-        controller.createClubMember( "Anton", 25, false, "exerciser");
+        controller.createClubMember(23, "Anton", 25, false, "exerciser", false, 0, false, 0, false, 0, false, 0);
         String userEditMember = "Anton";
 
         int index = 1;
@@ -103,7 +103,7 @@ class UserInterfaceTest {
         //Arrange
         Database database = new Database();
         Controller controller = new Controller();
-        controller.createClubMember("Anton", 25, false, "exerciser");
+        controller.createClubMember(23,"Anton", 25, false, "exerciser", false, 0, false, 0, false, 0, false, 0);
         String userDeleteMember = "Anton";
         ArrayList<ClubMember> searchDeleteMember = new ArrayList<>();
         //Act
