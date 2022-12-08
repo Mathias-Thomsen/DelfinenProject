@@ -15,14 +15,10 @@ public class Controller {
     Database database = new Database();
     Filehandler filehandler = new Filehandler();
     Financials financials = new Financials();
-
-
-
     public void startProgram(){
         loadData();
         loadDataCoach();
     }
-
 
     public void createClubMember(int membershipNumber, String name, int age, boolean active, String swimType, boolean isCrawl, double crawlTime, boolean isBackCrawl, double backCrawlTime, boolean isButterfly, double butterflyTime, boolean isBreaststroke, double breaststrokeTime){
         database.createClubMember(membershipNumber, name, age, active, swimType, isCrawl,  crawlTime,  isBackCrawl,  backCrawlTime,  isButterfly,  butterflyTime,  isBreaststroke,  breaststrokeTime);
@@ -30,8 +26,6 @@ public class Controller {
     public void createCoach(String name, int age){
         database.createCoach(name, age);
     }
-
-
     public ArrayList<ClubMember> getClubMembers(){
         return database.getClubMembers();
     }
@@ -54,8 +48,6 @@ public class Controller {
             System.out.println("fail");
         }
     }
-
-
 
     public void loadDataCoach(){
         try {
@@ -80,7 +72,6 @@ public class Controller {
 
 
     //SORT METHODS
-
     public void sortCrawlTime(){
         database.sortCrawlTime();
     }

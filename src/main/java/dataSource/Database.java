@@ -106,15 +106,6 @@ public class Database {
         }
     }
 
-    public void teamNameAge() {
-
-    }
-
-
-
-
-
-
 
     public int getNextMemberNumber() {
         int number = clubMembers.size() + 1;

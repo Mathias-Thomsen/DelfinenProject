@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37187699-4e17-4b09-bf9b-6fa99e128523" name="Changes" comment="Added top five senior and junior in each category">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" afterDir="false" />
+    <list default="true" id="37187699-4e17-4b09-bf9b-6fa99e128523" name="Changes" comment="refactor menuChoise">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataSource/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataSource/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataSource/Filehandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataSource/Filehandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +56,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/gitignoreFiles" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="delfinePackage" />
     </key>
   </component>
   <component name="RunManager">
@@ -152,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670507261882</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="refactor menuChoise">
+      <created>1670508020443</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670508020443</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +190,8 @@
     <MESSAGE value="You can now see the best times in each category" />
     <MESSAGE value="You can now see the best times in each category1" />
     <MESSAGE value="Added top five senior and junior in each category" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added top five senior and junior in each category" />
+    <MESSAGE value="refactor menuChoise" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor menuChoise" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

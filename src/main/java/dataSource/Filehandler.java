@@ -2,8 +2,6 @@ package dataSource;
 
 import profiles.ClubMember;
 import profiles.Coach;
-
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
