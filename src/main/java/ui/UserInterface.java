@@ -417,8 +417,7 @@ public class UserInterface {
                 2. Show Senior team
                 3. Show Junior team
                 4. Show top 5 swimmers in each category
-                5. Show tournament result
-                6. Set time results
+                5. Set time results
                 9. Go back to sign in
                 """);
 
@@ -429,7 +428,7 @@ public class UserInterface {
                 case 2 -> showSeniorTeams();
                 case 3 -> showJuniorTeams();
                 case 4 -> showTop5SwimmersMenu();
-                case 6 -> setTimeResults();
+                case 5 -> setTimeResults();
                 case 9 -> mainMenu();
                 default -> System.out.println("Invalid Input\n");
             }
