@@ -21,9 +21,25 @@ public class UserInterface {
         controller.startProgram();
         mainMenu();
     }
+    public int menuChoise() {
+        int menuChoiseInt = 0;
+        do {
+            String valg = scanner.nextLine().trim();
+            try {
+                menuChoiseInt = Integer.parseInt(valg);
+                userChoice = true;
+            } catch (NumberFormatException e) {
+                System.out.print("There has been a error enter a valid number: ");
+                scanner.nextLine();
+            }
+
+        } while (!userChoice);
+        return menuChoiseInt;
+    }
+
     public void mainMenu() {
-        int menuChoise = 0;
-        while (menuChoise != 9) {
+        int mainMenuChoise = 0;
+        while (mainMenuChoise != 9) {
             System.out.println("""
                     -------------------------
                     Sign in as:
@@ -34,19 +50,9 @@ public class UserInterface {
                     9. Exit program
                     """);
 
-            do {
-                String valg = scanner.nextLine().trim();
-                try {
-                    menuChoise = Integer.parseInt(valg);
-                    userChoice = true;
-                } catch (NumberFormatException e) {
-                    System.out.print("There has been a error enter a valid number: ");
-                    scanner.nextLine();
-                }
+            mainMenuChoise = menuChoise();
 
-            } while (!userChoice);
-
-            switch (menuChoise) {
+            switch (mainMenuChoise) {
                 case 1 -> clubManagerMenu();
                 case 2 -> coachMenu();
                 case 3 -> cashierMenu();
@@ -59,8 +65,8 @@ public class UserInterface {
 
     //_________________Club Manager________________________
     public void clubManagerMenu() {
-        int menuChoise = 0;
-        while (menuChoise != 9) {
+        int clubManagerChoise = 0;
+        while (clubManagerChoise != 9) {
             System.out.println("""
                 -------------------------
                 Club manager menu:
@@ -74,19 +80,9 @@ public class UserInterface {
                 9. Go back to sign in
                 """);
 
-            do {
-                String valg = scanner.nextLine().trim();
-                try {
-                    menuChoise = Integer.parseInt(valg);
-                    userChoice = true;
-                } catch (NumberFormatException e) {
-                    System.out.print("There has been a error enter a valid number: ");
-                    scanner.nextLine();
-                }
+           clubManagerChoise = menuChoise();
 
-            } while (!userChoice);
-
-            switch (menuChoise) {
+            switch (clubManagerChoise) {
                 case 1 -> createMember();
                 case 2 -> createCoach();
                 case 3 -> showMembers();
@@ -283,8 +279,6 @@ public class UserInterface {
 
 
     }
-
-
 
     public void createCoach() {
         //Name
@@ -508,8 +502,8 @@ public class UserInterface {
     //_________________Coach________________________________
 
     public void coachMenu(){
-        int menuChoise = 0;
-        while (menuChoise != 9) {
+        int coachMenuChoise = 0;
+        while (coachMenuChoise != 9) {
             System.out.println("""
                 -------------------------
                 Coach menu:
@@ -523,25 +517,15 @@ public class UserInterface {
                 9. Go back to sign in
                 """);
 
-            do {
-                String valg = scanner.nextLine().trim();
-                try {
-                    menuChoise = Integer.parseInt(valg);
-                    userChoice = true;
-                } catch (NumberFormatException e) {
-                    System.out.print("There has been a error enter a valid number: ");
-                    scanner.nextLine();
-                }
+           coachMenuChoise = menuChoise();
 
-            } while (!userChoice);
-
-            switch (menuChoise) {
+            switch (coachMenuChoise) {
                 case 1 -> showCompetitiveSwimmers();
                 case 2 -> showSeniorTeams();
                 case 3 -> showJuniorTeams();
                 case 4 -> showTop5SwimmersMenu();
                 case 6 -> setTimeResults();
-                //case 9 -> mainMenu();
+                case 9 -> mainMenu();
                 default -> System.out.println("Invalid Input\n");
             }
         }

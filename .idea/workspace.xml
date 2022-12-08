@@ -5,38 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37187699-4e17-4b09-bf9b-6fa99e128523" name="Changes" comment="Added top five senior and junior in each category">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_12_2022__09_59__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_12_2022__09_59__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_12_2022__10_30__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_12_2022__10_30__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_12_2022__12_25__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_12_2022__12_25__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_2022__16_13__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_2022__16_13__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_11_2022__17_26__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_11_2022__17_26__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_11_2022,_11_25_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_11_2022,_17_41_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_11_2022__11_25__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_11_2022__17_41__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_11_2022,_08_46_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_11_2022__08_46__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/clubmembersData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/clubmembersData.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/coachesData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/coachesData.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/competitive.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/competitive.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/memberNumber.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/memberNumber.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/comparatorer/CompetitiveBackCrawlTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/comparatorer/CompetitiveBackCrawlTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/comparatorer/CompetitiveBreaststrokeSwimmers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/comparatorer/CompetitiveBreaststrokeSwimmers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/comparatorer/CompetitiveButterflySwimmers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/comparatorer/CompetitiveButterflySwimmers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/comparatorer/CompetitiveCrawlTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/comparatorer/CompetitiveCrawlTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/competitive/Competitive.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/competitive/Tournament.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataSource/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataSource/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataSource/Filehandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataSource/Filehandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/profiles/ClubMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/profiles/ClubMember.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/delfinePackage/Controller/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/delfinePackage/Controller/ControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/delfinePackage/Ui/UserInterfaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/delfinePackage/Ui/UserInterfaceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Competitive/Competitive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Competitive/Competitive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ui/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ui/UserInterface.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +131,28 @@
       <option name="project" value="LOCAL" />
       <updated>1670423265502</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added top five senior and junior in each category">
+      <created>1670507248868</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670507248868</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added top five senior and junior in each category">
+      <created>1670507255405</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670507255405</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added top five senior and junior in each category">
+      <created>1670507261882</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670507261882</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
