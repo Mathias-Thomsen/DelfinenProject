@@ -4,28 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37187699-4e17-4b09-bf9b-6fa99e128523" name="Changes" comment="refactor menuChoise">
+    <list default="true" id="37187699-4e17-4b09-bf9b-6fa99e128523" name="Changes" comment="refactor the whole project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/clubmembersData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/clubmembersData.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/coachesData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/coachesData.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/competitive.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/memberNumber.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataSource/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataSource/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataSource/Filehandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataSource/Filehandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/financials/Financials.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/profiles/ClubMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/profiles/ClubMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/subscription/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/subscription/Subscription.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataSource/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataSource/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataSource/Filehandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataSource/Filehandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Financials/Financials.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Profiles/ClubMember.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Subscription/Subscription.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/delfinePackage/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ui/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ui/UserInterface.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,18 +38,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_directory_selection": "/Users/marcusfrorupnielsen/Documents/IT projects/DelfinenProject/src/main/java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/marcusfrorupnielsen/Documents/IT projects/DelfinenProject/src/main/java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -190,7 +171,28 @@
       <option name="project" value="LOCAL" />
       <updated>1670517980483</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="refactor the whole project">
+      <created>1670526080584</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1670526080584</updated>
+    </task>
+    <task id="LOCAL-00015" summary="refactor the whole project">
+      <created>1670526084903</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670526084903</updated>
+    </task>
+    <task id="LOCAL-00016" summary="refactor the whole project">
+      <created>1670526105716</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670526105716</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +218,8 @@
     <MESSAGE value="You can now see the best times in each category1" />
     <MESSAGE value="Added top five senior and junior in each category" />
     <MESSAGE value="refactor menuChoise" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor menuChoise" />
+    <MESSAGE value="refactor the whole project" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor the whole project" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
