@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37187699-4e17-4b09-bf9b-6fa99e128523" name="Changes" comment="package edit 2" />
+    <list default="true" id="37187699-4e17-4b09-bf9b-6fa99e128523" name="Changes" comment="You can now see the best times in each category1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/competitive/Competitive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/competitive/Competitive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataSource/Database.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ui/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ui/UserInterface.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -66,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669716103911</updated>
       <workItem from="1669716113904" duration="17956000" />
-      <workItem from="1670355738425" duration="8466000" />
+      <workItem from="1670355738425" duration="9407000" />
     </task>
     <task id="LOCAL-00001" summary="added saveCoachdata, loadcoachdata and parseCsvlineCoach">
       <created>1670263502091</created>
@@ -103,14 +114,28 @@
       <option name="project" value="LOCAL" />
       <updated>1670410232107</updated>
     </task>
-    <task id="LOCAL-00006" summary="package edit 2">
-      <created>1670412299857</created>
+    <task id="LOCAL-00006" summary="package edit !!!!!!!!!!!">
+      <created>1670412093453</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1670412299857</updated>
+      <updated>1670412093453</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="You can now see the best times in each category">
+      <created>1670423229452</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670423229453</updated>
+    </task>
+    <task id="LOCAL-00008" summary="You can now see the best times in each category1">
+      <created>1670423265502</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670423265502</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,8 +156,10 @@
     <MESSAGE value="added saveCoachdata, loadcoachdata and parseCsvlineCoach" />
     <MESSAGE value="package edit" />
     <MESSAGE value="package edit succes!!!!!!!!!!!" />
-    <MESSAGE value="package edit 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="package edit 2" />
+    <MESSAGE value="package edit !!!!!!!!!!!" />
+    <MESSAGE value="You can now see the best times in each category" />
+    <MESSAGE value="You can now see the best times in each category1" />
+    <option name="LAST_COMMIT_MESSAGE" value="You can now see the best times in each category1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

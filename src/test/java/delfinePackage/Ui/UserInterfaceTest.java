@@ -1,8 +1,8 @@
 package delfinePackage.Ui;
 
-import Profiles.ClubMember;
-import Controller.Controller;
-import DataSource.Database;
+import profiles.ClubMember;
+import controller.Controller;
+import dataSource.Database;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
