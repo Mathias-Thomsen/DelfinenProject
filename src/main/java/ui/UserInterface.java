@@ -793,8 +793,8 @@ public class UserInterface {
                     + "Active Status:............. " + (controller.active() ? "Active" : "Passive" )+ "\n"
                     + "Junior or senior:.......... " + (controller.isSenior() ? "Senior" : "Junior") + "\n"
                     + "Exerciser or competition:.. " + controller.getSwimType() + "\n"
-                    + "adelfineProjectPackage.Subscription............... " + controller.getPayment() + "\n"
-                    + "adelfineProjectPackage.Subscription is paid....... " + (controller.isRandomPay() ? "Paid" : "Not paid"));
+                    + "Subscription:.............. " + controller.getPayment() + "\n"
+                    + "Subscription is paid:...... " + (controller.isRandomPay() ? "Paid" : "Not paid"));
     }
     public void showFinancialData() {
         System.out.println("------------------\n"
