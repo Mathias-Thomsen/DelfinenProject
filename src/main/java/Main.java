@@ -1,5 +1,3 @@
-package delfinePackage;
-
 import ui.UserInterface;
 
 public class Main {
