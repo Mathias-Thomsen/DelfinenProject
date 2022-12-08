@@ -2,7 +2,6 @@ package ui;
 
 import profiles.ClubMember;
 import controller.Controller;
-
 import java.time.LocalDate;
 import java.time.Year;
 import java.util.ArrayList;
@@ -10,13 +9,11 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class UserInterface {
-    Scanner scanner = new Scanner(System.in);
-    Controller controller = new Controller();
-    boolean userChoice = false; //The loops in edit member keeps going while userChoice is false.
-
+    private Scanner scanner = new Scanner(System.in);
+    private Controller controller = new Controller();
+    private boolean userChoice = false; //The loops in edit member keeps going while userChoice is false.
 
     //________________Start program and main menu________________
-
     public void startProgram() {
         controller.startProgram();
         mainMenu();
@@ -36,7 +33,6 @@ public class UserInterface {
         } while (!userChoice);
         return menuChoiseInt;
     }
-
     public void mainMenu() {
         int mainMenuChoise = 0;
         while (mainMenuChoise != 9) {
@@ -94,26 +90,39 @@ public class UserInterface {
             }
         }
     }
-    public void createMember() {
-
-        //Name
+    public boolean activeOrPassiveChoise() {
+        boolean choiseFalse = false;
+        while (userChoice) {
+            String choiseString = scanner.nextLine().trim().toLowerCase();
+            if (choiseString.equals("active") || choiseString.equals("a")) {
+                choiseFalse = true;
+                break;
+            } else if (choiseString.equals("passive") || choiseString.equals("p")) {
+                break;
+            } else {
+                System.out.println("You have to type active/passive or (a/p)");
+            }
+        }
+       return choiseFalse;
+    }
+    public String createName(){
+        String nameInput;
         System.out.println("--------------------------------------------------------");
-        System.out.println("Input new member name: ");
-        String nameInput = scanner.nextLine();
+        System.out.println("Input new name: ");
+        nameInput = scanner.nextLine();
         while (nameInput.isEmpty() || nameInput.equals(" ")) {
             System.out.print("Invalid input try again:");
             nameInput = scanner.nextLine();
         }
-
-        //Age
+        return nameInput;
+    }
+    public int createAge() {
         int birthYear = 0;
         int birthMonth = 0;
         int birthDay = 0;
         Year thisYear = Year.now();
         int thisYearInt = Integer.parseInt(String.valueOf(thisYear));
 
-        System.out.println("--------------------------------------------------------");
-        System.out.println("Input new member birthday: ");
         System.out.print("Year (fx 2000): ");
         while(userChoice) {
             birthYear = scanner.nextInt();
@@ -155,51 +164,44 @@ public class UserInterface {
         LocalDate birthDate = LocalDate.of(birthYear, birthMonth, birthDay);
 
         int ageInput = controller.calculateAge(birthDate, currentDate);
+        return ageInput;
+    }
+    public void createMember() {
 
+        //Name
+        String memberName;
+        memberName = createName();
+
+        //Age
+        System.out.println("--------------------------------------------------------");
+        System.out.println("Input new member birthday: ");
+        int memberAge;
+        memberAge = createAge();
 
         //Activity status
         System.out.println("--------------------------------------------------------");
         System.out.println("Input new member activity status (active/passive): ");
-        String activityInput;
         boolean setActive;
-        boolean activeOrPassive;
-        while (true) {
-            activityInput = scanner.nextLine().trim().toLowerCase();
-            if (activityInput.equals("active") || activityInput.equals("a")) {
-                activeOrPassive = true;
-                setActive = true;
-                break;
-            } else if (activityInput.equals("passive") || activityInput.equals("p")) {
-                activeOrPassive = true;
-                setActive = false;
-                break;
-            } else {
-                System.out.println("You have to type active/passive or (a/p)");
-            }
-        }
+        setActive = activeOrPassiveChoise();
+
+
 
         //Exerciser/competition
         System.out.println("--------------------------------------------------------");
         System.out.println("Input new member activity status (Exerciser/competition): ");
         String swim;
-        boolean exerciserOrCompetition;
-
         while (true) {
             swim = scanner.nextLine().trim().toLowerCase();
             if (swim.equals("exerciser") || swim.equals("e")) {
-                exerciserOrCompetition = true;
                 swim = "Exerciser";
                 break;
             } else if (swim.equals("competition") || swim.equals("c")) {
-                exerciserOrCompetition = true;
                 swim = "Competition";
                 break;
             } else {
                 System.out.println("You have to type exerciser/competition or (e/c)");
             }
         }
-
-        //Create member
         boolean crawl = false;
         boolean backCrawl = false;
         boolean butterfly = false;
@@ -208,122 +210,37 @@ public class UserInterface {
         if (swim.equals("Competition")) {
             System.out.println("Please, select which swim catagory you are active in");
             System.out.print("Crawl active/passive: ");
-
-            String crawlInputString;
-            do {
-                crawlInputString = scanner.nextLine().trim().toLowerCase();
-                if (crawlInputString.equals("active") || crawlInputString.equals("a")) {
-                    crawl = true;
-                    break;
-                } else if (crawlInputString.equals("passive") || crawlInputString.equals("p")) {
-                    crawl = false;
-                    break;
-                } else {
-                    System.out.println("You have to type active/passive or (a/p)");
-                }
-            } while (userChoice);
-
+            crawl = activeOrPassiveChoise();
             System.out.print("Backcrawl active/passive:");
-            String backCrawlString;
-            while (userChoice) {
-                backCrawlString = scanner.nextLine().trim().toLowerCase();
-                if (backCrawlString.equals("active") || backCrawlString.equals("a")) {
-                    backCrawl = true;
-                    break;
-                } else if (backCrawlString.equals("passive") || backCrawlString.equals("p")) {
-                    backCrawl = false;
-                    break;
-                } else {
-                    System.out.println("You have to type active/passive or (a/p)");
-                }
-            }
-
+            backCrawl = activeOrPassiveChoise();
             System.out.print("Butterfly active/passive:");
-            String butterflyString;
-            while (userChoice) {
-                butterflyString = scanner.nextLine().trim().toLowerCase();
-                if (butterflyString.equals("active") || butterflyString.equals("a")) {
-                    butterfly = true;
-                    break;
-                } else if (butterflyString.equals("passive") || butterflyString.equals("p")) {
-                    butterfly = false;
-                    break;
-                } else {
-                    System.out.println("You have to type active/passive or (a/p)");
-                }
-            }
-            System.out.println("Breaststroke active/passive:");
-            String breastString;
+            butterfly = activeOrPassiveChoise();
+            System.out.print("Breaststroke active/passive:");
+            breast = activeOrPassiveChoise();
 
-
-            while (userChoice) {
-                breastString = scanner.nextLine().trim().toLowerCase();
-                if (breastString.equals("active") || breastString.equals("a")) {
-                    breast = true;
-                    break;
-                } else if (breastString.equals("passive") || breastString.equals("p")) {
-                    breast = false;
-                    break;
-                } else {
-                    System.out.println("You have to type active/passive or (a/p)");
-                }
-            }
         }
-        controller.createClubMember(number, nameInput, ageInput, setActive, swim, crawl, 0, backCrawl, 0, butterfly, 0, breast, 0);
+
+        //Create member with all informations
+        controller.createClubMember(number, memberName, memberAge, setActive, swim, crawl, 0, backCrawl, 0, butterfly, 0, breast, 0);
         controller.getRandomPay(); // Set random pay true/false
         controller.junoirOrsenoir(); // calculate from the age and set the member to junior or senior
         controller.teamName(); // connect to teams from junior or senior
         controller.getCreatePayment();
-
         controller.saveData(); //save to the file every time we make a new member.
 
 
     }
-
     public void createCoach() {
         //Name
-        System.out.println("--------------------------------------------------------");
-        System.out.println("Input new coach name: ");
-        String coachNameInput = scanner.nextLine();
-        while (coachNameInput.isEmpty() || coachNameInput.equals(" ")) {
-            System.out.print("Invalid input try again:");
-            coachNameInput = scanner.nextLine();
-        }
+        String coachName;
+        coachName = createName();
 
         //Age
-        System.out.println("--------------------------------------------------------");
-        System.out.println("Input new coach birthday: ");
-        System.out.print("Year (fx 2000): ");
-        while (!scanner.hasNextInt()) {
-            System.out.println("Coach age can only be numbers, try again");
-            scanner.nextLine();
-        }
-        int getCoachBirthYear = scanner.nextInt();
-        scanner.nextLine();
-        System.out.print("Month (fx 9): ");
-        while (!scanner.hasNextInt()) {
-            System.out.println("Coach age can only be numbers, try again");
-            scanner.nextLine();
-        }
-        int getCoachBirthMonth = scanner.nextInt();
-        scanner.nextLine();
-        System.out.print("Day (fx 18):");
-        while (!scanner.hasNextInt()) {
-            System.out.println("Member age can only be numbers, try again");
-            scanner.nextLine();
-        }
-        int getCoachBirthDay = scanner.nextInt();
-        scanner.nextLine();
-
-        LocalDate currentDate = LocalDate.now();
-        LocalDate birthDate = LocalDate.of(getCoachBirthYear, getCoachBirthMonth, getCoachBirthDay);
-
-        int coacheAgeInput = controller.calculateAge(birthDate, currentDate);
-
+        int coachAge;
+        coachAge = createAge();
 
         //create coach
-
-        controller.createCoach(coachNameInput, coacheAgeInput);
+        controller.createCoach(coachName, coachAge);
         controller.setCoachNumber();
 
         //Save Data
@@ -352,7 +269,7 @@ public class UserInterface {
                     + "Name:...................... " + controller.getName() + "\n"
                     + "Age:....................... " + controller.getAge() + "\n"
                     + "Active Status:............. " + (controller.active() ? "Active" : "Passive") + "\n"
-                    + "Junior or senior:.......... " + controller.isSenior() + "\n"
+                    + "Junior or senior:.......... " + (controller.isSenior() ? "Senior" : "Junior") + "\n"
                     + "Exerciser or competition:.. " + controller.getSwimType());
         }
         if (controller.findMember(searchTerm).isEmpty()) {
@@ -403,23 +320,19 @@ public class UserInterface {
             }
         } while (!userChoice);
 
-
         do {
             System.out.println("Activity status: " + (editMember.active() ? "active" : "passive"));
 
             try {
-                System.out.print("Type your update here (active/passive):  ");
-                boolean activeOrPassive;
+                System.out.print("Type your update here (active/passive) or (a/p):  ");
                 while (true) {
                     String activityEditInput = scanner.nextLine().trim().toLowerCase();
                     if (!activityEditInput.isEmpty()) {
 
                         if (activityEditInput.equals("active") || activityEditInput.equals("a")) {
-                            activeOrPassive = true;
                             editMember.setActive(true);
                             break;
                         } else if (activityEditInput.equals("passive") || activityEditInput.equals("p")) {
-                            activeOrPassive = true;
                             editMember.setActive(false);
                             break;
                         } else {
@@ -437,20 +350,16 @@ public class UserInterface {
 
         do {
             System.out.println("Member paid: " + (editMember.isRandomPay() ? "Has paid" : "Haven't paid"));
-
             try {
-                System.out.print("Type your update here (Has paid/Has not paid):  ");
-                boolean activeOrPassive;
+                System.out.print("Type your update here (Has paid/Has not paid) or (p/n):  ");
                 while (true) {
                     String isRandomInput = scanner.nextLine().trim().toLowerCase();
-                    if (!isRandomInput.isEmpty()) {
 
-                        if (isRandomInput.trim().toLowerCase().equals("has paid") || isRandomInput.trim().toLowerCase().equals("p")) {
-                            activeOrPassive = true;
+                    if (!isRandomInput.isEmpty()) {
+                        if (isRandomInput.trim().equalsIgnoreCase("has paid") || isRandomInput.trim().equalsIgnoreCase("p")) {
                             editMember.setRandomPay(true);
                             break;
-                        } else if (isRandomInput.trim().toLowerCase().equals("has not paid") || isRandomInput.equals("n")) {
-                            activeOrPassive = true;
+                        } else if (isRandomInput.trim().equalsIgnoreCase("has not paid") || isRandomInput.equalsIgnoreCase("n")) {
                             editMember.setRandomPay(false);
                             break;
                         } else {
@@ -466,10 +375,7 @@ public class UserInterface {
             }
         } while (!userChoice);
 
-
-
         controller.saveData();
-
 
     }
     public void deleteMember() {
@@ -481,7 +387,7 @@ public class UserInterface {
         int index = 1;
 
 
-        for (ClubMember deleteMember : controller.getClubMembers()) {
+        for (ClubMember deleteMember : controller.getMembers()) {
             String nameInput = deleteMember.getName().toLowerCase();
             if (nameInput.contains(userDeleteMember.toLowerCase())) {
                 searchDeleteMember.add(deleteMember);
@@ -500,7 +406,6 @@ public class UserInterface {
     }
 
     //_________________Coach________________________________
-
     public void coachMenu(){
         int coachMenuChoise = 0;
         while (coachMenuChoise != 9) {
@@ -565,7 +470,6 @@ public class UserInterface {
             }
         }
     }
-
     public void showTop5SwimmersMenu(){
         int menuChoise = 0;
         while (menuChoise != 9) {
@@ -611,8 +515,6 @@ public class UserInterface {
             }
         }
     }
-
-
     public void showTop5CrawlSwimmersSenior(){
         System.out.println("Top 5 crawl swimmers");
         controller.sortCrawlTime();
@@ -649,11 +551,10 @@ public class UserInterface {
                         + "Team:...................... " + controller.getTeamName() + "\n"
                         + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
                         + "Name:...................... " + controller.getName() + "\n"
-                        + "Time:...................... " + controller.getCrawlTime());
+                        + "Time:...................... " + controller.getBackCrawlTime());
             }
         }
     }
-
     public void showTop5BackCrawlSwimmersJunior(){
         System.out.println("Top 5 back crawl swimmers");
         controller.sortBackCrawlTime();
@@ -663,11 +564,10 @@ public class UserInterface {
                         + "Team:...................... " + controller.getTeamName() + "\n"
                         + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
                         + "Name:...................... " + controller.getName() + "\n"
-                        + "Time:...................... " + controller.getCrawlTime());
+                        + "Time:...................... " + controller.getBackCrawlTime());
             }
         }
     }
-
     public void showTop5ButterflySwimmersSenior(){
         System.out.println("Top 5 butterfly swimmers");
         controller.sortButterflyTime();
@@ -677,7 +577,7 @@ public class UserInterface {
                         + "Team:...................... " + controller.getTeamName() + "\n"
                         + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
                         + "Name:...................... " + controller.getName() + "\n"
-                        + "Time:...................... " + controller.getCrawlTime());
+                        + "Time:...................... " + controller.getButterflyTime());
             }
         }
     }
@@ -690,7 +590,7 @@ public class UserInterface {
                         + "Team:...................... " + controller.getTeamName() + "\n"
                         + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
                         + "Name:...................... " + controller.getName() + "\n"
-                        + "Time:...................... " + controller.getCrawlTime());
+                        + "Time:...................... " + controller.getButterflyTime());
             }
         }
     }
@@ -703,7 +603,7 @@ public class UserInterface {
                         + "Team:...................... " + controller.getTeamName() + "\n"
                         + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
                         + "Name:...................... " + controller.getName() + "\n"
-                        + "Time:...................... " + controller.getCrawlTime());
+                        + "Time:...................... " + controller.getBreaststrokeTime());
             }
         }
     }
@@ -716,11 +616,10 @@ public class UserInterface {
                         + "Team:...................... " + controller.getTeamName() + "\n"
                         + "Membership Number:......... " + controller.getMembershipNumber() + "\n"
                         + "Name:...................... " + controller.getName() + "\n"
-                        + "Time:...................... " + controller.getCrawlTime());
+                        + "Time:...................... " + controller.getBreaststrokeTime());
             }
         }
     }
-
     public void setTimeResults(){
         System.out.println("-----------------------------------------------------");
         System.out.println("Search for the member you want to set results: ");
@@ -749,7 +648,7 @@ public class UserInterface {
         if (editMember.isCrawl()){
             System.out.println("Crawl: " + (editMember.isCrawl() ? "Active" : "Passvie"));
             do {
-                System.out.println("Crawl time: " + editMember.getCrawlTime());
+                System.out.println("Crawl time: " + editMember.getCrawlTime() + " minutes");
                 try {
                     System.out.println("Type your updated result here: ");
                     String newCrawlTime = scanner.nextLine();
@@ -764,7 +663,7 @@ public class UserInterface {
         } if (editMember.isBackCrawl()) {
             System.out.println("Backcrawl: " + (editMember.isBackCrawl() ? "Active" : "Passvie"));
             do {
-                System.out.println("backcrawl time: " + editMember.getBackCrawlTime());
+                System.out.println("backcrawl time: " + editMember.getBackCrawlTime() + " minutes");
                 try {
                     System.out.println("Type your updated result here: ");
                     String newBackCrawlTime = scanner.nextLine();
@@ -779,7 +678,7 @@ public class UserInterface {
         } if (editMember.isButterfly()){
             System.out.println("Butterfly: " + (editMember.isButterfly() ? "Active" : "Passvie"));
             do {
-                System.out.println("Butterfly time: " + editMember.getButterflyTime());
+                System.out.println("Butterfly time: " + editMember.getButterflyTime() + " minutes");
                 try {
                     System.out.println("Type your updated result here: ");
                     String newButterflyTime = scanner.nextLine();
@@ -794,7 +693,7 @@ public class UserInterface {
         } if (editMember.isBreaststroke()){
             System.out.println("Breaststroke: " + (editMember.isBreaststroke() ? "Active" : "Passvie"));
             do {
-                System.out.println("Breaststroke time: " + editMember.getBreaststrokeTime());
+                System.out.println("Breaststroke time: " + editMember.getBreaststrokeTime() + " minutes");
                 try {
                     System.out.println("Type your updated result here: ");
                     String newBreastStrokeTime = scanner.nextLine();
@@ -811,11 +710,9 @@ public class UserInterface {
         }
 
         controller.saveData();
-
     }
 
     //__________________Cashier____________________________
-
     public void cashierMenu(){
         int menuChoise = 0;
         while (menuChoise != 9) {
@@ -864,8 +761,8 @@ public class UserInterface {
                     + "Active Status:............. " + (controller.active() ? "Active" : "Passive" )+ "\n"
                     + "Junior or senior:.......... " + (controller.isSenior() ? "Senior" : "Junior") + "\n"
                     + "Exerciser or competition:.. " + controller.getSwimType() + "\n"
-                    + "adelfineProjectPackage.Subscription............... " + controller.getPayment() + "\n"
-                    + "adelfineProjectPackage.Subscription is paid....... " + (controller.isRandomPay() ? "Paid" : "Not paid"));
+                    + "Subscription:............... " + controller.getPayment() + "\n"
+                    + "Subscription is paid:...... " + (controller.isRandomPay() ? "Paid" : "Not paid"));
         }
     }
     public void searchMemberCashier() {
@@ -901,13 +798,12 @@ public class UserInterface {
                     + "adelfineProjectPackage.Subscription is paid....... " + (controller.isRandomPay() ? "Paid" : "Not paid"));
     }
     public void showFinancialData() {
-        controller.setTotaleIncome();
         System.out.println("------------------\n"
                 + "Total senior members (1600)...............: " + controller.getTotalSeniorMembers() + "\n"
                 + "Total junior members (1000)...............: " + controller.getTotalJuniorMembers() + "\n"
                 + "Total senior plus members (1200)..........: " + controller.getTotalSeniorPlusMembers() + "\n"
                 + "Total passive members (500)...............: " + controller.getTotalPassiveMembers() + "\n"
-                + "Total expected amount.....................: " + controller.getTotalIncome() + "\n"
+                + "Total expected amount.....................: " + controller.getTotaleIncome() + "\n"
                 + "Total income..............................: " + controller.getTotalAmount() + "\n"
                 + "Unpaid income from members................: " + controller.getUnpaidAmount()
 

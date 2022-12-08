@@ -1,4 +1,9 @@
-1;Mathias;23;true;true;Competition;1600;true;Team senior dolphins;true;1.2;true;1.4;true;3.5;true;2.4
-2;Marcus;21;true;true;Exerciser;1600;false;No team;false;0.0;false;0.0;false;0.0;false;0.0
-3;Mathias;17;true;false;Competition;1000;true;Team junior dolphins;true;3.4;true;2.5;true;6.3;true;1.6
-4;Christian ;21;true;true;Competition;1600;false;Team senior dolphins;true;2.3;true;4.6;true;2.5;true;1.3
+1;Mathias Thomsen;23;true;true;Competition;1600;true;Team senior dolphins;true;1.2;true;0.4;false;0.0;true;0.3
+2;Hans Hansen;17;true;false;Competition;1000;true;Team junior dolphins;false;0.0;true;1.7;false;0.0;true;2.6
+3;Grete Johansen;38;true;true;Exerciser;1600;true;No team;false;0.0;false;0.0;false;0.0;false;0.0
+4;Mads Sørensen;32;true;true;Competition;1600;true;Team senior dolphins;true;1.5;true;2.4;true;1.6;true;1.2
+5;Tais Rasmussen;22;false;true;Exerciser;500;false;No team;false;0.0;false;0.0;false;0.0;false;0.0
+6;Marcus Frørup Nielsen;20;true;true;Competition;1600;false;Team senior dolphins;true;3.0;true;2.4;true;3.5;true;1.4
+7;Kristian Sørensen;26;true;true;Competition;1600;true;Team senior dolphins;true;3.4;false;0.0;false;0.0;false;0.0
+8;Jens Hansen;59;true;true;Competition;1600;true;Team senior dolphins;true;9.6;false;0.0;false;0.0;false;0.0
+9;Frederik Christensen;29;true;true;Competition;1600;true;Team senior dolphins;true;2.3;false;0.0;false;0.0;false;0.0

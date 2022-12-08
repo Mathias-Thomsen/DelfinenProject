@@ -112,14 +112,6 @@ public class ClubMember {
         this.teamName = teamName;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public boolean isActive() {
-        return active;
-    }
-
     public boolean isCrawl() {
         return isCrawl;
     }

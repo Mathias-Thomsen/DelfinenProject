@@ -7,9 +7,6 @@ public class Subscription {
     private final int SENIOR_PAY = 1600;
     private final int SENIOR_PLUS_PAY = 1200; // payment with senior discount
     private final int PASSIVE_PAY = 500;
-
-
-
     public int getJUNIOR_PAY() {
         return JUNIOR_PAY;
     }

@@ -6,9 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="37187699-4e17-4b09-bf9b-6fa99e128523" name="Changes" comment="refactor menuChoise">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/clubmembersData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/clubmembersData.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/coachesData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/coachesData.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/competitive.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/memberNumber.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dataSource/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataSource/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dataSource/Filehandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataSource/Filehandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/delfinePackage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/financials/Financials.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/profiles/ClubMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/profiles/ClubMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/subscription/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/subscription/Subscription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataSource/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataSource/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataSource/Filehandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataSource/Filehandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Financials/Financials.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Profiles/ClubMember.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Subscription/Subscription.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/delfinePackage/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ui/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ui/UserInterface.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,12 +75,13 @@
       <recent name="$PROJECT_DIR$/gitignoreFiles" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
       <recent name="delfinePackage" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="Initiation" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="delfinePackage.Main" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="DelfinenProject" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -165,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670508020443</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="refactor menuChoise">
+      <created>1670517980483</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670517980483</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
